@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://ukt2dai804xx"]
+
+[ext_resource type="Script" path="res://Leaderboard.gd" id="1_oftcf"]
+[ext_resource type="Script" path="res://Leaderboard Name Entry.gd" id="2_84p6p"]
+[ext_resource type="Script" path="res://Leaderboard Submit.gd" id="3_igrs1"]
+[ext_resource type="Script" path="res://Leaderboard Display.gd" id="4_hyhe4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Leaderboard" type="CanvasLayer" parent="."]
+script = ExtResource("1_oftcf")
+
+[node name="Leaderboard Text" type="RichTextLabel" parent="Leaderboard"]
+offset_left = 61.0
+offset_top = 85.0
+offset_right = 646.0
+offset_bottom = 392.0
+mouse_filter = 2
+text = "Test Text"
+
+[node name="Name Entry" type="LineEdit" parent="Leaderboard/Leaderboard Text"]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 18.0
+offset_right = 554.0
+offset_bottom = 49.0
+script = ExtResource("2_84p6p")
+
+[node name="Submit" type="Button" parent="Leaderboard/Leaderboard Text"]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 103.0
+offset_right = 542.0
+offset_bottom = 134.0
+text = "Submit"
+script = ExtResource("3_igrs1")
+
+[node name="Display" type="Button" parent="Leaderboard"]
+offset_left = 690.0
+offset_top = 166.0
+offset_right = 773.0
+offset_bottom = 197.0
+toggle_mode = true
+text = "Display"
+script = ExtResource("4_hyhe4")

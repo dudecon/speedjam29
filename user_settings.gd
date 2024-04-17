@@ -1,5 +1,8 @@
-extends Button
+extends Node
 
+var playername = "Unknown"
+
+var musicplayhead = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,8 +12,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-func _pressed():
-	$"../..".change_player_name()
-	$"../.."._upload_score(50)
-	$"../.."._get_leaderboards()

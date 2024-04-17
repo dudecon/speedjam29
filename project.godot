@@ -14,6 +14,10 @@ config/name="ScoreJam29"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+UserSettings="*res://user_settings.gd"
+
 [rendering]
 
 renderer/rendering_method="mobile"
