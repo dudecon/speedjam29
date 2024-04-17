@@ -1,5 +1,10 @@
 extends CanvasLayer
 
+# intended use is to have the following objects as children
+# name entry "line edit"     with the Name Entry script attached
+# submit score "button"      with the Submit     script attached
+# a visibility toggle button with the Display    script attached
+
 # Use this game API key if you want to test it with a functioning leaderboard
 # "987dbd0b9e5eb3749072acc47a210996eea9feb0"
 var game_API_key = "dev_24ca5c7259174be2b695689fc9a233e4"
