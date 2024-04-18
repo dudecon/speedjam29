@@ -17,35 +17,61 @@ grow_vertical = 2
 script = ExtResource("1_oftcf")
 
 [node name="Leaderboard Text" type="RichTextLabel" parent="Leaderboard"]
+clip_contents = false
 offset_left = 61.0
 offset_top = 85.0
-offset_right = 646.0
+offset_right = 503.0
 offset_bottom = 392.0
 mouse_filter = 2
-text = "Test Text"
+text = "Fetching leaderboard
+Please stand by"
 
 [node name="Name Entry" type="LineEdit" parent="Leaderboard/Leaderboard Text"]
 layout_mode = 0
-offset_left = 452.0
-offset_top = 18.0
-offset_right = 554.0
-offset_bottom = 49.0
+offset_left = 485.0
+offset_top = 6.0
+offset_right = 587.0
+offset_bottom = 37.0
 script = ExtResource("2_84p6p")
+
+[node name="Label" type="Label" parent="Leaderboard/Leaderboard Text/Name Entry"]
+offset_left = 26.0
+offset_top = -31.0
+offset_right = 69.0
+offset_bottom = -8.0
+text = "Name"
 
 [node name="Submit" type="Button" parent="Leaderboard/Leaderboard Text"]
 layout_mode = 0
-offset_left = 479.0
-offset_top = 103.0
-offset_right = 542.0
-offset_bottom = 134.0
+offset_left = 486.0
+offset_top = 100.0
+offset_right = 549.0
+offset_bottom = 131.0
 text = "Submit"
 script = ExtResource("3_igrs1")
 
+[node name="SpinBox" type="SpinBox" parent="Leaderboard/Leaderboard Text/Submit"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 86.0
+offset_right = 77.0625
+offset_bottom = 117.0
+max_value = 9001.0
+value = 50.0
+
+[node name="Label" type="Label" parent="Leaderboard/Leaderboard Text/Submit/SpinBox"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -28.0
+offset_right = 51.0
+offset_bottom = -5.0
+text = "Score"
+
 [node name="Display" type="Button" parent="Leaderboard"]
-offset_left = 690.0
-offset_top = 166.0
-offset_right = 773.0
-offset_bottom = 197.0
+offset_left = 684.0
+offset_top = 174.0
+offset_right = 767.0
+offset_bottom = 205.0
 toggle_mode = true
 text = "Display"
 script = ExtResource("4_hyhe4")

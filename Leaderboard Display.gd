@@ -6,4 +6,5 @@ func _ready():
 	
 func _toggled(toggled_on):
 	$"../Leaderboard Text".visible = toggled_on
-	$".."._get_leaderboards()
+	if toggled_on:
+		$".."._get_leaderboards()

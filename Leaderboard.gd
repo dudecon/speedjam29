@@ -11,7 +11,8 @@ var game_API_key = "dev_24ca5c7259174be2b695689fc9a233e4"
 var development_mode = false
 var leaderboard_key = "21583"
 var session_token = ""
-var player_ID = ""
+var player_identifier = ""
+var usersettings
 
 # HTTP Request node can only handle one call per node
 var auth_http = HTTPRequest.new()
@@ -21,10 +22,11 @@ var set_name_http = HTTPRequest.new()
 var get_name_http = HTTPRequest.new()
 
 func _ready():
+	usersettings = get_node("/root/UserSettings")
 	_authentication_request()
 
 func change_player_name():
-	#print("Changing player name")
+	if development_mode: print("Changing player name")
 	
 	# use this variable for setting the name of the player
 	var player_name = $"Leaderboard Text/Name Entry".text
@@ -43,15 +45,15 @@ func change_player_name():
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 	
-func _on_player_set_name_request_completed(result, response_code, headers, body):
+func _on_player_set_name_request_completed(_result, _response_code, _headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
 	
 	# Print data
-	#print(json)
+	if development_mode: print("set name result: ", json)
 	set_name_http.queue_free()
 
 func _get_player_name():
-	#print("Getting player name")
+	if development_mode: print("Getting player name")
 	var url = "https://api.lootlocker.io/game/player/name"
 	var headers = ["Content-Type: application/json", "x-session-token:"+session_token]
 	
@@ -66,21 +68,19 @@ func _get_player_name():
 		push_error("An error occurred in the HTTP request.")
 
 	
-func _on_player_get_name_request_completed(result, response_code, headers, body):
+func _on_player_get_name_request_completed(_result, _response_code, _headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
 	
 	# Print data
-	#print(json)
+	if development_mode: print("get name result: ", json)
 	# Print player name
-	#print(json.name)
+	if development_mode: print("got name: ", json.name)
+	_get_leaderboards()
 
 func _authentication_request():
 	# Check if a player session has been saved
 	var player_session_exists = false
-	var player_identifier = player_ID
-	"""var file = FileAccess.open("user://LootLocker.data", FileAccess.READ)
-	player_identifier = file.get_as_text()
-	file.close()"""
+	player_identifier = usersettings.player_leaderboard_ID
 	if(player_identifier.length() > 1):
 		player_session_exists = true
 		
@@ -98,46 +98,38 @@ func _authentication_request():
 	auth_http = HTTPRequest.new()
 	add_child(auth_http)
 	#auth_http.connect("request_completed", self, "_on_authentication_request_completed")
-	auth_http.request_completed.connect(self._on_authentication_request_completed)
+	auth_http.request_completed.connect(_on_authentication_request_completed)
 	# Send request
 	#auth_http.request("https://api.lootlocker.io/game/v2/session/guest", headers, true, HTTPClient.METHOD_POST, to_json(data))
 	var error = auth_http.request("https://api.lootlocker.io/game/v2/session/guest", headers, HTTPClient.METHOD_POST, JSON.stringify(data))
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 	# Print what we're sending, for debugging purposes:
-	#print(data)
+	if development_mode: print("auth sent data", data)
 
 
-func _on_authentication_request_completed(result, _response_code, _headers, body):
-	var json = JSON.parse_string(body.get_string_from_utf8())
-	if json == null:
-		pass
-	elif json.success:
-		player_ID = json.player_identifier
-		session_token = json.session_token
+func _on_authentication_request_completed(_result, _response_code, _headers, body):
+	var json = JSON.new()
+	json.parse(body.get_string_from_utf8())
+	var unpacked_data = json.get_data()
 	
-	"""var json = JSON.parse_string(body.get_string_from_utf8())
-	if json.success:
-		# Save player_identifier to file
-		var file = FileAccess.open("user://LootLocker.data", FileAccess.WRITE)
-		file.store_string(json.player_identifier)
-		file.close()
+	# Save the player_identifier
+	usersettings.player_leaderboard_ID = unpacked_data.player_identifier
 	
-		# Save session_token to memory
-		session_token = json.session_token
+	# Save session_token to memory
+	session_token = unpacked_data.session_token
 	
 	# Print server response
-	print(json)"""
+	if development_mode: print("auth complete data", unpacked_data)
 	
 	# Clear node
 	auth_http.queue_free()
 	# Get leaderboards
-	_get_leaderboards()
-	#_get_player_name()
+	#_get_leaderboards()
 
 
 func _get_leaderboards():
-	#print("Getting leaderboards")
+	if development_mode: print("Getting leaderboards")
 	var url = "https://api.lootlocker.io/game/leaderboards/"+leaderboard_key+"/list?count=10"
 	var headers = ["Content-Type: application/json", "x-session-token:"+session_token]
 	
@@ -153,25 +145,26 @@ func _get_leaderboards():
 		push_error("An error occurred in the HTTP request.")
 
 
-func _on_leaderboard_request_completed(result, _response_code, _headers, body):
+func _on_leaderboard_request_completed(_result, _response_code, _headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
 	
 	# Print data
-	#print(json)
+	if development_mode: print("leaderboard data: ", json)
 	
 	if "items" in json:
 		# Formatting as a leaderboard
 		var leaderboardFormatted = ""
-		for n in json.items.size():
-			leaderboardFormatted += str(json.items[n].rank)+str(". ")
-			if json.items[n].player.name == "":
-				leaderboardFormatted += str(json.items[n].player.id)+str(" - ")
-			else:
-				leaderboardFormatted += str(json.items[n].player.name)+str(" - ")
-			leaderboardFormatted += str(json.items[n].score)+str("\n")
+		if json.items != null:
+			for n in json.items.size():
+				leaderboardFormatted += str(json.items[n].rank)+str(". ")
+				if json.items[n].player.name == "":
+					leaderboardFormatted += str(json.items[n].player.id)+str(" - ")
+				else:
+					leaderboardFormatted += str(json.items[n].player.name)+str(" - ")
+				leaderboardFormatted += str(json.items[n].score)+str("\n")
 		
 		# Print the formatted leaderboard to the console
-		#print(leaderboardFormatted)
+		if development_mode: print("formatted leaderboard data\n", leaderboardFormatted)
 		$"Leaderboard Text".text = leaderboardFormatted
 	# Clear node
 	leaderboard_http.queue_free()
@@ -190,14 +183,15 @@ func _upload_score(U_score):
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 	# Print what we're sending, for debugging purposes:
-	#print(data)
+	if development_mode: print("upload data: ", data)
 
 
-func _on_upload_score_request_completed(result, _response_code, _headers, body) :
+func _on_upload_score_request_completed(_result, _response_code, _headers, body) :
 	var json = JSON.parse_string(body.get_string_from_utf8())
 	
 	# Print data
-	#print(json)
+	if development_mode: print("score upload complete: ", json)
 	
 	# Clear node
 	submit_score_http.queue_free()
+	_get_leaderboards()
