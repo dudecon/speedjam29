@@ -10,7 +10,9 @@ config_version=5
 
 [application]
 
-config/name="ScoreJam29"
+config/name="Riddle Rooms"
+config/description="A game about solving riddles and hidden object puzzles"
+run/main_scene="res://Puzzle1.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 

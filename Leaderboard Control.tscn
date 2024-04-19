@@ -35,6 +35,7 @@ offset_bottom = 37.0
 script = ExtResource("2_84p6p")
 
 [node name="Label" type="Label" parent="Leaderboard/Leaderboard Text/Name Entry"]
+layout_mode = 0
 offset_left = 26.0
 offset_top = -31.0
 offset_right = 69.0

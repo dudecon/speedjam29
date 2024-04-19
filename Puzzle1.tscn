@@ -1,0 +1,1909 @@
+[gd_scene load_steps=5 format=3 uid="uid://x6klgu6xrpjj"]
+
+[ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
+[ext_resource type="Script" path="res://Library.gd" id="2_70pea"]
+[ext_resource type="Theme" uid="uid://k122kqdoda5o" path="res://bookbuttons.tres" id="2_d8cy2"]
+[ext_resource type="Script" path="res://BookshelfBookButton.gd" id="3_l15ot"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Library" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(521, 329)
+texture = ExtResource("1_vr0u6")
+script = ExtResource("2_70pea")
+
+[node name="Book Collection" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -211.0
+offset_top = -81.0
+offset_right = -134.0
+offset_bottom = -47.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 14.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = -1.0
+offset_right = 25.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection"]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 35.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection"]
+layout_mode = 0
+offset_left = 35.0
+offset_right = 45.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 1.0
+offset_right = 55.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 1.0
+offset_right = 76.0
+offset_bottom = 36.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection2" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -217.0
+offset_top = -125.0
+offset_right = -140.0
+offset_bottom = -82.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection2"]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 12.0
+offset_bottom = 36.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection2"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 1.0
+offset_right = 21.0
+offset_bottom = 36.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 2.0
+offset_right = 29.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection2"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 3.0
+offset_right = 38.0
+offset_bottom = 38.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection2"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 38.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection2"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 5.0
+offset_right = 57.0
+offset_bottom = 39.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection2"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 6.0
+offset_right = 66.0
+offset_bottom = 41.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection2"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 7.0
+offset_right = 75.0
+offset_bottom = 42.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection3" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -219.0
+offset_top = -165.0
+offset_right = -127.0
+offset_bottom = -127.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 25.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 26.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 27.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 3.0
+offset_right = 34.0
+offset_bottom = 28.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 6.0
+offset_right = 44.0
+offset_bottom = 31.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 7.0
+offset_right = 54.0
+offset_bottom = 32.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 33.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 9.0
+offset_right = 73.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button12" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 12.0
+offset_right = 83.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button13" type="Button" parent="Library/Book Collection3"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 13.0
+offset_right = 92.0
+offset_bottom = 38.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection4" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -211.0
+offset_top = -41.0
+offset_right = -134.0
+offset_bottom = -7.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection4"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 14.0
+offset_bottom = 18.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection4"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = -1.0
+offset_right = 25.0
+offset_bottom = 19.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection4"]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 35.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection4"]
+layout_mode = 0
+offset_left = 35.0
+offset_right = 45.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection4"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 1.0
+offset_right = 55.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection4"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 65.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection4"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection5" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -211.0
+offset_top = -16.0
+offset_right = -122.0
+offset_bottom = 4.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection5"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 14.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection5"]
+layout_mode = 0
+offset_left = 14.0
+offset_right = 25.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection5"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 1.0
+offset_right = 35.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection5"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 1.0
+offset_right = 45.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection5"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 1.0
+offset_right = 55.0
+offset_bottom = 21.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection5"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 65.0
+offset_bottom = 21.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection5"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection6" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -211.0
+offset_top = 8.0
+offset_right = -123.0
+offset_bottom = 39.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection6"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 14.0
+offset_bottom = 30.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection6"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 29.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection6"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 2.0
+offset_right = 35.0
+offset_bottom = 28.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection6"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 1.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection6"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 1.0
+offset_right = 55.0
+offset_bottom = 26.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection6"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1.0
+offset_right = 66.0
+offset_bottom = 25.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection6"]
+offset_left = 66.0
+offset_top = 1.0
+offset_right = 77.0
+offset_bottom = 24.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection6"]
+offset_left = 77.0
+offset_top = 1.0
+offset_right = 87.0
+offset_bottom = 23.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection7" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -59.0
+offset_top = -25.0
+offset_right = 16.0
+offset_bottom = -3.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection7"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 12.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection7"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = -1.0
+offset_right = 22.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection7"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = -1.0
+offset_right = 32.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection7"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -1.0
+offset_right = 42.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection7"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = -1.0
+offset_right = 52.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection7"]
+offset_left = 52.0
+offset_top = -1.0
+offset_right = 62.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection7"]
+offset_left = 62.0
+offset_top = -1.0
+offset_right = 72.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection8" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -59.0
+offset_top = 3.0
+offset_right = 16.0
+offset_bottom = 25.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection8"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 12.0
+offset_bottom = 24.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection8"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = -1.0
+offset_right = 22.0
+offset_bottom = 25.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection8"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = -1.0
+offset_right = 32.0
+offset_bottom = 25.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection8"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -1.0
+offset_right = 42.0
+offset_bottom = 26.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection8"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = -1.0
+offset_right = 52.0
+offset_bottom = 27.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection8"]
+offset_left = 52.0
+offset_top = -1.0
+offset_right = 62.0
+offset_bottom = 28.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection8"]
+offset_left = 62.0
+offset_top = -1.0
+offset_right = 72.0
+offset_bottom = 29.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection9" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -58.0
+offset_top = -53.0
+offset_right = 17.0
+offset_bottom = -31.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection9"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 14.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection9"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = -6.0
+offset_right = 22.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection9"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = -6.0
+offset_right = 28.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection9"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = -7.0
+offset_right = 38.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection9"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = -7.0
+offset_right = 48.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection9"]
+offset_left = 48.0
+offset_top = -8.0
+offset_right = 58.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection9"]
+offset_left = 58.0
+offset_top = -8.0
+offset_right = 68.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection10" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -58.0
+offset_top = -84.0
+offset_right = 17.0
+offset_bottom = -62.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection10"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 14.0
+offset_bottom = 22.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection10"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = -7.0
+offset_right = 22.0
+offset_bottom = 21.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection10"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = -8.0
+offset_right = 28.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection10"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = -9.0
+offset_right = 38.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection10"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = -9.0
+offset_right = 48.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection10"]
+offset_left = 48.0
+offset_top = -10.0
+offset_right = 58.0
+offset_bottom = 20.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection10"]
+offset_left = 58.0
+offset_top = -11.0
+offset_right = 68.0
+offset_bottom = 19.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection11" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -359.0
+offset_top = -174.0
+offset_right = -220.0
+offset_bottom = -102.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection11"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -6.0
+offset_right = 12.0
+offset_bottom = 55.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection11"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = -5.0
+offset_right = 21.0
+offset_bottom = 56.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection11"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = -4.0
+offset_right = 29.0
+offset_bottom = 57.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection11"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -2.0
+offset_right = 38.0
+offset_bottom = 58.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection11"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = -1.0
+offset_right = 47.0
+offset_bottom = 59.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection11"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 1.0
+offset_right = 57.0
+offset_bottom = 60.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection11"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 2.0
+offset_right = 66.0
+offset_bottom = 61.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection11"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 4.0
+offset_right = 75.0
+offset_bottom = 62.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button13" type="Button" parent="Library/Book Collection11"]
+offset_left = 75.0
+offset_top = 6.0
+offset_right = 83.0
+offset_bottom = 63.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button14" type="Button" parent="Library/Book Collection11"]
+offset_left = 83.0
+offset_top = 7.0
+offset_right = 91.0
+offset_bottom = 64.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button15" type="Button" parent="Library/Book Collection11"]
+offset_left = 91.0
+offset_top = 9.0
+offset_right = 100.0
+offset_bottom = 65.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button16" type="Button" parent="Library/Book Collection11"]
+offset_left = 100.0
+offset_top = 10.0
+offset_right = 109.0
+offset_bottom = 66.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button17" type="Button" parent="Library/Book Collection11"]
+offset_left = 109.0
+offset_top = 12.0
+offset_right = 119.0
+offset_bottom = 67.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button18" type="Button" parent="Library/Book Collection11"]
+offset_left = 119.0
+offset_top = 13.0
+offset_right = 128.0
+offset_bottom = 68.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button19" type="Button" parent="Library/Book Collection11"]
+offset_left = 128.0
+offset_top = 14.0
+offset_right = 136.0
+offset_bottom = 69.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection12" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -366.0
+offset_top = -96.0
+offset_right = -299.0
+offset_bottom = -63.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection12"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 8.0
+offset_bottom = 25.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection12"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -1.0
+offset_right = 17.0
+offset_bottom = 26.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection12"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 1.0
+offset_right = 25.0
+offset_bottom = 27.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection12"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 2.0
+offset_right = 34.0
+offset_bottom = 28.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection12"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 3.0
+offset_right = 44.0
+offset_bottom = 29.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection12"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 5.0
+offset_right = 54.0
+offset_bottom = 30.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection12"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 6.0
+offset_right = 64.0
+offset_bottom = 31.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection13" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -294.0
+offset_top = -91.0
+offset_right = -216.0
+offset_bottom = -58.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection13"]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 8.0
+offset_bottom = 27.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection13"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -1.0
+offset_right = 17.0
+offset_bottom = 27.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection13"]
+layout_mode = 0
+offset_left = 17.0
+offset_right = 25.0
+offset_bottom = 28.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection13"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 1.0
+offset_right = 34.0
+offset_bottom = 28.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection13"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 2.0
+offset_right = 44.0
+offset_bottom = 29.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection13"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 3.0
+offset_right = 55.0
+offset_bottom = 30.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection13"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 4.0
+offset_right = 66.0
+offset_bottom = 31.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection13"]
+offset_left = 66.0
+offset_top = 4.0
+offset_right = 76.0
+offset_bottom = 32.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection14" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -369.0
+offset_top = -62.0
+offset_right = -217.0
+offset_bottom = -26.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection14"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 14.0
+offset_right = 14.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection14"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 4.0
+offset_right = 22.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection14"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 4.0
+offset_right = 31.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection14"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 3.0
+offset_right = 46.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection14"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 3.0
+offset_right = 55.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection14"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 4.0
+offset_right = 66.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection14"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 6.0
+offset_right = 76.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection14"]
+offset_left = 76.0
+offset_top = 10.0
+offset_right = 86.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button12" type="Button" parent="Library/Book Collection14"]
+offset_left = 86.0
+offset_top = 10.0
+offset_right = 96.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button13" type="Button" parent="Library/Book Collection14"]
+offset_left = 96.0
+offset_top = 10.0
+offset_right = 105.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button14" type="Button" parent="Library/Book Collection14"]
+offset_left = 105.0
+offset_top = 10.0
+offset_right = 113.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button15" type="Button" parent="Library/Book Collection14"]
+offset_left = 113.0
+offset_top = 10.0
+offset_right = 121.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button16" type="Button" parent="Library/Book Collection14"]
+offset_left = 121.0
+offset_top = 13.0
+offset_right = 131.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button17" type="Button" parent="Library/Book Collection14"]
+offset_left = 131.0
+offset_top = 13.0
+offset_right = 141.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button18" type="Button" parent="Library/Book Collection14"]
+offset_left = 141.0
+offset_top = 9.0
+offset_right = 151.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection15" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -368.0
+offset_top = -27.0
+offset_right = -216.0
+offset_bottom = 9.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection15"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 14.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection15"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 6.0
+offset_right = 26.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection15"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 6.0
+offset_right = 37.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection15"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 6.0
+offset_right = 53.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection15"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 6.0
+offset_right = 71.0
+offset_bottom = 36.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection15"]
+offset_left = 71.0
+offset_top = 6.0
+offset_right = 86.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button12" type="Button" parent="Library/Book Collection15"]
+offset_left = 86.0
+offset_top = 6.0
+offset_right = 96.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button13" type="Button" parent="Library/Book Collection15"]
+offset_left = 96.0
+offset_top = 7.0
+offset_right = 105.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button14" type="Button" parent="Library/Book Collection15"]
+offset_left = 105.0
+offset_top = 7.0
+offset_right = 113.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button15" type="Button" parent="Library/Book Collection15"]
+offset_left = 113.0
+offset_top = 7.0
+offset_right = 122.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button16" type="Button" parent="Library/Book Collection15"]
+offset_left = 122.0
+offset_top = 6.0
+offset_right = 133.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button18" type="Button" parent="Library/Book Collection15"]
+offset_left = 136.0
+offset_top = 5.0
+offset_right = 151.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection16" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -368.0
+offset_top = 12.0
+offset_right = -216.0
+offset_bottom = 48.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection16"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 10.0
+offset_right = 14.0
+offset_bottom = 40.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection16"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 7.0
+offset_right = 26.0
+offset_bottom = 38.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection16"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 6.0
+offset_right = 37.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection16"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 6.0
+offset_right = 53.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection16"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 6.0
+offset_right = 71.0
+offset_bottom = 36.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection16"]
+offset_left = 71.0
+offset_top = 5.0
+offset_right = 86.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button12" type="Button" parent="Library/Book Collection16"]
+offset_left = 86.0
+offset_top = 5.0
+offset_right = 96.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button13" type="Button" parent="Library/Book Collection16"]
+offset_left = 96.0
+offset_top = 5.0
+offset_right = 105.0
+offset_bottom = 33.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button14" type="Button" parent="Library/Book Collection16"]
+offset_left = 105.0
+offset_top = 4.0
+offset_right = 113.0
+offset_bottom = 32.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button15" type="Button" parent="Library/Book Collection16"]
+offset_left = 113.0
+offset_top = 4.0
+offset_right = 122.0
+offset_bottom = 32.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button16" type="Button" parent="Library/Book Collection16"]
+offset_left = 122.0
+offset_top = 3.0
+offset_right = 133.0
+offset_bottom = 31.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button18" type="Button" parent="Library/Book Collection16"]
+offset_left = 136.0
+offset_top = 2.0
+offset_right = 151.0
+offset_bottom = 31.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection17" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -324.0
+offset_top = -276.0
+offset_right = -189.0
+offset_bottom = -204.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection17"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -6.0
+offset_right = 12.0
+offset_bottom = 40.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection17"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = -4.0
+offset_right = 21.0
+offset_bottom = 42.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection17"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = -2.0
+offset_right = 29.0
+offset_bottom = 43.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection17"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 1.0
+offset_right = 38.0
+offset_bottom = 45.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection17"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 4.0
+offset_right = 47.0
+offset_bottom = 47.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection17"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 7.0
+offset_right = 57.0
+offset_bottom = 49.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection17"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 9.0
+offset_right = 66.0
+offset_bottom = 51.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection17"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 11.0
+offset_right = 75.0
+offset_bottom = 53.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button13" type="Button" parent="Library/Book Collection17"]
+offset_left = 76.0
+offset_top = 30.0
+offset_right = 84.0
+offset_bottom = 87.0
+rotation = -0.0589421
+scale = Vector2(0.882527, 0.477243)
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button14" type="Button" parent="Library/Book Collection17"]
+offset_left = 83.0
+offset_top = 32.0
+offset_right = 91.0
+offset_bottom = 89.0
+rotation = -0.102885
+scale = Vector2(0.907817, 0.489416)
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button15" type="Button" parent="Library/Book Collection17"]
+offset_left = 91.0
+offset_top = 34.0
+offset_right = 100.0
+offset_bottom = 90.0
+rotation = -0.264816
+scale = Vector2(0.800952, 0.530166)
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button16" type="Button" parent="Library/Book Collection17"]
+offset_left = 99.0
+offset_top = 36.0
+offset_right = 108.0
+offset_bottom = 92.0
+rotation = -0.37966
+scale = Vector2(0.948108, 0.597638)
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button17" type="Button" parent="Library/Book Collection17"]
+offset_left = 109.0
+offset_top = 38.0
+offset_right = 119.0
+offset_bottom = 93.0
+rotation = -0.479592
+scale = Vector2(0.833429, 0.647082)
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection18" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -344.0
+offset_top = 64.0
+offset_right = -214.0
+offset_bottom = 110.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection18"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 8.0
+offset_right = 15.0
+offset_bottom = 45.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection18"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 7.0
+offset_right = 27.0
+offset_bottom = 44.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection18"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 6.0
+offset_right = 41.0
+offset_bottom = 42.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection18"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 5.0
+offset_right = 53.0
+offset_bottom = 40.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection18"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 8.0
+offset_right = 63.0
+offset_bottom = 38.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection18"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 7.0
+offset_right = 74.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection18"]
+offset_left = 74.0
+offset_top = 6.0
+offset_right = 85.0
+offset_bottom = 36.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection18"]
+offset_left = 85.0
+offset_top = 5.0
+offset_right = 95.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button12" type="Button" parent="Library/Book Collection18"]
+offset_left = 95.0
+offset_top = 4.0
+offset_right = 105.0
+offset_bottom = 34.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button13" type="Button" parent="Library/Book Collection18"]
+offset_left = 105.0
+offset_top = 3.0
+offset_right = 116.0
+offset_bottom = 33.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button14" type="Button" parent="Library/Book Collection18"]
+offset_left = 116.0
+offset_top = 2.0
+offset_right = 128.0
+offset_bottom = 32.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button15" type="Button" parent="Library/Book Collection18"]
+offset_left = -6.0
+offset_top = 9.0
+offset_right = 2.0
+offset_bottom = 46.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Book Collection19" type="Control" parent="Library"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -344.0
+offset_top = 107.0
+offset_right = -214.0
+offset_bottom = 153.0
+
+[node name="Button4" type="Button" parent="Library/Book Collection19"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 10.0
+offset_right = 18.0
+offset_bottom = 51.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button5" type="Button" parent="Library/Book Collection19"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 10.0
+offset_right = 31.0
+offset_bottom = 47.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button6" type="Button" parent="Library/Book Collection19"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 9.0
+offset_right = 41.0
+offset_bottom = 45.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button7" type="Button" parent="Library/Book Collection19"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 8.0
+offset_right = 53.0
+offset_bottom = 43.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button8" type="Button" parent="Library/Book Collection19"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 10.0
+offset_right = 63.0
+offset_bottom = 40.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button9" type="Button" parent="Library/Book Collection19"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 9.0
+offset_right = 74.0
+offset_bottom = 39.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button10" type="Button" parent="Library/Book Collection19"]
+offset_left = 74.0
+offset_top = 7.0
+offset_right = 85.0
+offset_bottom = 37.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button11" type="Button" parent="Library/Book Collection19"]
+offset_left = 85.0
+offset_top = 5.0
+offset_right = 95.0
+offset_bottom = 35.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button12" type="Button" parent="Library/Book Collection19"]
+offset_left = 95.0
+offset_top = 2.0
+offset_right = 105.0
+offset_bottom = 32.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button13" type="Button" parent="Library/Book Collection19"]
+offset_left = 105.0
+offset_top = 1.0
+offset_right = 116.0
+offset_bottom = 31.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[node name="Button14" type="Button" parent="Library/Book Collection19"]
+offset_left = 116.0
+offset_right = 128.0
+offset_bottom = 30.0
+theme = ExtResource("2_d8cy2")
+script = ExtResource("3_l15ot")
+
+[connection signal="pressed" from="Library/Book Collection/Button4" to="Library/Book Collection/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection/Button5" to="Library/Book Collection/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection/Button6" to="Library/Book Collection/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection/Button7" to="Library/Book Collection/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection/Button8" to="Library/Book Collection/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection/Button9" to="Library/Book Collection/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection/Button10" to="Library/Book Collection/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection2/Button4" to="Library/Book Collection2/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection2/Button5" to="Library/Book Collection2/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection2/Button6" to="Library/Book Collection2/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection2/Button7" to="Library/Book Collection2/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection2/Button8" to="Library/Book Collection2/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection2/Button9" to="Library/Book Collection2/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection2/Button10" to="Library/Book Collection2/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection2/Button11" to="Library/Book Collection2/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button4" to="Library/Book Collection3/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button5" to="Library/Book Collection3/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button6" to="Library/Book Collection3/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button7" to="Library/Book Collection3/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button8" to="Library/Book Collection3/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button9" to="Library/Book Collection3/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button10" to="Library/Book Collection3/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button11" to="Library/Book Collection3/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button12" to="Library/Book Collection3/Button12" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection3/Button13" to="Library/Book Collection3/Button13" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection4/Button4" to="Library/Book Collection4/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection4/Button5" to="Library/Book Collection4/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection4/Button6" to="Library/Book Collection4/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection4/Button7" to="Library/Book Collection4/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection4/Button8" to="Library/Book Collection4/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection4/Button9" to="Library/Book Collection4/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection4/Button10" to="Library/Book Collection4/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection5/Button4" to="Library/Book Collection5/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection5/Button5" to="Library/Book Collection5/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection5/Button6" to="Library/Book Collection5/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection5/Button7" to="Library/Book Collection5/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection5/Button8" to="Library/Book Collection5/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection5/Button9" to="Library/Book Collection5/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection5/Button10" to="Library/Book Collection5/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection6/Button4" to="Library/Book Collection6/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection6/Button5" to="Library/Book Collection6/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection6/Button6" to="Library/Book Collection6/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection6/Button7" to="Library/Book Collection6/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection6/Button8" to="Library/Book Collection6/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection6/Button9" to="Library/Book Collection6/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection6/Button10" to="Library/Book Collection6/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection6/Button11" to="Library/Book Collection6/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection7/Button4" to="Library/Book Collection7/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection7/Button5" to="Library/Book Collection7/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection7/Button6" to="Library/Book Collection7/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection7/Button7" to="Library/Book Collection7/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection7/Button8" to="Library/Book Collection7/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection7/Button9" to="Library/Book Collection7/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection7/Button10" to="Library/Book Collection7/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection8/Button4" to="Library/Book Collection8/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection8/Button5" to="Library/Book Collection8/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection8/Button6" to="Library/Book Collection8/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection8/Button7" to="Library/Book Collection8/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection8/Button8" to="Library/Book Collection8/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection8/Button9" to="Library/Book Collection8/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection8/Button10" to="Library/Book Collection8/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection9/Button4" to="Library/Book Collection9/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection9/Button5" to="Library/Book Collection9/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection9/Button6" to="Library/Book Collection9/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection9/Button7" to="Library/Book Collection9/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection9/Button8" to="Library/Book Collection9/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection9/Button9" to="Library/Book Collection9/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection9/Button10" to="Library/Book Collection9/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection10/Button4" to="Library/Book Collection10/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection10/Button5" to="Library/Book Collection10/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection10/Button6" to="Library/Book Collection10/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection10/Button7" to="Library/Book Collection10/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection10/Button8" to="Library/Book Collection10/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection10/Button9" to="Library/Book Collection10/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection10/Button10" to="Library/Book Collection10/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button4" to="Library/Book Collection11/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button5" to="Library/Book Collection11/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button6" to="Library/Book Collection11/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button7" to="Library/Book Collection11/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button8" to="Library/Book Collection11/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button9" to="Library/Book Collection11/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button10" to="Library/Book Collection11/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button11" to="Library/Book Collection11/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button13" to="Library/Book Collection11/Button13" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button14" to="Library/Book Collection11/Button14" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button15" to="Library/Book Collection11/Button15" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button16" to="Library/Book Collection11/Button16" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button17" to="Library/Book Collection11/Button17" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button18" to="Library/Book Collection11/Button18" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection11/Button19" to="Library/Book Collection11/Button19" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection12/Button4" to="Library/Book Collection12/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection12/Button5" to="Library/Book Collection12/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection12/Button6" to="Library/Book Collection12/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection12/Button7" to="Library/Book Collection12/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection12/Button8" to="Library/Book Collection12/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection12/Button9" to="Library/Book Collection12/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection12/Button10" to="Library/Book Collection12/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection13/Button4" to="Library/Book Collection13/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection13/Button5" to="Library/Book Collection13/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection13/Button6" to="Library/Book Collection13/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection13/Button7" to="Library/Book Collection13/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection13/Button8" to="Library/Book Collection13/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection13/Button9" to="Library/Book Collection13/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection13/Button10" to="Library/Book Collection13/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection13/Button11" to="Library/Book Collection13/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button4" to="Library/Book Collection14/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button5" to="Library/Book Collection14/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button6" to="Library/Book Collection14/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button7" to="Library/Book Collection14/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button8" to="Library/Book Collection14/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button9" to="Library/Book Collection14/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button10" to="Library/Book Collection14/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button11" to="Library/Book Collection14/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button12" to="Library/Book Collection14/Button12" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button13" to="Library/Book Collection14/Button13" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button14" to="Library/Book Collection14/Button14" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button15" to="Library/Book Collection14/Button15" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button16" to="Library/Book Collection14/Button16" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button17" to="Library/Book Collection14/Button17" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection14/Button18" to="Library/Book Collection14/Button18" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button4" to="Library/Book Collection15/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button5" to="Library/Book Collection15/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button6" to="Library/Book Collection15/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button7" to="Library/Book Collection15/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button9" to="Library/Book Collection15/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button11" to="Library/Book Collection15/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button12" to="Library/Book Collection15/Button12" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button13" to="Library/Book Collection15/Button13" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button14" to="Library/Book Collection15/Button14" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button15" to="Library/Book Collection15/Button15" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button16" to="Library/Book Collection15/Button16" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection15/Button18" to="Library/Book Collection15/Button18" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button4" to="Library/Book Collection16/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button5" to="Library/Book Collection16/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button6" to="Library/Book Collection16/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button7" to="Library/Book Collection16/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button9" to="Library/Book Collection16/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button11" to="Library/Book Collection16/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button12" to="Library/Book Collection16/Button12" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button13" to="Library/Book Collection16/Button13" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button14" to="Library/Book Collection16/Button14" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button15" to="Library/Book Collection16/Button15" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button16" to="Library/Book Collection16/Button16" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection16/Button18" to="Library/Book Collection16/Button18" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button4" to="Library/Book Collection17/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button5" to="Library/Book Collection17/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button6" to="Library/Book Collection17/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button7" to="Library/Book Collection17/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button8" to="Library/Book Collection17/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button9" to="Library/Book Collection17/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button10" to="Library/Book Collection17/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button11" to="Library/Book Collection17/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button13" to="Library/Book Collection17/Button13" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button14" to="Library/Book Collection17/Button14" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button15" to="Library/Book Collection17/Button15" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button16" to="Library/Book Collection17/Button16" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection17/Button17" to="Library/Book Collection17/Button17" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button4" to="Library/Book Collection18/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button5" to="Library/Book Collection18/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button6" to="Library/Book Collection18/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button7" to="Library/Book Collection18/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button8" to="Library/Book Collection18/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button9" to="Library/Book Collection18/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button10" to="Library/Book Collection18/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button11" to="Library/Book Collection18/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button12" to="Library/Book Collection18/Button12" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button13" to="Library/Book Collection18/Button13" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button14" to="Library/Book Collection18/Button14" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection18/Button15" to="Library/Book Collection18/Button15" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button4" to="Library/Book Collection19/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button5" to="Library/Book Collection19/Button5" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button6" to="Library/Book Collection19/Button6" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button7" to="Library/Book Collection19/Button7" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button8" to="Library/Book Collection19/Button8" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button9" to="Library/Book Collection19/Button9" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button10" to="Library/Book Collection19/Button10" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button11" to="Library/Book Collection19/Button11" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button12" to="Library/Book Collection19/Button12" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button13" to="Library/Book Collection19/Button13" method="_on_pressed"]
+[connection signal="pressed" from="Library/Book Collection19/Button14" to="Library/Book Collection19/Button14" method="_on_pressed"]
