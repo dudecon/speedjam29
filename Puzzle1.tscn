@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=10 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
 [ext_resource type="Script" path="res://Library.gd" id="2_70pea"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://BookshelfBookButton.gd" id="3_l15ot"]
 [ext_resource type="PackedScene" uid="uid://doexc7d0yn3yi" path="res://LibraryUI.tscn" id="5_ptx08"]
 [ext_resource type="PackedScene" uid="uid://ukt2dai804xx" path="res://Leaderboard Control.tscn" id="6_svosm"]
+[ext_resource type="Script" path="res://BookVisibility.gd" id="7_e05th"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_f5vjs"]
 keycode = 75
@@ -30,6 +31,7 @@ offset_right = -134.0
 offset_bottom = -47.0
 
 [node name="Button4" type="Button" parent="Library/Book Collection"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 2.0
 offset_top = -2.0
@@ -3906,7 +3908,7 @@ offset_top = 10.0
 offset_right = 592.0
 offset_bottom = 136.0
 
-[node name="Button" type="Button" parent="Library Controls"]
+[node name="BookVisibility" type="Button" parent="Library Controls"]
 layout_mode = 0
 offset_left = 28.0
 offset_top = 10.0
@@ -3915,6 +3917,7 @@ offset_bottom = 45.0
 toggle_mode = true
 shortcut = SubResource("Shortcut_br7s2")
 text = "Book Visibility"
+script = ExtResource("7_e05th")
 
 [connection signal="pressed" from="Library/Book Collection/Button4" to="Library/Book Collection/Button4" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection/Button5" to="Library/Book Collection/Button5" method="_on_pressed"]

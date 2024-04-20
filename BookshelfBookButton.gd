@@ -16,7 +16,7 @@ func _ready():
 	times_read = 0
 	$".".visible = false
 	if len(booklist) == 396:
-		%Library._set_book_visibility()
+		%Library._set_book_visibility(396)
 
 
 func _on_pressed():
