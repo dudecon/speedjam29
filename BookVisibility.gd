@@ -7,14 +7,15 @@ func _ready():
 
 
 func _toggled(toggled_on):
-	var btheme = %Button4.theme
-	"res://bookbuttons.tres"
-	theme
+	var btheme = %Button4.theme#["normal"]#.styles.normal
+	print(btheme)
+	var newcolor
+	#"res://bookbuttons.tres" "Button/styles/normal"
 	if toggled_on:
-		btheme.button.styles.normal.border_width = 3
-		%Library._set_book_visibility(200)
+		newcolor = Color(1,1,1,0.7)
+		#%Library._set_book_visibility(200)
 	else:
-		btheme.button.styles.normal.border_width = 0
-		%Library._set_book_visibility(0)
-	
-"Button/styles/normal"
+		newcolor = Color(1,1,1,0.0)
+		#%Library._set_book_visibility(0)
+	btheme.set_color("border_color", "Button", newcolor)
+

@@ -21,7 +21,7 @@ func _ready():
 
 func _on_pressed():
 	if times_read == 0:
-		%"Library UI".books_read += 1
+		%"book count label"._update_count(1)
 	if title == "":
 		title = "this is book " + str(this_ID)
 	times_read += 1
