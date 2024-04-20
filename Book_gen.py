@@ -1,4 +1,5 @@
 import random
+import json
 
 # Define potential themes and their corresponding emojis
 
@@ -120,9 +121,9 @@ class Book:
     
     def generate_book(self, chapter_num=None):        
         if chapter_num is None:
-            chapter_num = random.randint(3,7)
+            chapter_num = random.randint(2,6)
 
-        """Generates 3 to 7 thoughts/chapters for the book."""
+        """Generates 2 to 6 thoughts/chapters for the book."""
         for _ in range(chapter_num):
             self.chapters.append(self.generate_chapter())
 
@@ -132,11 +133,6 @@ class Book:
         for chapter in self.chapters:
             print(''.join(chapter))
         print('\n')
-
-# Example usage
-my_book_themes = ["🕳", "🌑"]  # Defining the themes for the book
-my_book = Book(my_book_themes)
-my_book.print_book()  # Printing the book's content
 
 for i in range(20):
     Book().print_book()
