@@ -5,7 +5,6 @@ extends Button
 func _ready():
 	pass # Replace with function body.
 
+func _on_pressed():
+	%BookSpines.book_bind._read_the_book()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

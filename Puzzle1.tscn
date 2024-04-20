@@ -1,16 +1,57 @@
-[gd_scene load_steps=10 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=19 format=3 uid="uid://x6klgu6xrpjj"]
 
+[ext_resource type="Texture2D" uid="uid://cyrhomw7eh4tv" path="res://open_book_01.png" id="1_6sdj3"]
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
 [ext_resource type="Script" path="res://Library.gd" id="2_70pea"]
 [ext_resource type="Theme" uid="uid://k122kqdoda5o" path="res://bookbuttons.tres" id="2_d8cy2"]
+[ext_resource type="Texture2D" uid="uid://d3jl5vgd7pco4" path="res://open_book_02.png" id="2_qi87j"]
+[ext_resource type="Texture2D" uid="uid://6hn008eeaoky" path="res://open_book_03.png" id="3_eifc6"]
 [ext_resource type="Script" path="res://BookshelfBookButton.gd" id="3_l15ot"]
+[ext_resource type="Texture2D" uid="uid://bylh5x1sqyqll" path="res://open_book_04.png" id="4_5p3px"]
 [ext_resource type="Texture2D" uid="uid://yrahe0kta43a" path="res://book_spines.jpg" id="5_jpf2q"]
+[ext_resource type="Texture2D" uid="uid://bwo1fv301yy0m" path="res://open_book_05.png" id="5_ql2g5"]
 [ext_resource type="Script" path="res://book count label.gd" id="6_c2rq3"]
 [ext_resource type="Script" path="res://BookSpines.gd" id="6_jg0br"]
+[ext_resource type="Texture2D" uid="uid://wupsy27npfbd" path="res://open_book_06.png" id="6_ok38s"]
 [ext_resource type="PackedScene" uid="uid://ukt2dai804xx" path="res://Leaderboard Control.tscn" id="6_svosm"]
 [ext_resource type="Script" path="res://ReadBook.gd" id="7_34xcq"]
+[ext_resource type="Script" path="res://OpenBook.gd" id="14_wvnwt"]
+[ext_resource type="Script" path="res://BookOpener.gd" id="14_xc8uf"]
+[ext_resource type="FontFile" uid="uid://dyqxga5rynpup" path="res://NotoEmoji-VariableFont_wght.ttf" id="16_qxkyd"]
 
 [node name="Puzzle1" type="Node2D"]
+
+[node name="AllOpenBooks" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OpenBook01" type="Sprite2D" parent="AllOpenBooks"]
+position = Vector2(271, 182)
+texture = ExtResource("1_6sdj3")
+
+[node name="OpenBook02" type="Sprite2D" parent="AllOpenBooks"]
+position = Vector2(287, 175)
+texture = ExtResource("2_qi87j")
+
+[node name="OpenBook03" type="Sprite2D" parent="AllOpenBooks"]
+position = Vector2(264, 165)
+texture = ExtResource("3_eifc6")
+
+[node name="OpenBook04" type="Sprite2D" parent="AllOpenBooks"]
+position = Vector2(247, 217)
+texture = ExtResource("4_5p3px")
+
+[node name="OpenBook05" type="Sprite2D" parent="AllOpenBooks"]
+position = Vector2(250, 229)
+texture = ExtResource("5_ql2g5")
+
+[node name="OpenBook06" type="Sprite2D" parent="AllOpenBooks"]
+position = Vector2(245, 219)
+texture = ExtResource("6_ok38s")
 
 [node name="Library" type="Sprite2D" parent="."]
 unique_name_in_owner = true
@@ -779,7 +820,7 @@ offset_bottom = -102.0
 [node name="Button4" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 4.0
-offset_top = -6.0
+offset_top = 17.0
 offset_right = 12.0
 offset_bottom = 55.0
 theme = ExtResource("2_d8cy2")
@@ -788,7 +829,7 @@ script = ExtResource("3_l15ot")
 [node name="Button5" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 12.0
-offset_top = -5.0
+offset_top = 19.0
 offset_right = 21.0
 offset_bottom = 56.0
 theme = ExtResource("2_d8cy2")
@@ -797,7 +838,7 @@ script = ExtResource("3_l15ot")
 [node name="Button6" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 21.0
-offset_top = -4.0
+offset_top = 22.0
 offset_right = 29.0
 offset_bottom = 57.0
 theme = ExtResource("2_d8cy2")
@@ -806,7 +847,7 @@ script = ExtResource("3_l15ot")
 [node name="Button7" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 29.0
-offset_top = -2.0
+offset_top = 21.0
 offset_right = 38.0
 offset_bottom = 58.0
 theme = ExtResource("2_d8cy2")
@@ -815,25 +856,16 @@ script = ExtResource("3_l15ot")
 [node name="Button8" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 38.0
-offset_top = -1.0
+offset_top = 26.0
 offset_right = 47.0
 offset_bottom = 59.0
-theme = ExtResource("2_d8cy2")
-script = ExtResource("3_l15ot")
-
-[node name="Button9" type="Button" parent="Library/Book Collection11"]
-layout_mode = 0
-offset_left = 47.0
-offset_top = 1.0
-offset_right = 57.0
-offset_bottom = 60.0
 theme = ExtResource("2_d8cy2")
 script = ExtResource("3_l15ot")
 
 [node name="Button10" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 57.0
-offset_top = 2.0
+offset_top = 27.0
 offset_right = 66.0
 offset_bottom = 61.0
 theme = ExtResource("2_d8cy2")
@@ -842,7 +874,7 @@ script = ExtResource("3_l15ot")
 [node name="Button11" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 66.0
-offset_top = 4.0
+offset_top = 27.0
 offset_right = 75.0
 offset_bottom = 62.0
 theme = ExtResource("2_d8cy2")
@@ -851,25 +883,16 @@ script = ExtResource("3_l15ot")
 [node name="Button13" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 75.0
-offset_top = 6.0
+offset_top = 29.0
 offset_right = 83.0
 offset_bottom = 63.0
-theme = ExtResource("2_d8cy2")
-script = ExtResource("3_l15ot")
-
-[node name="Button14" type="Button" parent="Library/Book Collection11"]
-layout_mode = 0
-offset_left = 83.0
-offset_top = 7.0
-offset_right = 91.0
-offset_bottom = 64.0
 theme = ExtResource("2_d8cy2")
 script = ExtResource("3_l15ot")
 
 [node name="Button15" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 91.0
-offset_top = 9.0
+offset_top = 31.0
 offset_right = 100.0
 offset_bottom = 65.0
 theme = ExtResource("2_d8cy2")
@@ -878,17 +901,17 @@ script = ExtResource("3_l15ot")
 [node name="Button16" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 100.0
-offset_top = 10.0
-offset_right = 109.0
+offset_top = 33.0
+offset_right = 108.0
 offset_bottom = 66.0
 theme = ExtResource("2_d8cy2")
 script = ExtResource("3_l15ot")
 
 [node name="Button17" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
-offset_left = 109.0
-offset_top = 12.0
-offset_right = 119.0
+offset_left = 108.0
+offset_top = 36.0
+offset_right = 116.0
 offset_bottom = 67.0
 theme = ExtResource("2_d8cy2")
 script = ExtResource("3_l15ot")
@@ -896,7 +919,7 @@ script = ExtResource("3_l15ot")
 [node name="Button18" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
 offset_left = 119.0
-offset_top = 13.0
+offset_top = 37.0
 offset_right = 128.0
 offset_bottom = 68.0
 theme = ExtResource("2_d8cy2")
@@ -904,9 +927,9 @@ script = ExtResource("3_l15ot")
 
 [node name="Button19" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 14.0
-offset_right = 136.0
+offset_left = 129.0
+offset_top = 38.0
+offset_right = 137.0
 offset_bottom = 69.0
 rotation = -0.0225093
 theme = ExtResource("2_d8cy2")
@@ -3892,11 +3915,32 @@ script = ExtResource("3_l15ot")
 
 [node name="BookSpines" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(487, 557)
+position = Vector2(475, 550)
 texture = ExtResource("5_jpf2q")
 region_enabled = true
 region_rect = Rect2(-0.025, 0, 507, 167)
 script = ExtResource("6_jg0br")
+
+[node name="Label" type="Label" parent="BookSpines"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -479.5
+offset_top = -125.38
+offset_right = -27.5
+offset_bottom = -38.3801
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.188235, 0.235294, 0.243137, 1)
+theme_override_colors/font_outline_color = Color(0.737255, 0.596078, 0.529412, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("16_qxkyd")
+theme_override_font_sizes/font_size = 58
+text = "🎶💧💀🔍🧐"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ReadBook" type="Button" parent="BookSpines"]
 modulate = Color(1, 1, 1, 0)
@@ -3906,6 +3950,42 @@ offset_right = 241.0
 offset_bottom = 74.0
 tooltip_text = "read this book"
 script = ExtResource("7_34xcq")
+
+[node name="BookOpener" type="ColorRect" parent="."]
+unique_name_in_owner = true
+clip_contents = true
+offset_left = 148.0
+offset_top = 21.0
+offset_right = 1170.0
+offset_bottom = 644.0
+color = Color(0, 0, 0, 0)
+script = ExtResource("14_xc8uf")
+
+[node name="OpenBook" type="Sprite2D" parent="BookOpener"]
+position = Vector2(508, 305)
+texture = ExtResource("1_6sdj3")
+script = ExtResource("14_wvnwt")
+
+[node name="Label" type="Label" parent="BookOpener"]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 107.0
+offset_right = 799.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0.188235, 0.235294, 0.243137, 1)
+theme_override_colors/font_outline_color = Color(0.831373, 0.698039, 0.541176, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("16_qxkyd")
+theme_override_font_sizes/font_size = 37
+text = "🎤📖👾🌧
+🎶💧💀🔍🧐🎶💧💀🎶💧
+👹👹🌊
+👹🧐🎵
+📑🎼🌦️🔍📒
+💧📕🧐🌊🎹"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Leaderboard" parent="." instance=ExtResource("6_svosm")]
 
@@ -4023,11 +4103,9 @@ text = "Books read:"
 [connection signal="pressed" from="Library/Book Collection11/Button6" to="Library/Book Collection11/Button6" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection11/Button7" to="Library/Book Collection11/Button7" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection11/Button8" to="Library/Book Collection11/Button8" method="_on_pressed"]
-[connection signal="pressed" from="Library/Book Collection11/Button9" to="Library/Book Collection11/Button9" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection11/Button10" to="Library/Book Collection11/Button10" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection11/Button11" to="Library/Book Collection11/Button11" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection11/Button13" to="Library/Book Collection11/Button13" method="_on_pressed"]
-[connection signal="pressed" from="Library/Book Collection11/Button14" to="Library/Book Collection11/Button14" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection11/Button15" to="Library/Book Collection11/Button15" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection11/Button16" to="Library/Book Collection11/Button16" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection11/Button17" to="Library/Book Collection11/Button17" method="_on_pressed"]
@@ -4339,3 +4417,4 @@ text = "Books read:"
 [connection signal="pressed" from="Library/Book Collection38/Button23" to="Library/Book Collection38/Button23" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection38/Button25" to="Library/Book Collection38/Button25" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection38/Button26" to="Library/Book Collection38/Button26" method="_on_pressed"]
+[connection signal="pressed" from="BookSpines/ReadBook" to="BookSpines/ReadBook" method="_on_pressed"]

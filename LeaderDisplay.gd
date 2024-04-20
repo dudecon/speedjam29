@@ -2,7 +2,7 @@ extends ColorRect
 
 var target_height
 var target_alpha
-var ui_speed = 0.05
+var ui_speed = 5.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,13 +13,13 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	if %Leaderboard.visible:
 		var curalpha = $".".modulate[3]
-		var newalpha = curalpha + (target_alpha - curalpha) * ui_speed
+		var newalpha = curalpha + (target_alpha - curalpha) * ui_speed * delta
 		$".".modulate[3] = newalpha
 		var curheight = $".".size.y
-		var newheight = curheight + (target_height - curheight) * ui_speed
+		var newheight = curheight + (target_height - curheight) * ui_speed * delta
 		$".".size.y = newheight
 		if newheight < 10:
 			%Leaderboard.visible = false
