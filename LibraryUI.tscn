@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2msxfjpe1np4"]
+
+[sub_resource type="GDScript" id="GDScript_b2dbl"]
+script/source = "extends Control
+
+var books_read
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	books_read = 0
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	%\"book count label\".text = \"Books read: \" + str(books_read)
+"
+
+[node name="LibraryUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_b2dbl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 599.0
+offset_right = 164.0
+offset_bottom = 640.0
+color = Color(0.152941, 0.152941, 0.152941, 0.494118)
+
+[node name="book count label" type="Label" parent="ColorRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 139.0
+offset_bottom = 37.0
+text = "Books read: 0"
