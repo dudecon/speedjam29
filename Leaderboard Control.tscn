@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Leaderboard Submit.gd" id="3_igrs1"]
 [ext_resource type="Script" path="res://Leaderboard Display.gd" id="4_hyhe4"]
 
-[node name="Control" type="Control"]
+[node name="Leaderboard" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,24 +14,42 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Leaderboard" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("1_oftcf")
+
+[node name="ColorRect" type="ColorRect" parent="Leaderboard"]
+offset_left = 35.0
+offset_top = 43.0
+offset_right = 685.0
+offset_bottom = 456.0
+color = Color(0.396078, 0.333333, 0.00392157, 0.792157)
 
 [node name="Leaderboard Text" type="RichTextLabel" parent="Leaderboard"]
 clip_contents = false
-offset_left = 61.0
-offset_top = 85.0
-offset_right = 503.0
-offset_bottom = 392.0
+offset_left = 56.0
+offset_top = 70.0
+offset_right = 505.0
+offset_bottom = 429.0
 mouse_filter = 2
-text = "Fetching leaderboard
-Please stand by"
+theme_override_font_sizes/normal_font_size = 24
+text = "1. Fetching leaderboard info      - 0000
+2 Please stand by
+3
+4
+5
+6
+7
+8
+9
+10"
 
 [node name="Name Entry" type="LineEdit" parent="Leaderboard/Leaderboard Text"]
 layout_mode = 0
-offset_left = 485.0
-offset_top = 6.0
-offset_right = 587.0
-offset_bottom = 37.0
+offset_left = 487.0
+offset_top = 26.0
+offset_right = 589.0
+offset_bottom = 57.0
+max_length = 24
 script = ExtResource("2_84p6p")
 
 [node name="Label" type="Label" parent="Leaderboard/Leaderboard Text/Name Entry"]
@@ -68,11 +86,11 @@ offset_right = 51.0
 offset_bottom = -5.0
 text = "Score"
 
-[node name="Display" type="Button" parent="Leaderboard"]
-offset_left = 684.0
-offset_top = 174.0
-offset_right = 767.0
-offset_bottom = 205.0
+[node name="Display" type="Button" parent="."]
+offset_left = 959.0
+offset_top = 15.0
+offset_right = 1127.0
+offset_bottom = 46.0
 toggle_mode = true
-text = "Display"
+text = "Display Leaderboard"
 script = ExtResource("4_hyhe4")

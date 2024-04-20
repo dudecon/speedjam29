@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=7 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
 [ext_resource type="Script" path="res://Library.gd" id="2_70pea"]
 [ext_resource type="Theme" uid="uid://k122kqdoda5o" path="res://bookbuttons.tres" id="2_d8cy2"]
 [ext_resource type="Script" path="res://BookshelfBookButton.gd" id="3_l15ot"]
+[ext_resource type="PackedScene" uid="uid://doexc7d0yn3yi" path="res://LibraryUI.tscn" id="5_ptx08"]
+[ext_resource type="PackedScene" uid="uid://ukt2dai804xx" path="res://Leaderboard Control.tscn" id="6_svosm"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Puzzle1" type="Node2D"]
 
 [node name="Library" type="Sprite2D" parent="."]
 unique_name_in_owner = true
@@ -3884,6 +3886,11 @@ offset_right = 211.0
 offset_bottom = 43.0
 theme = ExtResource("2_d8cy2")
 script = ExtResource("3_l15ot")
+
+[node name="Library UI" parent="." instance=ExtResource("5_ptx08")]
+unique_name_in_owner = true
+
+[node name="Leaderboard" parent="." instance=ExtResource("6_svosm")]
 
 [connection signal="pressed" from="Library/Book Collection/Button4" to="Library/Book Collection/Button4" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection/Button5" to="Library/Book Collection/Button5" method="_on_pressed"]
