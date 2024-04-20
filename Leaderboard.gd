@@ -29,7 +29,7 @@ func change_player_name():
 	if development_mode: print("Changing player name")
 	
 	# use this variable for setting the name of the player
-	var player_name = $"Leaderboard Text/Name Entry".text
+	var player_name = %"Name Entry".text
 	
 	var data = { "name": str(player_name) }
 	var url =  "https://api.lootlocker.io/game/player/name"
@@ -165,7 +165,7 @@ func _on_leaderboard_request_completed(_result, _response_code, _headers, body):
 		
 		# Print the formatted leaderboard to the console
 		if development_mode: print("formatted leaderboard data\n", leaderboardFormatted)
-		$"Leaderboard Text".text = leaderboardFormatted
+		%"Leaderboard Text".text = leaderboardFormatted
 	# Clear node
 	leaderboard_http.queue_free()
 
