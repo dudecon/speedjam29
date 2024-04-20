@@ -1,10 +1,10 @@
 extends Button
 
 func _ready():
-	$"../Leaderboard Text".visible = false
+	$"../Leaderboard".visible = false
 	#$"../AccomplishedLabel".visible = false
 	
 func _toggled(toggled_on):
-	$"../Leaderboard Text".visible = toggled_on
+	$"../Leaderboard".visible = toggled_on
 	if toggled_on:
-		$".."._get_leaderboards()
+		$"../Leaderboard"._get_leaderboards()
