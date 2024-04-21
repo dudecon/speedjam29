@@ -104,19 +104,6 @@ class Book:
 
         return chapter
     
-    def generate_chapter_x(self, chapter_theme=None):
-        """Generates a single thought/chapter based on the theme."""
-        if chapter_theme is None:
-            chapter_theme = book_themes
-        # Select between 3 to 5 emojis from the chosen theme
-        item_num = random.choice(self.chapter_len)
-        max_num = len(themes[chapter_theme]) 
-        if max_num <= item_num:
-            item_num = max_num
-
-        chapter = random.sample(themes[chapter_theme], item_num)
-        return chapter
-    
     def generate_book(self, chapter_num=None):        
         if chapter_num is None:
             chapter_num = random.randint(2,6)
@@ -124,6 +111,7 @@ class Book:
         """Generates 2 to 6 thoughts/chapters for the book."""
         for _ in range(chapter_num):
             self.chapters.append(self.generate_chapter())
+        return self.chapters
 
     def print_book(self):
         print(''.join(self.book_themes) + '\n')
@@ -132,8 +120,14 @@ class Book:
             print(''.join(chapter))
         print('\n')
 
-for i in range(20):
-    Book().print_book()
+    def get_chapters(self):
+        return self.chapters
+
+    def get_book_themes(self):
+        return self.book_themes
+
+# for i in range(20):
+#     Book().print_book()
 
 
 
