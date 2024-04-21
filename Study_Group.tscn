@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxs07yer7bvtc"]
+
+[ext_resource type="Texture2D" uid="uid://d03q3i47jy1td" path="res://tehcr33d_6_high_schooler_archetypes_sitting_at_a_lunch_table_jo_e3fb4566-4f05-4203-b485-852823ba0b58.png" id="1_tl7oh"]
+
+[sub_resource type="Shortcut" id="Shortcut_hqxld"]
+
+[node name="Social1" type="Node2D"]
+
+[node name="Study_Group" type="Sprite2D" parent="."]
+position = Vector2(1286, 768)
+scale = Vector2(1.67891, 1.75674)
+texture = ExtResource("1_tl7oh")
+
+[node name="Chad" type="Button" parent="Study_Group"]
+offset_left = -554.0
+offset_top = -248.0
+offset_right = -369.0
+offset_bottom = -47.0001
+shortcut = SubResource("Shortcut_hqxld")
+
+[node name="Stacy" type="Button" parent="Study_Group"]
+offset_left = -365.0
+offset_top = -182.0
+offset_right = -357.0
+offset_bottom = -154.0
+scale = Vector2(15.4617, 6.19143)
+
+[node name="Gewn" type="Button" parent="Study_Group"]
+offset_left = -177.496
+offset_top = -238.51
+offset_right = -169.496
+offset_bottom = -210.51
+scale = Vector2(15.4617, 6.19143)
+
+[node name="Social_Cards" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Social_Cards"]
+layout_mode = 0
+offset_left = 1147.0
+offset_top = 1158.0
+offset_right = 1434.0
+offset_bottom = 1445.0
