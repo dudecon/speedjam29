@@ -130,7 +130,7 @@ func _on_authentication_request_completed(_result, _response_code, _headers, bod
 
 func _get_leaderboards():
 	if development_mode: print("Getting leaderboards")
-	var url = "https://api.lootlocker.io/game/leaderboards/"+leaderboard_key+"/list?count=10"
+	var url = "https://api.lootlocker.io/game/leaderboards/"+leaderboard_key+"/list?count=11"
 	var headers = ["Content-Type: application/json", "x-session-token:"+session_token]
 	
 	# Create a request node for getting the highscore
@@ -155,12 +155,19 @@ func _on_leaderboard_request_completed(_result, _response_code, _headers, body):
 		# Formatting as a leaderboard
 		var leaderboardFormatted = ""
 		if json.items != null:
+			var nopadname = ""
+			var rank = -1
 			for n in json.items.size():
-				leaderboardFormatted += str(json.items[n].rank)+str(". ")
+				rank = str(json.items[n].rank)
+				if int(rank) < 10: rank = " " + rank
+				leaderboardFormatted += rank+str(": ")
 				if json.items[n].player.name == "":
-					leaderboardFormatted += str(json.items[n].player.id)+str(" - ")
+					nopadname = str(json.items[n].player.id)
 				else:
-					leaderboardFormatted += str(json.items[n].player.name)+str(" - ")
+					nopadname = str(json.items[n].player.name)
+				for i in range(26 - len(nopadname)):
+					nopadname += "-"
+				leaderboardFormatted += nopadname+str(" - ")
 				leaderboardFormatted += str(json.items[n].score)+str("\n")
 		
 		# Print the formatted leaderboard to the console

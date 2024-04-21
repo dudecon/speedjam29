@@ -15,6 +15,7 @@ config/description="A game about solving riddles and hidden object puzzles"
 run/main_scene="res://Puzzle1.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+gui/theme/custom="default_theme.tres"
 
 [autoload]
 

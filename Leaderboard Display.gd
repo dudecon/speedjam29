@@ -6,7 +6,7 @@ func _ready():
 
 func _toggled(toggled_on):
 	if toggled_on:
-		%LeaderDisplay.target_height = 500
+		%LeaderDisplay.target_height = 660
 		%LeaderDisplay.target_alpha = 1.0
 		%Leaderboard.visible = true
 		%Leaderboard._get_leaderboards()

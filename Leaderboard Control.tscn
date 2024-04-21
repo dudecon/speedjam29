@@ -1,11 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://ukt2dai804xx"]
+[gd_scene load_steps=14 format=3 uid="uid://ukt2dai804xx"]
 
+[ext_resource type="Theme" uid="uid://c4knut3ejgm3h" path="res://default_theme.tres" id="1_1q4k8"]
 [ext_resource type="Script" path="res://Leaderboard.gd" id="1_oftcf"]
 [ext_resource type="Script" path="res://Leaderboard Name Entry.gd" id="2_84p6p"]
 [ext_resource type="Script" path="res://LeaderDisplay.gd" id="2_clybt"]
 [ext_resource type="Texture2D" uid="uid://2l8ov7w8jh56" path="res://baroque_golden_filigree_frame.jpg" id="2_csbqg"]
+[ext_resource type="Texture2D" uid="uid://cbqpk1tmluxx" path="res://EmptyFrame.png" id="3_5y4pb"]
 [ext_resource type="Script" path="res://Leaderboard Submit.gd" id="3_igrs1"]
 [ext_resource type="Script" path="res://Leaderboard Display.gd" id="4_hyhe4"]
+[ext_resource type="FontFile" uid="uid://d1y4hftmvewfn" path="res://XanhMono-Regular.ttf" id="4_uvoik"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nurqh"]
+bg_color = Color(0.407843, 0.380392, 0.0941176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_koede"]
+bg_color = Color(0.803922, 0.752941, 0.227451, 1)
 
 [sub_resource type="InputEventKey" id="InputEventKey_h0n01"]
 keycode = 76
@@ -20,6 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_1q4k8")
 
 [node name="Leaderboard" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
@@ -30,71 +40,81 @@ script = ExtResource("1_oftcf")
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.803922)
 clip_contents = true
-offset_right = 729.0
-offset_bottom = 505.0
+offset_right = 949.0
+offset_bottom = 661.0
 color = Color(1, 1, 1, 0)
 script = ExtResource("2_clybt")
 
 [node name="BaroqueGoldenFiligreeFrame" type="Sprite2D" parent="Leaderboard/LeaderDisplay"]
 modulate = Color(0.780392, 0.772549, 0, 0.858824)
-position = Vector2(357, 253)
+position = Vector2(463.526, 325.75)
+scale = Vector2(1.12216, 0.906566)
 texture = ExtResource("2_csbqg")
+region_enabled = true
+region_rect = Rect2(20, 0, 573, 396)
 
 [node name="Leaderboard Text" type="RichTextLabel" parent="Leaderboard/LeaderDisplay"]
 unique_name_in_owner = true
 clip_contents = false
 layout_mode = 2
-offset_left = 56.0
-offset_top = 74.0
-offset_right = 505.0
-offset_bottom = 433.0
+offset_left = 168.026
+offset_top = 160.25
+offset_right = 649.026
+offset_bottom = 490.25
 mouse_filter = 2
+theme = ExtResource("1_1q4k8")
+theme_override_colors/default_color = Color(0.929412, 0.937255, 0.764706, 1)
+theme_override_fonts/normal_font = ExtResource("4_uvoik")
 theme_override_font_sizes/normal_font_size = 24
-text = "1. Fetching leaderboard info      - 0000
-2 Please stand by
-3
-4
-5
-6
-7
-8
-9
-10"
+text = " 1. Fetching leaderboard info - 0000
+ 2 Please stand by
+ 3 downloading?
+ 4 
+ 5
+ 6 
+ 7
+ 8
+ 9
+10
+goes up to 11 "
+scroll_active = false
+autowrap_mode = 0
 
 [node name="Name Entry" type="LineEdit" parent="Leaderboard/LeaderDisplay/Leaderboard Text"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 487.0
-offset_top = 26.0
-offset_right = 589.0
-offset_bottom = 57.0
-max_length = 24
+offset_top = 33.0
+offset_right = 609.0
+offset_bottom = 66.0
+max_length = 26
 script = ExtResource("2_84p6p")
 
 [node name="Label" type="Label" parent="Leaderboard/LeaderDisplay/Leaderboard Text/Name Entry"]
 layout_mode = 0
-offset_left = 26.0
-offset_top = -31.0
-offset_right = 69.0
-offset_bottom = -8.0
+offset_left = 36.9745
+offset_top = -31.25
+offset_right = 79.9745
+offset_bottom = -6.25003
 text = "Name"
 
 [node name="Submit" type="Button" parent="Leaderboard/LeaderDisplay/Leaderboard Text"]
 layout_mode = 0
-offset_left = 486.0
-offset_top = 100.0
-offset_right = 549.0
-offset_bottom = 131.0
-text = "Submit"
+offset_left = 488.0
+offset_top = 125.0
+offset_right = 600.0
+offset_bottom = 186.0
+text = "Submit
+Score"
 script = ExtResource("3_igrs1")
 
 [node name="SpinBox" type="SpinBox" parent="Leaderboard/LeaderDisplay/Leaderboard Text/Submit"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = -6.0
-offset_top = 86.0
-offset_right = 77.0625
-offset_bottom = 117.0
+offset_left = 12.9745
+offset_top = 130.75
+offset_right = 96.037
+offset_bottom = 163.75
 max_value = 9001.0
 value = 50.0
 
@@ -106,12 +126,19 @@ offset_right = 51.0
 offset_bottom = -5.0
 text = "Score"
 
+[node name="EmptyFrame" type="Sprite2D" parent="Leaderboard/LeaderDisplay"]
+position = Vector2(464.025, 307.25)
+scale = Vector2(0.747567, 0.747567)
+texture = ExtResource("3_5y4pb")
+
 [node name="LeaderDisplayButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 959.0
-offset_top = 15.0
-offset_right = 1127.0
-offset_bottom = 46.0
+offset_left = 937.0
+offset_top = 17.0
+offset_right = 1135.0
+offset_bottom = 50.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_nurqh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_koede")
 toggle_mode = true
 shortcut = SubResource("Shortcut_td48o")
 text = "Display Leaderboard"

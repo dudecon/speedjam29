@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=21 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://cyrhomw7eh4tv" path="res://open_book_01.png" id="1_6sdj3"]
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://wupsy27npfbd" path="res://open_book_06.png" id="6_ok38s"]
 [ext_resource type="PackedScene" uid="uid://ukt2dai804xx" path="res://Leaderboard Control.tscn" id="6_svosm"]
 [ext_resource type="Script" path="res://ReadBook.gd" id="7_34xcq"]
+[ext_resource type="Script" path="res://Book Collection.gd" id="9_uv7ar"]
 [ext_resource type="Script" path="res://OpenBook.gd" id="14_wvnwt"]
 [ext_resource type="Script" path="res://BookOpener.gd" id="14_xc8uf"]
 [ext_resource type="FontFile" uid="uid://dyqxga5rynpup" path="res://NotoEmoji-VariableFont_wght.ttf" id="16_qxkyd"]
@@ -67,6 +68,7 @@ offset_left = -211.0
 offset_top = -81.0
 offset_right = -134.0
 offset_bottom = -47.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection"]
 layout_mode = 0
@@ -137,6 +139,7 @@ offset_left = -217.0
 offset_top = -125.0
 offset_right = -140.0
 offset_bottom = -82.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection2"]
 layout_mode = 0
@@ -217,6 +220,7 @@ offset_left = -219.0
 offset_top = -165.0
 offset_right = -127.0
 offset_bottom = -127.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection3"]
 layout_mode = 0
@@ -314,6 +318,7 @@ offset_left = -211.0
 offset_top = -41.0
 offset_right = -134.0
 offset_bottom = -7.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection4"]
 layout_mode = 0
@@ -383,6 +388,7 @@ offset_left = -211.0
 offset_top = -16.0
 offset_right = -122.0
 offset_bottom = 4.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection5"]
 layout_mode = 0
@@ -453,6 +459,7 @@ offset_left = -211.0
 offset_top = 8.0
 offset_right = -123.0
 offset_bottom = 39.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection6"]
 layout_mode = 0
@@ -533,6 +540,7 @@ offset_left = -59.0
 offset_top = -25.0
 offset_right = 16.0
 offset_bottom = -3.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection7"]
 layout_mode = 0
@@ -604,6 +612,7 @@ offset_left = -59.0
 offset_top = 3.0
 offset_right = 16.0
 offset_bottom = 25.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection8"]
 layout_mode = 0
@@ -675,6 +684,7 @@ offset_left = -58.0
 offset_top = -53.0
 offset_right = 17.0
 offset_bottom = -31.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection9"]
 layout_mode = 0
@@ -746,6 +756,7 @@ offset_left = -58.0
 offset_top = -84.0
 offset_right = 17.0
 offset_bottom = -62.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection10"]
 layout_mode = 0
@@ -817,6 +828,7 @@ offset_left = -359.0
 offset_top = -174.0
 offset_right = -220.0
 offset_bottom = -102.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection11"]
 layout_mode = 0
@@ -943,6 +955,7 @@ offset_left = -366.0
 offset_top = -96.0
 offset_right = -299.0
 offset_bottom = -63.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection12"]
 layout_mode = 0
@@ -1013,6 +1026,7 @@ offset_left = -294.0
 offset_top = -91.0
 offset_right = -216.0
 offset_bottom = -58.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection13"]
 layout_mode = 0
@@ -1091,6 +1105,7 @@ offset_left = -369.0
 offset_top = -62.0
 offset_right = -217.0
 offset_bottom = -26.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection14"]
 layout_mode = 0
@@ -1234,6 +1249,7 @@ offset_left = -368.0
 offset_top = -27.0
 offset_right = -216.0
 offset_bottom = 9.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection15"]
 layout_mode = 0
@@ -1350,6 +1366,7 @@ offset_left = -368.0
 offset_top = 12.0
 offset_right = -216.0
 offset_bottom = 48.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection16"]
 layout_mode = 0
@@ -1466,6 +1483,7 @@ offset_left = -324.0
 offset_top = -276.0
 offset_right = -189.0
 offset_bottom = -204.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection17"]
 layout_mode = 0
@@ -1601,6 +1619,7 @@ offset_left = -344.0
 offset_top = 64.0
 offset_right = -214.0
 offset_bottom = 110.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection18"]
 layout_mode = 0
@@ -1717,6 +1736,7 @@ offset_left = -344.0
 offset_top = 107.0
 offset_right = -214.0
 offset_bottom = 153.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection19"]
 layout_mode = 0
@@ -1823,6 +1843,7 @@ offset_left = -188.0
 offset_top = 58.0
 offset_right = -100.0
 offset_bottom = 89.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection20"]
 layout_mode = 0
@@ -1902,6 +1923,7 @@ offset_left = -188.0
 offset_top = 97.0
 offset_right = -113.0
 offset_bottom = 129.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection21"]
 layout_mode = 0
@@ -1983,6 +2005,7 @@ offset_left = -55.0
 offset_top = 58.0
 offset_right = -6.0
 offset_bottom = 90.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection22"]
 layout_mode = 0
@@ -2034,6 +2057,7 @@ offset_left = -54.0
 offset_top = 93.0
 offset_right = -5.0
 offset_bottom = 125.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection23"]
 layout_mode = 0
@@ -2085,6 +2109,7 @@ offset_left = 20.0
 offset_top = 66.0
 offset_right = 53.0
 offset_bottom = 98.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection24"]
 layout_mode = 0
@@ -2118,6 +2143,7 @@ offset_left = 10.0
 offset_top = 100.0
 offset_right = 43.0
 offset_bottom = 132.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection25"]
 layout_mode = 0
@@ -2160,6 +2186,7 @@ offset_left = 102.0
 offset_top = 66.0
 offset_right = 245.0
 offset_bottom = 115.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection26"]
 layout_mode = 0
@@ -2301,6 +2328,7 @@ offset_left = 103.0
 offset_top = 113.0
 offset_right = 246.0
 offset_bottom = 162.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection27"]
 layout_mode = 0
@@ -2442,6 +2470,7 @@ offset_left = 269.0
 offset_top = 90.0
 offset_right = 357.0
 offset_bottom = 140.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button5" type="Button" parent="Library/Book Collection28"]
 layout_mode = 0
@@ -2513,6 +2542,7 @@ offset_left = 267.0
 offset_top = 137.0
 offset_right = 355.0
 offset_bottom = 187.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button5" type="Button" parent="Library/Book Collection29"]
 layout_mode = 0
@@ -2584,6 +2614,7 @@ offset_left = 287.0
 offset_top = 15.0
 offset_right = 370.0
 offset_bottom = 64.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection30"]
 layout_mode = 0
@@ -2660,6 +2691,7 @@ offset_left = 379.0
 offset_top = 99.0
 offset_right = 628.0
 offset_bottom = 174.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button5" type="Button" parent="Library/Book Collection31"]
 layout_mode = 0
@@ -2857,6 +2889,7 @@ offset_left = 387.0
 offset_top = 163.0
 offset_right = 636.0
 offset_bottom = 238.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button5" type="Button" parent="Library/Book Collection32"]
 layout_mode = 1
@@ -3041,6 +3074,7 @@ offset_left = 404.0
 offset_top = -19.0
 offset_right = 631.0
 offset_bottom = 20.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection33"]
 layout_mode = 0
@@ -3225,6 +3259,7 @@ offset_left = 404.0
 offset_top = 26.0
 offset_right = 629.0
 offset_bottom = 91.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection34"]
 layout_mode = 0
@@ -3331,6 +3366,7 @@ offset_left = 409.0
 offset_top = -73.0
 offset_right = 726.0
 offset_bottom = -34.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button4" type="Button" parent="Library/Book Collection35"]
 layout_mode = 0
@@ -3520,6 +3556,7 @@ offset_left = 413.0
 offset_top = -123.0
 offset_right = 730.0
 offset_bottom = -84.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button10" type="Button" parent="Library/Book Collection36"]
 layout_mode = 0
@@ -3662,6 +3699,7 @@ offset_left = 413.0
 offset_top = -204.0
 offset_right = 633.0
 offset_bottom = -141.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button10" type="Button" parent="Library/Book Collection37"]
 layout_mode = 0
@@ -3823,6 +3861,7 @@ offset_left = 414.0
 offset_top = -264.0
 offset_right = 634.0
 offset_bottom = -201.0
+script = ExtResource("9_uv7ar")
 
 [node name="Button10" type="Button" parent="Library/Book Collection38"]
 layout_mode = 0
@@ -3916,7 +3955,7 @@ script = ExtResource("3_l15ot")
 
 [node name="BookSpines" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(475, 550)
+position = Vector2(486, 566)
 texture = ExtResource("5_jpf2q")
 region_enabled = true
 region_rect = Rect2(-0.025, 0, 507, 167)
@@ -3954,25 +3993,26 @@ script = ExtResource("7_34xcq")
 
 [node name="BookOpener" type="ColorRect" parent="."]
 unique_name_in_owner = true
+visible = false
 clip_contents = true
 offset_left = 148.0
 offset_top = 21.0
 offset_right = 1170.0
-offset_bottom = 644.0
+offset_bottom = 534.0
 color = Color(0, 0, 0, 0)
 script = ExtResource("14_xc8uf")
 
 [node name="OpenBook" type="Sprite2D" parent="BookOpener"]
-position = Vector2(508, 305)
+position = Vector2(420, 259)
 texture = ExtResource("1_6sdj3")
 script = ExtResource("14_wvnwt")
 
 [node name="Label" type="Label" parent="BookOpener"]
 layout_mode = 0
-offset_left = 255.0
-offset_top = 107.0
-offset_right = 799.0
-offset_bottom = 516.0
+offset_left = 167.0
+offset_top = 61.0
+offset_right = 711.0
+offset_bottom = 470.0
 theme_override_colors/font_color = Color(0.188235, 0.235294, 0.243137, 1)
 theme_override_colors/font_outline_color = Color(0.831373, 0.698039, 0.541176, 1)
 theme_override_constants/outline_size = 11
@@ -3990,10 +4030,11 @@ autowrap_mode = 3
 
 [node name="LockBookContents" type="Button" parent="BookOpener"]
 modulate = Color(1, 1, 1, 0.160784)
-offset_left = 285.0
-offset_top = 152.0
-offset_right = 772.0
-offset_bottom = 468.0
+layout_mode = 0
+offset_left = 197.0
+offset_top = 106.0
+offset_right = 684.0
+offset_bottom = 422.0
 tooltip_text = "study book"
 script = ExtResource("17_kdugo")
 
