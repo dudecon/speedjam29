@@ -67,11 +67,13 @@ var available_themes = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("library ready")
+	#print("library ready")
 	total_books = 0
 	for shelf in get_children():
 		total_books += shelf.get_child_count()
 	_set_book_visibility()
+	#print("num available ",len(available_themes))
+	#print("num used ",len(used_themes))
 
 func _set_book_visibility(target_visible = 0):
 	if len(all_books) != len(visible_books) + len(invisible_books):

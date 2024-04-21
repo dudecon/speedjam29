@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=22 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://cyrhomw7eh4tv" path="res://open_book_01.png" id="1_6sdj3"]
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" path="res://BookOpener.gd" id="14_xc8uf"]
 [ext_resource type="FontFile" uid="uid://dyqxga5rynpup" path="res://NotoEmoji-VariableFont_wght.ttf" id="16_qxkyd"]
 [ext_resource type="Script" path="res://LockBookContents.gd" id="17_kdugo"]
+[ext_resource type="Theme" uid="uid://c4knut3ejgm3h" path="res://default_theme.tres" id="20_any22"]
 
 [node name="Puzzle1" type="Node2D"]
 
@@ -3349,6 +3350,7 @@ clip_children = 2
 position = Vector2(-6.10352e-05, 3.05176e-05)
 color = Color(1, 0.352941, 0.270588, 0.360784)
 polygon = PackedVector2Array(71, -1, 97, -2, 111, 0, 116, 4, 124, 1, 137, 1, 154, 4, 171, 10, 162, 57, 115, 53, 111, 49, 106, 52, 56, 48)
+script = ExtResource("9_uv7ar")
 
 [node name="Button12" type="Button" parent="Library/Book Collection34/Polygon2D"]
 offset_left = 60.0
@@ -4047,21 +4049,22 @@ offset_left = 360.0
 offset_top = 10.0
 offset_right = 592.0
 offset_bottom = 136.0
+theme = ExtResource("20_any22")
 
 [node name="ColorRect" type="ColorRect" parent="Library Controls"]
 layout_mode = 0
 offset_left = -346.0
 offset_top = 590.0
-offset_right = -195.0
+offset_right = -160.0
 offset_bottom = 631.0
 color = Color(0.152941, 0.152941, 0.152941, 0.494118)
 
 [node name="book count label" type="Label" parent="Library Controls/ColorRect"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 102.0
+offset_left = 120.0
 offset_top = 7.0
-offset_right = 145.0
+offset_right = 163.0
 offset_bottom = 37.0
 text = "0"
 script = ExtResource("6_c2rq3")

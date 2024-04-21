@@ -15,8 +15,13 @@ var inside_texture
 func title_gen():
 	var num_chars = [1,1,2,2,2,2,2,3,3,4,5].pick_random()
 	var gtitle = ""
+	var other_themes = %Library.THEMES.keys() + %Library.available_themes
+	#print(other_themes)
 	for i in num_chars:
-		gtitle = gtitle + %Library.THEMES.keys().pick_random()
+		if i == 0:
+			gtitle += $"..".shelf_theme
+		else:
+			gtitle += other_themes.pick_random()
 	return gtitle
 
 
@@ -53,6 +58,7 @@ func _ready():
 
 func _read_the_book():
 	%BookSpines._set_spine(spine_y, spine_color, title, $".")
+	%BookSpines.countdown += 4
 	if times_read == 0:
 		%"book count label"._update_count(1)
 	modulate = Color(0,1,0,.8)
