@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8r8g24ml6xay"
+path="res://.godot/imported/Whispers in the Shadows Start.mp3-aec82f27ac1c9b0d5a6cd01407fb896a.mp3str"
+
+[deps]
+
+source_file="res://Whispers in the Shadows Start.mp3"
+dest_files=["res://.godot/imported/Whispers in the Shadows Start.mp3-aec82f27ac1c9b0d5a6cd01407fb896a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
