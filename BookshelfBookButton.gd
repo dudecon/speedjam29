@@ -58,7 +58,7 @@ func _ready():
 
 func _read_the_book():
 	%BookSpines._set_spine(spine_y, spine_color, title, $".")
-	%BookSpines.countdown += 4
+	%BookSpines.countdown = 8
 	if times_read == 0:
 		%"book count label"._update_count(1)
 	modulate = Color(0,1,0,.8)
@@ -66,6 +66,7 @@ func _read_the_book():
 		contents = content_gen()
 	%BookOpener._open_book(contents)
 	times_read += 1
+	%Social._add_to_known(contents)
 
 func _study_book_contents():
 	times_studied += 1
@@ -78,6 +79,7 @@ func _on_pressed():
 		spine_y = %BookSpines.yvals.pick_random()
 		spine_color = Color(randf_range(.5,1),randf_range(.5,1),randf_range(.5,1))
 		title = title_gen()
+		%BookSpines.countdown = 4
 	%BookSpines._set_spine(spine_y, spine_color, title, $".")
 	
 	

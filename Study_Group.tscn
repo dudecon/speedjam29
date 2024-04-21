@@ -1,6 +1,33 @@
-[gd_scene load_steps=16 format=3 uid="uid://bxs07yer7bvtc"]
+[gd_scene load_steps=23 format=3 uid="uid://bxdwuk6jrfu0c"]
 
+[ext_resource type="Script" path="res://Study_Group.gd" id="1_r0edu"]
 [ext_resource type="Texture2D" uid="uid://d03q3i47jy1td" path="res://tehcr33d_6_high_schooler_archetypes_sitting_at_a_lunch_table_jo_e3fb4566-4f05-4203-b485-852823ba0b58.png" id="1_tl7oh"]
+[ext_resource type="Script" path="res://Social_target.gd" id="3_3h75m"]
+[ext_resource type="Theme" uid="uid://k122kqdoda5o" path="res://bookbuttons.tres" id="3_s2b88"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c06w7"]
+bg_color = Color(0.419608, 0.478431, 0.247059, 0.427451)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.12549, 0.619608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_llhml"]
+bg_color = Color(0.815686, 0.513726, 0.380392, 0.392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7p1t"]
+bg_color = Color(0.933333, 0.552941, 0.270588, 0.25098)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.752941, 0.776471, 0, 1)
+
+[sub_resource type="Theme" id="Theme_qojja"]
+Button/styles/focus = SubResource("StyleBoxFlat_c06w7")
+Button/styles/hover = SubResource("StyleBoxFlat_llhml")
+Button/styles/normal = SubResource("StyleBoxFlat_h7p1t")
 
 [sub_resource type="InputEventKey" id="InputEventKey_g4fnp"]
 device = -1
@@ -59,37 +86,83 @@ unicode = 114
 events = [SubResource("InputEventKey_ko7bf")]
 
 [node name="Social1" type="Node2D"]
+script = ExtResource("1_r0edu")
+
+[node name="MouseBlocker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = -10.0
+offset_right = 1160.0
+offset_bottom = 656.0
 
 [node name="Study_Group" type="Sprite2D" parent="."]
 position = Vector2(532, 305)
 scale = Vector2(0.615813, 0.643842)
 texture = ExtResource("1_tl7oh")
 
-[node name="Chad_target" type="Button" parent="Study_Group"]
-offset_left = -558.611
-offset_top = -262.487
-offset_right = -546.611
-offset_bottom = -224.487
-scale = Vector2(15.4617, 6.19143)
+[node name="Social Buttons" type="Control" parent="Study_Group"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -604.0
+offset_top = -298.0
+offset_right = 642.0
+offset_bottom = 50.0
+theme = SubResource("Theme_qojja")
+
+[node name="Chad_target" type="Button" parent="Study_Group/Social Buttons"]
+offset_left = 45.0
+offset_top = 36.0
+offset_right = 228.0
+offset_bottom = 275.0
 toggle_mode = true
 shortcut = SubResource("Shortcut_2hwp3")
+script = ExtResource("3_3h75m")
 
-[node name="Stacy_target" type="Button" parent="Study_Group"]
-offset_left = -372.0
-offset_top = -171.0
-offset_right = -245.0
-offset_bottom = -5.0
+[node name="Stacy_target" type="Button" parent="Study_Group/Social Buttons"]
+offset_left = 232.079
+offset_top = 127.21
+offset_right = 359.079
+offset_bottom = 293.21
 toggle_mode = true
 shortcut = SubResource("Shortcut_gd6iv")
+script = ExtResource("3_3h75m")
 
-[node name="Gewn_target" type="Button" parent="Study_Group"]
-offset_left = -177.496
-offset_top = -238.51
-offset_right = -169.496
-offset_bottom = -210.51
-scale = Vector2(15.4617, 6.19143)
+[node name="Gewn_target" type="Button" parent="Study_Group/Social Buttons"]
+offset_left = 427.0
+offset_top = 60.0
+offset_right = 552.0
+offset_bottom = 227.0
 toggle_mode = true
 shortcut = SubResource("Shortcut_au6i3")
+script = ExtResource("3_3h75m")
+
+[node name="Beta_target" type="Button" parent="Study_Group/Social Buttons"]
+offset_left = 632.0
+offset_top = 76.0
+offset_right = 790.0
+offset_bottom = 267.0
+toggle_mode = true
+shortcut = SubResource("Shortcut_2hwp3")
+script = ExtResource("3_3h75m")
+
+[node name="Karen_target" type="Button" parent="Study_Group/Social Buttons"]
+offset_left = 826.0
+offset_top = 93.0
+offset_right = 962.0
+offset_bottom = 301.0
+toggle_mode = true
+shortcut = SubResource("Shortcut_au6i3")
+script = ExtResource("3_3h75m")
+
+[node name="Violet_target" type="Button" parent="Study_Group/Social Buttons"]
+offset_left = 964.499
+offset_top = 19.9815
+offset_right = 1162.5
+offset_bottom = 279.981
+toggle_mode = true
+shortcut = SubResource("Shortcut_au6i3")
+script = ExtResource("3_3h75m")
 
 [node name="Social_Cards" type="Control" parent="."]
 layout_mode = 3
@@ -98,6 +171,7 @@ offset_left = 135.0
 offset_top = 444.0
 offset_right = 1019.0
 offset_bottom = 674.0
+theme = ExtResource("3_s2b88")
 
 [node name="Q_deck" type="Button" parent="Social_Cards"]
 layout_mode = 1
@@ -119,10 +193,10 @@ anchor_left = -0.152
 anchor_top = -1.93
 anchor_right = -0.152
 anchor_bottom = -1.93
-offset_left = 358.368
-offset_top = 435.9
-offset_right = 488.368
-offset_bottom = 618.9
+offset_left = 356.368
+offset_top = 429.9
+offset_right = 486.368
+offset_bottom = 612.9
 shortcut = SubResource("Shortcut_h6yio")
 
 [node name="E_deck" type="Button" parent="Social_Cards"]
@@ -133,9 +207,9 @@ anchor_top = -1.93
 anchor_right = -0.152
 anchor_bottom = -1.93
 offset_left = 560.368
-offset_top = 433.9
+offset_top = 428.9
 offset_right = 690.368
-offset_bottom = 616.9
+offset_bottom = 611.9
 shortcut = SubResource("Shortcut_d7jva")
 
 [node name="R_deck" type="Button" parent="Social_Cards"]
@@ -145,8 +219,8 @@ anchor_left = -0.152
 anchor_top = -1.93
 anchor_right = -0.152
 anchor_bottom = -1.93
-offset_left = 750.368
-offset_top = 432.9
-offset_right = 880.368
-offset_bottom = 615.9
+offset_left = 780.368
+offset_top = 427.9
+offset_right = 910.368
+offset_bottom = 610.9
 shortcut = SubResource("Shortcut_mgpjr")

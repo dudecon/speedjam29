@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=29 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://cyrhomw7eh4tv" path="res://open_book_01.png" id="1_6sdj3"]
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" path="res://BookOpener.gd" id="14_xc8uf"]
 [ext_resource type="FontFile" uid="uid://dyqxga5rynpup" path="res://NotoEmoji-VariableFont_wght.ttf" id="16_qxkyd"]
 [ext_resource type="Script" path="res://LockBookContents.gd" id="17_kdugo"]
+[ext_resource type="PackedScene" uid="uid://bxdwuk6jrfu0c" path="res://Study_Group.tscn" id="19_jldyb"]
 [ext_resource type="Theme" uid="uid://c4knut3ejgm3h" path="res://default_theme.tres" id="20_any22"]
 [ext_resource type="AudioStream" uid="uid://c0yxj23mqxs7i" path="res://The Pages Have Ears Cello.mp3" id="22_bpr7t"]
 [ext_resource type="AudioStream" uid="uid://8r8g24ml6xay" path="res://Whispers in the Shadows Start.mp3" id="23_knopl"]
@@ -4046,6 +4047,10 @@ offset_bottom = 422.0
 tooltip_text = "study book"
 script = ExtResource("17_kdugo")
 
+[node name="Social" parent="." instance=ExtResource("19_jldyb")]
+unique_name_in_owner = true
+visible = false
+
 [node name="Leaderboard" parent="." instance=ExtResource("6_svosm")]
 
 [node name="Library Controls" type="Control" parent="."]
@@ -4083,27 +4088,33 @@ offset_right = 98.0
 offset_bottom = 30.0
 text = "Books read:"
 
-[node name="Node" type="Node" parent="."]
+[node name="Music Library" type="Node" parent="."]
 
-[node name="Cello" type="AudioStreamPlayer" parent="Node"]
+[node name="Cello" type="AudioStreamPlayer" parent="Music Library"]
 stream = ExtResource("22_bpr7t")
 
-[node name="Whispers1" type="AudioStreamPlayer" parent="Node"]
+[node name="Whispers1" type="AudioStreamPlayer" parent="Music Library"]
 stream = ExtResource("23_knopl")
 volume_db = -17.086
 
-[node name="Whispers2" type="AudioStreamPlayer" parent="Node"]
+[node name="Whispers2" type="AudioStreamPlayer" parent="Music Library"]
 stream = ExtResource("24_3pfj5")
 
-[node name="StacksS" type="AudioStreamPlayer" parent="Node"]
+[node name="Pages" type="AudioStreamPlayer" parent="Music Library"]
+stream = ExtResource("22_bpr7t")
+volume_db = -15.6
+
+[node name="Music Social" type="Node" parent="."]
+
+[node name="StacksS" type="AudioStreamPlayer" parent="Music Social"]
 stream = ExtResource("25_sy36q")
 volume_db = -13.371
 
-[node name="StacksE1" type="AudioStreamPlayer" parent="Node"]
+[node name="StacksE1" type="AudioStreamPlayer" parent="Music Social/StacksS"]
 stream = ExtResource("26_g7yy1")
 volume_db = -13.371
 
-[node name="StacksE2" type="AudioStreamPlayer" parent="Node"]
+[node name="StacksE2" type="AudioStreamPlayer" parent="Music Social/StacksS"]
 stream = ExtResource("27_5oo3b")
 volume_db = -13.371
 

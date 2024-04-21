@@ -15,7 +15,6 @@ func _set_spine(s_y, s_color, title, book):
 	book_bind = book
 	$Label.text = title
 	visible = true
-	countdown = 4
 
 func _process(delta):
 	if visible:

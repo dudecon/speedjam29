@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ukt2dai804xx"]
+[gd_scene load_steps=18 format=3 uid="uid://ukt2dai804xx"]
 
 [ext_resource type="Theme" uid="uid://c4knut3ejgm3h" path="res://default_theme.tres" id="1_1q4k8"]
 [ext_resource type="Script" path="res://Leaderboard.gd" id="1_oftcf"]
@@ -9,18 +9,28 @@
 [ext_resource type="Script" path="res://Leaderboard Submit.gd" id="3_igrs1"]
 [ext_resource type="Script" path="res://Leaderboard Display.gd" id="4_hyhe4"]
 [ext_resource type="FontFile" uid="uid://d1y4hftmvewfn" path="res://XanhMono-Regular.ttf" id="4_uvoik"]
+[ext_resource type="Script" path="res://Restart.gd" id="10_yp3dt"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nurqh"]
-bg_color = Color(0.407843, 0.380392, 0.0941176, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1eji"]
+bg_color = Color(0.364706, 0, 0.0156863, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_koede"]
-bg_color = Color(0.803922, 0.752941, 0.227451, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbowt"]
+bg_color = Color(0.658824, 0, 0.054902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtydb"]
+bg_color = Color(0.584314, 0.584314, 0, 1)
 
 [sub_resource type="InputEventKey" id="InputEventKey_h0n01"]
 keycode = 76
 
 [sub_resource type="Shortcut" id="Shortcut_td48o"]
 events = [SubResource("InputEventKey_h0n01")]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nurqh"]
+bg_color = Color(0.407843, 0.380392, 0.0941176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_koede"]
+bg_color = Color(0.803922, 0.752941, 0.227451, 1)
 
 [node name="Leaderboard" type="Control"]
 layout_mode = 3
@@ -33,7 +43,6 @@ theme = ExtResource("1_1q4k8")
 
 [node name="Leaderboard" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
-visible = false
 script = ExtResource("1_oftcf")
 
 [node name="LeaderDisplay" type="ColorRect" parent="Leaderboard"]
@@ -131,8 +140,23 @@ position = Vector2(464.025, 307.25)
 scale = Vector2(0.747567, 0.747567)
 texture = ExtResource("3_5y4pb")
 
-[node name="LeaderDisplayButton" type="Button" parent="."]
-layout_mode = 0
+[node name="Top Level UI" type="CanvasLayer" parent="."]
+
+[node name="Restart" type="Button" parent="Top Level UI"]
+offset_left = 17.0
+offset_top = 13.0
+offset_right = 180.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.968627, 0.996078, 0.470588, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_f1eji")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fbowt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wtydb")
+toggle_mode = true
+shortcut = SubResource("Shortcut_td48o")
+text = "Restart Game"
+script = ExtResource("10_yp3dt")
+
+[node name="LeaderDisplayButton" type="Button" parent="Top Level UI"]
 offset_left = 937.0
 offset_top = 17.0
 offset_right = 1135.0
@@ -143,3 +167,5 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_td48o")
 text = "Display Leaderboard"
 script = ExtResource("4_hyhe4")
+
+[connection signal="pressed" from="Top Level UI/Restart" to="Top Level UI/Restart" method="_on_pressed"]
