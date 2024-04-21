@@ -15,7 +15,11 @@ func _ready():
 	countdown = 0
 
 func _open_book(contents):
-	$OpenBook.texture = $OpenBook.book_textures.pick_random().texture
+	if %BookSpines.book_bind.times_read == 0:
+		$OpenBook.texture = $OpenBook.book_textures.pick_random().texture
+		%BookSpines.book_bind.inside_texture = $OpenBook.texture
+	else:
+		$OpenBook.texture = %BookSpines.book_bind.inside_texture
 	visible = true
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	countdown = 5

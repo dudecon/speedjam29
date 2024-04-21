@@ -9,10 +9,11 @@ func _ready():
 	visible = false
 	countdown = 0
 
-func _set_spine(s_y,s_color, book):
+func _set_spine(s_y, s_color, title, book):
 	region_rect.position.y = s_y
 	modulate = s_color
 	book_bind = book
+	$Label.text = title
 	visible = true
 	countdown = 4
 

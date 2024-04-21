@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=20 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://cyrhomw7eh4tv" path="res://open_book_01.png" id="1_6sdj3"]
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" path="res://OpenBook.gd" id="14_wvnwt"]
 [ext_resource type="Script" path="res://BookOpener.gd" id="14_xc8uf"]
 [ext_resource type="FontFile" uid="uid://dyqxga5rynpup" path="res://NotoEmoji-VariableFont_wght.ttf" id="16_qxkyd"]
+[ext_resource type="Script" path="res://LockBookContents.gd" id="17_kdugo"]
 
 [node name="Puzzle1" type="Node2D"]
 
@@ -3987,6 +3988,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="LockBookContents" type="Button" parent="BookOpener"]
+modulate = Color(1, 1, 1, 0.160784)
+offset_left = 285.0
+offset_top = 152.0
+offset_right = 772.0
+offset_bottom = 468.0
+tooltip_text = "study book"
+script = ExtResource("17_kdugo")
+
 [node name="Leaderboard" parent="." instance=ExtResource("6_svosm")]
 
 [node name="Library Controls" type="Control" parent="."]
@@ -4418,3 +4428,4 @@ text = "Books read:"
 [connection signal="pressed" from="Library/Book Collection38/Button25" to="Library/Book Collection38/Button25" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection38/Button26" to="Library/Book Collection38/Button26" method="_on_pressed"]
 [connection signal="pressed" from="BookSpines/ReadBook" to="BookSpines/ReadBook" method="_on_pressed"]
+[connection signal="pressed" from="BookOpener/LockBookContents" to="BookOpener/LockBookContents" method="_on_pressed"]
