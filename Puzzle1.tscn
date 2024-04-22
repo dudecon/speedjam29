@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=34 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://cyrhomw7eh4tv" path="res://open_book_01.png" id="1_6sdj3"]
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
@@ -32,7 +32,6 @@
 [ext_resource type="AudioStream" uid="uid://b4876six5sy12" path="res://Whispers in the Stacks End 2.mp3" id="27_5oo3b"]
 [ext_resource type="AudioStream" uid="uid://bof2bhn8fcwqm" path="res://Let Me Escape.mp3" id="29_n1gjl"]
 [ext_resource type="AudioStream" uid="uid://5wlau70mblsk" path="res://The Pages Have Ears.mp3" id="31_7c0lm"]
-[ext_resource type="AudioStream" uid="uid://d23fh8dnyg3px" path="res://The Escape(2).mp3" id="33_okvel"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hw3k"]
 bg_color = Color(0.145098, 0.407843, 0.352941, 0.847059)
@@ -4222,12 +4221,6 @@ stream = ExtResource("24_3pfj5")
 [node name="Pages" type="AudioStreamPlayer" parent="Music/Music Library"]
 stream = ExtResource("31_7c0lm")
 volume_db = -15.6
-
-[node name="Music Escape" type="Node" parent="Music"]
-
-[node name="Escaped 1" type="AudioStreamPlayer" parent="Music/Music Escape"]
-stream = ExtResource("33_okvel")
-volume_db = -16.343
 
 [connection signal="pressed" from="Library/Book Collection2/Button4" to="Library/Book Collection2/Button4" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection2/Button5" to="Library/Book Collection2/Button5" method="_on_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ukt2dai804xx"]
+[gd_scene load_steps=22 format=3 uid="uid://ukt2dai804xx"]
 
 [ext_resource type="Theme" uid="uid://c4knut3ejgm3h" path="res://default_theme.tres" id="1_1q4k8"]
 [ext_resource type="Script" path="res://Leaderboard.gd" id="1_oftcf"]
@@ -12,6 +12,7 @@
 [ext_resource type="FontFile" uid="uid://d1y4hftmvewfn" path="res://XanhMono-Regular.ttf" id="4_uvoik"]
 [ext_resource type="Script" path="res://Restart.gd" id="10_yp3dt"]
 [ext_resource type="Script" path="res://Escape the game.gd" id="12_y00w8"]
+[ext_resource type="AudioStream" uid="uid://d23fh8dnyg3px" path="res://The Escape(2).mp3" id="13_frxrq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1eji"]
 bg_color = Color(0.364706, 0, 0.0156863, 1)
@@ -49,6 +50,7 @@ script = ExtResource("2_mfrp1")
 
 [node name="Leaderboard" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
+visible = false
 script = ExtResource("1_oftcf")
 
 [node name="LeaderDisplay" type="ColorRect" parent="Leaderboard"]
@@ -157,6 +159,12 @@ theme_override_font_sizes/font_size = 30
 text = "0000000"
 horizontal_alignment = 1
 
+[node name="EmptyFrame" type="Sprite2D" parent="Leaderboard/LeaderDisplay/Leaderboard Text/Submit"]
+show_behind_parent = true
+position = Vector2(50.224, 125)
+scale = Vector2(0.196782, 0.331509)
+texture = ExtResource("3_5y4pb")
+
 [node name="EmptyFrame" type="Sprite2D" parent="Leaderboard/LeaderDisplay"]
 position = Vector2(464.025, 307.25)
 scale = Vector2(0.747567, 0.747567)
@@ -202,6 +210,10 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_wxqpp")
 text = "Escape!"
 script = ExtResource("12_y00w8")
+
+[node name="Escaped 1" type="AudioStreamPlayer" parent="Top Level UI/Escape the game"]
+stream = ExtResource("13_frxrq")
+volume_db = -3.714
 
 [connection signal="text_changed" from="Leaderboard/LeaderDisplay/Leaderboard Text/Name Entry" to="Leaderboard/LeaderDisplay/Leaderboard Text/Name Entry" method="_on_text_changed"]
 [connection signal="pressed" from="Top Level UI/Restart" to="Top Level UI/Restart" method="_on_pressed"]
