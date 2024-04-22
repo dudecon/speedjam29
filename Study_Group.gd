@@ -90,7 +90,7 @@ func _add_to_conversation(stuff, character_name, increment = 1):
 	#print("converse",converse)
 	_update_social(-2)
 
-func _update_social(val=0, book_chng=-1):
+func _update_social(val=0, book_chng=0):
 	social_battery += val
 	social_books_locked += book_chng	
 	%"social energy".text = str(social_battery)
