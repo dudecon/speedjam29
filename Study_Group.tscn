@@ -110,7 +110,7 @@ unicode = 114
 [sub_resource type="Shortcut" id="Shortcut_mgpjr"]
 events = [SubResource("InputEventKey_ko7bf")]
 
-[node name="Social1" type="Node2D"]
+[node name="Social Root" type="Node2D"]
 script = ExtResource("1_r0edu")
 
 [node name="MouseBlocker" type="Control" parent="."]
@@ -211,12 +211,19 @@ anchor_left = -0.152
 anchor_top = -1.93
 anchor_right = -0.152
 anchor_bottom = -1.93
-offset_left = 150.368
-offset_top = 429.9
-offset_right = 280.368
-offset_bottom = 612.9
+offset_left = 263.368
+offset_top = 411.9
+offset_right = 393.368
+offset_bottom = 594.9
 shortcut = SubResource("Shortcut_od6py")
 script = ExtResource("5_886fx")
+
+[node name="CardBackground2" type="Sprite2D" parent="Social_Cards/Q_deck"]
+modulate = Color(1, 1, 1, 0.709804)
+show_behind_parent = true
+position = Vector2(64, 90.5)
+scale = Vector2(0.637931, 0.618903)
+texture = ExtResource("6_pvb86")
 
 [node name="W_deck" type="Button" parent="Social_Cards"]
 layout_mode = 1
@@ -225,11 +232,18 @@ anchor_left = -0.152
 anchor_top = -1.93
 anchor_right = -0.152
 anchor_bottom = -1.93
-offset_left = 356.368
-offset_top = 429.9
-offset_right = 486.368
-offset_bottom = 612.9
+offset_left = 496.368
+offset_top = 426.9
+offset_right = 626.368
+offset_bottom = 609.9
 shortcut = SubResource("Shortcut_nj50o")
+
+[node name="CardBackground4" type="Sprite2D" parent="Social_Cards/W_deck"]
+modulate = Color(1, 1, 1, 0.709804)
+show_behind_parent = true
+position = Vector2(64.5, 91)
+scale = Vector2(0.642241, 0.609756)
+texture = ExtResource("7_16no5")
 
 [node name="E_deck" type="Button" parent="Social_Cards"]
 layout_mode = 1
@@ -238,11 +252,18 @@ anchor_left = -0.152
 anchor_top = -1.93
 anchor_right = -0.152
 anchor_bottom = -1.93
-offset_left = 560.368
-offset_top = 428.9
-offset_right = 690.368
-offset_bottom = 611.9
+offset_left = 762.368
+offset_top = 393.9
+offset_right = 892.368
+offset_bottom = 576.9
 shortcut = SubResource("Shortcut_d7jva")
+
+[node name="CardBackground" type="Sprite2D" parent="Social_Cards/E_deck"]
+modulate = Color(1, 1, 1, 0.709804)
+show_behind_parent = true
+position = Vector2(64, 91)
+scale = Vector2(0.655172, 0.634146)
+texture = ExtResource("8_y8ru0")
 
 [node name="R_deck" type="Button" parent="Social_Cards"]
 layout_mode = 1
@@ -251,10 +272,17 @@ anchor_left = -0.152
 anchor_top = -1.93
 anchor_right = -0.152
 anchor_bottom = -1.93
-offset_left = 780.368
-offset_top = 427.9
-offset_right = 910.368
-offset_bottom = 610.9
+offset_left = 946.368
+offset_top = 341.9
+offset_right = 1076.37
+offset_bottom = 524.9
 shortcut = SubResource("Shortcut_mgpjr")
+
+[node name="CardBackground3" type="Sprite2D" parent="Social_Cards/R_deck"]
+modulate = Color(1, 1, 1, 0.709804)
+show_behind_parent = true
+position = Vector2(64.5, 91.5)
+scale = Vector2(0.650862, 0.625)
+texture = ExtResource("9_1n8is")
 
 [connection signal="pressed" from="Social_Cards/Q_deck" to="Social_Cards/Q_deck" method="_on_pressed"]

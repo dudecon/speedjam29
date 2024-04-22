@@ -2,11 +2,12 @@ extends Button
 
 
 func _getQchar():
-	pass
+	var latest = $".".owner.player_brain["latest"]
+	print(latest)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	text = ""
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,5 +16,5 @@ func _process(delta):
 
 
 func _on_pressed():
-	
-	pass # Replace with function body.
+	if text == "":
+		_getQchar()
