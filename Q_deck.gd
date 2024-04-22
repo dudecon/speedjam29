@@ -10,6 +10,7 @@ func _getQchar():
 	var latest = scene_root.player_brain["latest"]
 	if len(latest):
 		text = latest.pick_random()
+		scene_root._update_social(-SOCIAL_COST)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,7 +30,7 @@ func _pressed():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if countdown > 0:
+	if countdown > 0 and $".".owner.visible:
 		countdown -= delta
 		if countdown <= 0:
 			_getQchar()
