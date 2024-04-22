@@ -16,7 +16,7 @@ func _pressed():
 
 
 func can_escape():
-	if $".".owner.social_battery > 30: return false
+	if $".".owner.social_battery > 45: return false
 	var escapeable = true
 	for child in $"../Study_Group/Social Buttons".get_children():
 		if child.thoughts_exposed:
