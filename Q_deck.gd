@@ -22,6 +22,7 @@ func _pressed():
 		# do the conversation thing
 		text = ""
 		countdown = COOLDOWN
+		$"../..".social_battery -= 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

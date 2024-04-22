@@ -83,7 +83,7 @@ func _add_to_conversation(stuff, character_name, increment = 1):
 	while len(charconv) > memcap:
 		charconv.pop_front()
 	#print("converse",converse)
-	social_battery -= 1
+	social_battery -= 2
 	print("social battery ", social_battery)
 
 
