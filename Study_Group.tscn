@@ -1,10 +1,14 @@
-[gd_scene load_steps=30 format=3 uid="uid://bxdwuk6jrfu0c"]
+[gd_scene load_steps=34 format=3 uid="uid://bxdwuk6jrfu0c"]
 
 [ext_resource type="Script" path="res://Study_Group.gd" id="1_r0edu"]
 [ext_resource type="Texture2D" uid="uid://d03q3i47jy1td" path="res://tehcr33d_6_high_schooler_archetypes_sitting_at_a_lunch_table_jo_e3fb4566-4f05-4203-b485-852823ba0b58.png" id="1_tl7oh"]
 [ext_resource type="Script" path="res://Social_target.gd" id="3_3h75m"]
 [ext_resource type="Theme" uid="uid://k122kqdoda5o" path="res://bookbuttons.tres" id="3_s2b88"]
 [ext_resource type="Script" path="res://Q_deck.gd" id="5_886fx"]
+[ext_resource type="Texture2D" uid="uid://ducrhl06sd873" path="res://CardBackground2.jpg" id="6_pvb86"]
+[ext_resource type="Texture2D" uid="uid://btxg6i8f6v1j5" path="res://CardBackground4.jpg" id="7_16no5"]
+[ext_resource type="Texture2D" uid="uid://bcr2fs1s301aq" path="res://CardBackground.jpg" id="8_y8ru0"]
+[ext_resource type="Texture2D" uid="uid://b5dbdd3mbm1bk" path="res://CardBackground3.jpg" id="9_1n8is"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c06w7"]
 bg_color = Color(0.419608, 0.478431, 0.247059, 0.427451)
@@ -218,6 +222,12 @@ offset_bottom = 612.9
 shortcut = SubResource("Shortcut_od6py")
 script = ExtResource("5_886fx")
 
+[node name="CardBackground2" type="Sprite2D" parent="Social_Cards/Q_deck"]
+show_behind_parent = true
+position = Vector2(64, 90.5)
+scale = Vector2(0.637931, 0.618903)
+texture = ExtResource("6_pvb86")
+
 [node name="W_deck" type="Button" parent="Social_Cards"]
 layout_mode = 1
 anchors_preset = -1
@@ -230,6 +240,12 @@ offset_top = 429.9
 offset_right = 486.368
 offset_bottom = 612.9
 shortcut = SubResource("Shortcut_nj50o")
+
+[node name="CardBackground4" type="Sprite2D" parent="Social_Cards/W_deck"]
+show_behind_parent = true
+position = Vector2(64.5, 91)
+scale = Vector2(0.642241, 0.609756)
+texture = ExtResource("7_16no5")
 
 [node name="E_deck" type="Button" parent="Social_Cards"]
 layout_mode = 1
@@ -244,6 +260,12 @@ offset_right = 690.368
 offset_bottom = 611.9
 shortcut = SubResource("Shortcut_d7jva")
 
+[node name="CardBackground" type="Sprite2D" parent="Social_Cards/E_deck"]
+show_behind_parent = true
+position = Vector2(64, 91)
+scale = Vector2(0.655172, 0.634146)
+texture = ExtResource("8_y8ru0")
+
 [node name="R_deck" type="Button" parent="Social_Cards"]
 layout_mode = 1
 anchors_preset = -1
@@ -256,5 +278,11 @@ offset_top = 427.9
 offset_right = 910.368
 offset_bottom = 610.9
 shortcut = SubResource("Shortcut_mgpjr")
+
+[node name="CardBackground3" type="Sprite2D" parent="Social_Cards/R_deck"]
+show_behind_parent = true
+position = Vector2(64.5, 91.5)
+scale = Vector2(0.650862, 0.625)
+texture = ExtResource("9_1n8is")
 
 [connection signal="pressed" from="Social_Cards/Q_deck" to="Social_Cards/Q_deck" method="_on_pressed"]
