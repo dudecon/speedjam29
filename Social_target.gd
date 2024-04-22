@@ -1,9 +1,13 @@
 extends Button
 
+var npc_social_brain
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# print(name)
+	print(name + "this node is ready")
+	
 	# name is used as the key for the social dictionary
 	pass # Replace with function body.
 
