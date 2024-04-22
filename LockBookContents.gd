@@ -6,5 +6,5 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _on_pressed():
+func _pressed():
 	%BookSpines.book_bind._study_book_contents()

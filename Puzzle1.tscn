@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=31 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://cyrhomw7eh4tv" path="res://open_book_01.png" id="1_6sdj3"]
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://bxdwuk6jrfu0c" path="res://Study_Group.tscn" id="19_jldyb"]
 [ext_resource type="Theme" uid="uid://c4knut3ejgm3h" path="res://default_theme.tres" id="20_any22"]
 [ext_resource type="AudioStream" uid="uid://c0yxj23mqxs7i" path="res://The Pages Have Ears Cello.mp3" id="22_bpr7t"]
+[ext_resource type="Script" path="res://Escape to Social.gd" id="23_d6h1p"]
 [ext_resource type="AudioStream" uid="uid://8r8g24ml6xay" path="res://Whispers in the Shadows Start.mp3" id="23_knopl"]
 [ext_resource type="AudioStream" uid="uid://y4klfdq68lxs" path="res://Whispers in the Shadows Second.mp3" id="24_3pfj5"]
 [ext_resource type="AudioStream" uid="uid://ce3okji8cls2p" path="res://Whispers in the Stacks Start.mp3" id="25_sy36q"]
@@ -4097,12 +4098,14 @@ offset_top = 205.0
 offset_right = -260.0
 offset_bottom = 452.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_7hw3k")
-disabled = true
+toggle_mode = true
+button_pressed = true
 text = "Escape
 to
 the
 Study
 Group"
+script = ExtResource("23_d6h1p")
 
 [node name="Music Library" type="Node" parent="."]
 
@@ -4529,4 +4532,3 @@ volume_db = -13.371
 [connection signal="pressed" from="Library/Book Collection38/Button25" to="Library/Book Collection38/Button25" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection38/Button26" to="Library/Book Collection38/Button26" method="_on_pressed"]
 [connection signal="pressed" from="BookSpines/ReadBook" to="BookSpines/ReadBook" method="_on_pressed"]
-[connection signal="pressed" from="BookOpener/LockBookContents" to="BookOpener/LockBookContents" method="_on_pressed"]
