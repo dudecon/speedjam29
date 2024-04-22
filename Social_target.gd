@@ -2,6 +2,8 @@ extends Button
 
 var npc_social_brain = {}
 
+var countdown
+
 var npc_social_content = {
 	"👨": ["🌱", "🌼", "🌿", "🍅", "🌷", "🏡", "👒"],  # Farmer
 	"👵": ["🥘", "🍲", "🥧", "🍳", "🍴", "🔪"],  # Chef
@@ -70,8 +72,9 @@ func _ready():
 	pass # Replace with function body.
 	
 
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func _pressed():
+	text = npc_social_brain[npc_social_brain.keys().pick_random()].pick_random()
