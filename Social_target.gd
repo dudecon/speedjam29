@@ -72,7 +72,7 @@ func _ready():
 	for i in range(3):
 		var new_topic = npc_social_content.keys().pick_random()
 		npc_social_brain[new_topic] = npc_social_content[new_topic]
-	print(npc_social_brain)
+	#print(npc_social_brain)
 	
 	# name is used as the key for the social dictionary
 	pass # Replace with function body.
@@ -84,14 +84,20 @@ func _toggled(toggled_on):
 	thoughts_exposed = toggled_on
 	
 func _pressed():
-	pass
+	if len(npc_active_thought) and thoughts_exposed:
+		_store_thought()
+	
+func _store_thought():
+	$".".owner._add_to_conversation(npc_active_thought, name, 2)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	countdown -= delta
 	if countdown < 0:
 		countdown = rng.randi_range(1,5)
-		npc_active_thought = generate_thought()	
+		npc_active_thought = generate_thought()
+		if thoughts_exposed:
+			_store_thought()
 	if thoughts_exposed:
 		text = npc_active_thought
 	else:

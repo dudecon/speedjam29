@@ -61,6 +61,22 @@ func _add_to_studied(stuff, increment = 1):
 		studied.pop_front()
 	#print("studied",studied)
 
+
+func _add_to_conversation(stuff, character_name, increment = 1):
+	stuff = stuff.replace("\n","")
+	_add_to_known(stuff, increment)
+	var converse = player_brain["converse"]
+	if character_name in converse:
+		converse[character_name].append(stuff)
+	else:
+		converse[character_name] = [stuff,]
+	var memcap = player_brain["mem_cap"]
+	var charconv = converse[character_name]
+	while len(charconv) > memcap:
+		charconv.pop_front()
+	print("converse",converse)
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
