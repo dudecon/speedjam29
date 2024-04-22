@@ -2,12 +2,12 @@ extends Button
 
 
 var countdown
-var COOLDOWN = 1
+var COOLDOWN = 2.618
 
 func _getEchars():
-	var latest = $".".owner.player_brain["known"].keys()
-	if len(latest):
-		text = latest.pick_random()
+	var read = $".".owner.player_brain["read"]
+	if len(read):
+		text = read.pick_random()
 	else:
 		countdown = COOLDOWN
 

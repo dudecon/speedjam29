@@ -4,9 +4,17 @@ var countdown
 var COOLDOWN = 1
 
 func _getWchar():
-	var latest = $".".owner.player_brain["known"].keys()
-	if len(latest):
-		text = latest.pick_random()
+	var convs_dict = $".".owner.player_brain["converse"]
+	var conversations = convs_dict.keys()
+	if len(conversations):
+		var valid_social = []
+		for social_nodes in conversations:
+			if social_nodes.thoughts_exposed:
+				valid_social.append(convs_dict[social_nodes])
+		if len(valid_social):
+			text = valid_social.pick_random().pick_random()
+		else:
+			countdown = COOLDOWN
 	else:
 		countdown = COOLDOWN
 

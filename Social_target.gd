@@ -79,17 +79,21 @@ func _ready():
 	
 func generate_thought():
 	return npc_social_brain[npc_social_brain.keys().pick_random()].pick_random()
-	
+
+
 func _toggled(toggled_on):
 	thoughts_exposed = toggled_on
-	
+
+
 func _pressed():
 	if len(npc_active_thought) and thoughts_exposed:
 		_store_thought()
-	
+
+
 func _store_thought():
-	$".".owner._add_to_conversation(npc_active_thought, name, 2)
-	
+	$".".owner._add_to_conversation(npc_active_thought, $".", 2)
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	countdown -= delta
