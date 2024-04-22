@@ -1,6 +1,11 @@
 extends Button
 
 var npc_social_brain = {}
+var npc_active_thought = ""
+var rng = RandomNumberGenerator.new()
+
+var thoughts_exposed = false
+
 
 var countdown
 
@@ -62,6 +67,7 @@ var npc_social_content = {
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# print(name)
+	countdown = rng.randi_range(1,5)
 	
 	for i in range(3):
 		var new_topic = npc_social_content.keys().pick_random()
@@ -71,10 +77,24 @@ func _ready():
 	# name is used as the key for the social dictionary
 	pass # Replace with function body.
 	
-
+func generate_thought():
+	return npc_social_brain[npc_social_brain.keys().pick_random()].pick_random()
+	
+func _toggled(toggled_on):
+	thoughts_exposed = toggled_on
+	
+func _pressed():
+	pass
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	countdown -= delta
+	if countdown < 0:
+		countdown = rng.randi_range(1,5)
+		npc_active_thought = generate_thought()	
+	if thoughts_exposed:
+		text = npc_active_thought
+	else:
+		text = ''
 	pass
 
-func _pressed():
-	text = npc_social_brain[npc_social_brain.keys().pick_random()].pick_random()
