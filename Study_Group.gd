@@ -13,20 +13,30 @@ func _ready():
 	"read"        : [],
 	"studied"     : [],
 	"converse"    : {},
-	"mem_cap"     : 2
+	"mem_cap"     : 4
 }
 
-func _add_to_known(stuff):
+func _add_to_known(stuff, increment = 1):
+	stuff = stuff.replace("\n","")
 	var known = player_brain["known"]
-	stuff.replace("\n","")
 	for c in stuff:
-		#if c == "\n": continue
 		if c in known:
-			known[c] += 1
+			known[c] += increment
 		else:
-			known[c] = 1
+			known[c] = increment
 	print(known)
 
+
+func _add_to_latest(stuff, increment = 1):
+	stuff = stuff.replace("\n","")
+	_add_to_known(stuff, increment)
+	var latest = player_brain["latest"]
+	var memcap = player_brain["mem_cap"]
+	for c in stuff:
+		latest.append(c)
+	while len(latest) > memcap:
+		latest.pop_front()
+	print(latest)
 
 
 

@@ -111,6 +111,7 @@ offset_bottom = 50.0
 theme = SubResource("Theme_qojja")
 
 [node name="Chad_target" type="Button" parent="Study_Group/Social Buttons"]
+layout_mode = 0
 offset_left = 45.0
 offset_top = 36.0
 offset_right = 228.0
@@ -120,6 +121,7 @@ shortcut = SubResource("Shortcut_2hwp3")
 script = ExtResource("3_3h75m")
 
 [node name="Stacy_target" type="Button" parent="Study_Group/Social Buttons"]
+layout_mode = 0
 offset_left = 232.079
 offset_top = 127.21
 offset_right = 359.079
@@ -129,6 +131,7 @@ shortcut = SubResource("Shortcut_gd6iv")
 script = ExtResource("3_3h75m")
 
 [node name="Gewn_target" type="Button" parent="Study_Group/Social Buttons"]
+layout_mode = 0
 offset_left = 427.0
 offset_top = 60.0
 offset_right = 552.0
@@ -138,6 +141,7 @@ shortcut = SubResource("Shortcut_au6i3")
 script = ExtResource("3_3h75m")
 
 [node name="Beta_target" type="Button" parent="Study_Group/Social Buttons"]
+layout_mode = 0
 offset_left = 632.0
 offset_top = 76.0
 offset_right = 790.0
@@ -147,6 +151,7 @@ shortcut = SubResource("Shortcut_2hwp3")
 script = ExtResource("3_3h75m")
 
 [node name="Karen_target" type="Button" parent="Study_Group/Social Buttons"]
+layout_mode = 0
 offset_left = 826.0
 offset_top = 93.0
 offset_right = 962.0
@@ -156,6 +161,7 @@ shortcut = SubResource("Shortcut_au6i3")
 script = ExtResource("3_3h75m")
 
 [node name="Violet_target" type="Button" parent="Study_Group/Social Buttons"]
+layout_mode = 0
 offset_left = 964.499
 offset_top = 19.9815
 offset_right = 1162.5

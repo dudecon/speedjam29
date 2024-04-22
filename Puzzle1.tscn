@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=30 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://cyrhomw7eh4tv" path="res://open_book_01.png" id="1_6sdj3"]
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
@@ -28,6 +28,9 @@
 [ext_resource type="AudioStream" uid="uid://ce3okji8cls2p" path="res://Whispers in the Stacks Start.mp3" id="25_sy36q"]
 [ext_resource type="AudioStream" uid="uid://clohgg6bm0rhg" path="res://Whispers in the Stacks End 1.mp3" id="26_g7yy1"]
 [ext_resource type="AudioStream" uid="uid://b4876six5sy12" path="res://Whispers in the Stacks End 2.mp3" id="27_5oo3b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hw3k"]
+bg_color = Color(0.145098, 0.407843, 0.352941, 0.847059)
 
 [node name="Puzzle1" type="Node2D"]
 
@@ -4087,6 +4090,20 @@ offset_top = 7.0
 offset_right = 98.0
 offset_bottom = 30.0
 text = "Books read:"
+
+[node name="Escape to Social" type="Button" parent="Library Controls"]
+layout_mode = 0
+offset_left = -351.0
+offset_top = 205.0
+offset_right = -260.0
+offset_bottom = 452.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7hw3k")
+disabled = true
+text = "Escape
+to
+the
+Study
+Group"
 
 [node name="Music Library" type="Node" parent="."]
 

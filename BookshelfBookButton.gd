@@ -50,11 +50,7 @@ func _ready():
 	times_studied = 0
 	modulate[3] = 0.4
 	inside_texture = 0
-	# 54 themes print(len(THEMES))
-	"""for s in THEMES.keys():
-		if len(s) != 1:
-			for c in s:
-				print(c)"""
+	
 
 func _read_the_book():
 	%BookSpines._set_spine(spine_y, spine_color, title, $".")
@@ -66,7 +62,7 @@ func _read_the_book():
 		contents = content_gen()
 	%BookOpener._open_book(contents)
 	times_read += 1
-	%Social._add_to_known(contents)
+	%Social._add_to_latest(contents)
 
 func _study_book_contents():
 	times_studied += 1

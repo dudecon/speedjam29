@@ -43,6 +43,7 @@ theme = ExtResource("1_1q4k8")
 
 [node name="Leaderboard" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
+visible = false
 script = ExtResource("1_oftcf")
 
 [node name="LeaderDisplay" type="ColorRect" parent="Leaderboard"]
