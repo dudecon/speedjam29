@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://x6klgu6xrpjj"]
+[gd_scene load_steps=39 format=3 uid="uid://x6klgu6xrpjj"]
 
 [ext_resource type="Texture2D" uid="uid://cyrhomw7eh4tv" path="res://open_book_01.png" id="1_6sdj3"]
 [ext_resource type="Texture2D" uid="uid://dmuvtxnp6kp2c" path="res://library.jpg" id="1_vr0u6"]
@@ -25,7 +25,9 @@
 [ext_resource type="AudioStream" uid="uid://c0yxj23mqxs7i" path="res://The Pages Have Ears Cello.mp3" id="22_bpr7t"]
 [ext_resource type="Script" path="res://Escape to Social.gd" id="23_d6h1p"]
 [ext_resource type="AudioStream" uid="uid://8r8g24ml6xay" path="res://Whispers in the Shadows Start.mp3" id="23_knopl"]
+[ext_resource type="FontFile" uid="uid://d1y4hftmvewfn" path="res://XanhMono-Regular.ttf" id="24_1gigy"]
 [ext_resource type="AudioStream" uid="uid://y4klfdq68lxs" path="res://Whispers in the Shadows Second.mp3" id="24_3pfj5"]
+[ext_resource type="Script" path="res://Help Button.gd" id="24_muhl7"]
 [ext_resource type="Script" path="res://Music.gd" id="25_awead"]
 [ext_resource type="AudioStream" uid="uid://ce3okji8cls2p" path="res://Whispers in the Stacks Start.mp3" id="25_sy36q"]
 [ext_resource type="AudioStream" uid="uid://clohgg6bm0rhg" path="res://Whispers in the Stacks End 1.mp3" id="26_g7yy1"]
@@ -35,6 +37,17 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hw3k"]
 bg_color = Color(0.145098, 0.407843, 0.352941, 0.847059)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7e2s"]
+bg_color = Color(0.87451, 0.027451, 0.0431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1upej"]
+bg_color = Color(0.258824, 0.258824, 0.258824, 0.780392)
+
+[sub_resource type="Theme" id="Theme_72x2w"]
+default_font = ExtResource("24_1gigy")
+default_font_size = 40
+Label/styles/normal = SubResource("StyleBoxFlat_1upej")
 
 [node name="Puzzle1" type="Node2D"]
 
@@ -4182,6 +4195,52 @@ to
 Study
 Group"
 script = ExtResource("23_d6h1p")
+
+[node name="Help Button" type="Button" parent="Library Controls"]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 547.0
+offset_right = 591.0
+offset_bottom = 629.0
+theme_override_colors/font_color = Color(0.0509804, 0, 0.2, 1)
+theme_override_font_sizes/font_size = 67
+theme_override_styles/normal = SubResource("StyleBoxFlat_a7e2s")
+toggle_mode = true
+text = "HELP!"
+script = ExtResource("24_muhl7")
+
+[node name="Control" type="Control" parent="Library Controls/Help Button"]
+visible = false
+anchors_preset = 0
+offset_left = -657.0
+offset_top = -554.0
+offset_right = 276.0
+offset_bottom = -11.0
+pivot_offset = Vector2(933, 271)
+theme = SubResource("Theme_72x2w")
+
+[node name="Label" type="Label" parent="Library Controls/Help Button/Control"]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 63.0
+offset_right = 804.0
+offset_bottom = 264.0
+text = "Welcome to 
+Symbolic Sentences!
+click on the books
+to get started"
+
+[node name="Label2" type="Label" parent="Library Controls/Help Button/Control"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 192.0
+offset_right = 376.0
+offset_bottom = 393.0
+rotation = -0.21725
+text = "when you've read
+enough, you can 
+escape to the
+study group"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_bpr7t")

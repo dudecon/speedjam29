@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bxdwuk6jrfu0c"]
+[gd_scene load_steps=45 format=3 uid="uid://bxdwuk6jrfu0c"]
 
 [ext_resource type="Script" path="res://Study_Group.gd" id="1_r0edu"]
 [ext_resource type="Texture2D" uid="uid://d03q3i47jy1td" path="res://tehcr33d_6_high_schooler_archetypes_sitting_at_a_lunch_table_jo_e3fb4566-4f05-4203-b485-852823ba0b58.png" id="1_tl7oh"]
@@ -14,6 +14,8 @@
 [ext_resource type="Script" path="res://E_deck.gd" id="10_5n4fq"]
 [ext_resource type="Script" path="res://R_deck.gd" id="12_kfljw"]
 [ext_resource type="Script" path="res://Escape to Library.gd" id="13_x0jv0"]
+[ext_resource type="Script" path="res://Help Button.gd" id="15_ssasj"]
+[ext_resource type="FontFile" uid="uid://d1y4hftmvewfn" path="res://XanhMono-Regular.ttf" id="16_l36am"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c06w7"]
 bg_color = Color(0.419608, 0.478431, 0.247059, 0.427451)
@@ -123,6 +125,17 @@ events = [SubResource("InputEventKey_ko7bf")]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8do1e"]
 bg_color = Color(0.145098, 0.407843, 0.352941, 0.847059)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3x2x"]
+bg_color = Color(0.87451, 0.027451, 0.0431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eqt24"]
+bg_color = Color(0.258824, 0.258824, 0.258824, 0.780392)
+
+[sub_resource type="Theme" id="Theme_v6ove"]
+default_font = ExtResource("16_l36am")
+default_font_size = 32
+Label/styles/normal = SubResource("StyleBoxFlat_eqt24")
 
 [node name="Social Root" type="Node2D"]
 script = ExtResource("1_r0edu")
@@ -326,6 +339,99 @@ text = "Escape
 to
 Library"
 script = ExtResource("13_x0jv0")
+
+[node name="Help Button" type="Button" parent="."]
+offset_left = 976.0
+offset_top = 560.0
+offset_right = 1146.0
+offset_bottom = 640.0
+theme_override_colors/font_color = Color(0.0509804, 0, 0.2, 1)
+theme_override_fonts/font = ExtResource("16_l36am")
+theme_override_font_sizes/font_size = 67
+theme_override_styles/normal = SubResource("StyleBoxFlat_l3x2x")
+toggle_mode = true
+text = "HELP!"
+script = ExtResource("15_ssasj")
+
+[node name="Control" type="Control" parent="Help Button"]
+visible = false
+anchors_preset = 0
+offset_left = -854.0
+offset_top = -570.0
+offset_right = 79.0
+offset_bottom = -27.0
+pivot_offset = Vector2(933, 271)
+theme = SubResource("Theme_v6ove")
+
+[node name="Label" type="Label" parent="Help Button/Control"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 57.0
+offset_right = 622.0
+offset_bottom = 106.0
+text = "This is the social game"
+
+[node name="Label2" type="Label" parent="Help Button/Control"]
+offset_left = 12.0
+offset_top = 133.0
+offset_right = 844.0
+offset_bottom = 259.0
+rotation = -0.048229
+text = "Click on the faces to toggle who you are talking to.
+The cards at the bottom are your options, which cost
+social points to use.
+"
+
+[node name="Label3" type="Label" parent="Help Button/Control"]
+offset_left = 105.0
+offset_top = 414.0
+offset_right = 313.0
+offset_bottom = 583.0
+text = "Random from
+all the emoji
+you've seen
+recently"
+
+[node name="Label4" type="Label" parent="Help Button/Control"]
+offset_left = 351.0
+offset_top = 432.0
+offset_right = 559.0
+offset_bottom = 601.0
+text = "Things
+the selected
+people have
+said recently"
+
+[node name="Label5" type="Label" parent="Help Button/Control"]
+offset_left = 585.0
+offset_top = 434.0
+offset_right = 777.0
+offset_bottom = 573.0
+text = "book chapter
+you read
+recently"
+
+[node name="Label6" type="Label" parent="Help Button/Control"]
+offset_left = 813.0
+offset_top = 367.0
+offset_right = 941.0
+offset_bottom = 493.0
+text = "book you
+studied
+recently"
+
+[node name="Label7" type="Label" parent="Help Button/Control"]
+offset_left = -66.0
+offset_top = 264.0
+offset_right = 1166.0
+offset_bottom = 476.0
+rotation = 0.0027337
+scale = Vector2(0.703589, 0.714447)
+text = "Each character has a vocabulary and three independent conversation stages.
+The first two stages give points for emoji in their vocabulary, and penalties
+for emoji not in their vocabulary. The third stage is the opposite.
+Complete all three stages for all six characters
+to escape this horrible clique! Good luck!"
 
 [connection signal="toggled" from="Study_Group/Social Buttons/Chad_target" to="Escape to Library" method="_on_chad_target_toggled"]
 [connection signal="toggled" from="Study_Group/Social Buttons/Stacy_target" to="Escape to Library" method="_on_stacy_target_toggled"]

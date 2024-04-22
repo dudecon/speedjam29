@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Riddle Rooms"
+config/name="Symbolic Sentences"
 config/description="A game about solving riddles and hidden object puzzles"
 run/main_scene="res://Puzzle1.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
