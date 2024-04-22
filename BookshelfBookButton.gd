@@ -78,6 +78,7 @@ func _pressed():
 		spine_color = Color(randf_range(.5,1),randf_range(.5,1),randf_range(.5,1))
 		title = title_gen()
 		%BookSpines.countdown = 4
+		%Social._update_social(1)
 	%BookSpines._set_spine(spine_y, spine_color, title, $".")
 	
 	
