@@ -2,12 +2,14 @@ extends Button
 
 
 var countdown
-var COOLDOWN = 0.618
+var COOLDOWN = 3.618
 
-func _getQchar():
-	var latest = $".".owner.player_brain["latest"]
-	if len(latest):
-		text = latest.pick_random()
+func _getRchars():
+	var studied = $".".owner.player_brain["studied"]
+	if len(studied):
+		text = studied.pick_random()
+	else:
+		countdown = COOLDOWN
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,5 +30,4 @@ func _process(delta):
 	if countdown > 0:
 		countdown -= delta
 		if countdown <= 0:
-			_getQchar()
-			countdown = COOLDOWN
+			_getRchars()
