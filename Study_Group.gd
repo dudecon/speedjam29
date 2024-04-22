@@ -3,10 +3,12 @@ var usersettings
 
 # this is where the player vocabulary lives
 var player_brain
+var social_battery
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var starting_memory = 4
+	social_battery = 10
 	usersettings = get_node("/root/UserSettings")
 	player_brain = {
 	"known"       : {},
@@ -49,16 +51,22 @@ func _add_to_read(stuff, increment = 1):
 		read.append(p)
 	while len(read) > memcap:
 		read.pop_front()
-	print("read",read)
+	social_battery += 2
+	#print("read",read)
+	print("social battery ", social_battery)
 
 
-func _add_to_studied(stuff, increment = 1):
+func _add_to_studied(stuff, increment = 1):	
 	_add_to_read(stuff, increment)
 	var studied = player_brain["studied"]
 	var memcap = player_brain["mem_cap"]
 	studied.append(stuff)
 	while len(studied) > memcap:
 		studied.pop_front()
+
+	social_battery += 10
+	print("social battery ", social_battery)
+
 	#print("studied",studied)
 
 
@@ -75,6 +83,9 @@ func _add_to_conversation(stuff, character_name, increment = 1):
 	while len(charconv) > memcap:
 		charconv.pop_front()
 	#print("converse",converse)
+	social_battery -= 1
+	print("social battery ", social_battery)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
