@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bxdwuk6jrfu0c"]
+[gd_scene load_steps=37 format=3 uid="uid://bxdwuk6jrfu0c"]
 
 [ext_resource type="Script" path="res://Study_Group.gd" id="1_r0edu"]
 [ext_resource type="Texture2D" uid="uid://d03q3i47jy1td" path="res://tehcr33d_6_high_schooler_archetypes_sitting_at_a_lunch_table_jo_e3fb4566-4f05-4203-b485-852823ba0b58.png" id="1_tl7oh"]
@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://ducrhl06sd873" path="res://CardBackground2.jpg" id="6_pvb86"]
 [ext_resource type="Texture2D" uid="uid://btxg6i8f6v1j5" path="res://CardBackground4.jpg" id="7_16no5"]
 [ext_resource type="Texture2D" uid="uid://bcr2fs1s301aq" path="res://CardBackground.jpg" id="8_y8ru0"]
+[ext_resource type="Script" path="res://W_deck.gd" id="8_ybdmm"]
 [ext_resource type="Texture2D" uid="uid://b5dbdd3mbm1bk" path="res://CardBackground3.jpg" id="9_1n8is"]
+[ext_resource type="Script" path="res://E_deck.gd" id="10_5n4fq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c06w7"]
 bg_color = Color(0.419608, 0.478431, 0.247059, 0.427451)
@@ -244,6 +246,7 @@ offset_top = 426.9
 offset_right = 626.368
 offset_bottom = 609.9
 shortcut = SubResource("Shortcut_nj50o")
+script = ExtResource("8_ybdmm")
 
 [node name="CardBackground4" type="Sprite2D" parent="Social_Cards/W_deck"]
 modulate = Color(1, 1, 1, 0.709804)
@@ -264,6 +267,7 @@ offset_top = 393.9
 offset_right = 892.368
 offset_bottom = 576.9
 shortcut = SubResource("Shortcut_d7jva")
+script = ExtResource("10_5n4fq")
 
 [node name="CardBackground" type="Sprite2D" parent="Social_Cards/E_deck"]
 modulate = Color(1, 1, 1, 0.709804)

@@ -10,5 +10,6 @@ func _ready():
 func _process(delta):
 	pass
 
+
 func _toggled(toggled_on):
 	%Social.visible = toggled_on

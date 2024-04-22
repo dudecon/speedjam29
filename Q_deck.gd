@@ -11,11 +11,9 @@ func _ready():
 	text = ""
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _pressed():
 	if text == "":
+		_getQchar()
+	else:
+		# do the conversation thing
 		_getQchar()

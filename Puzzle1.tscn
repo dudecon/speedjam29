@@ -4137,13 +4137,6 @@ volume_db = -13.371
 stream = ExtResource("27_5oo3b")
 volume_db = -13.371
 
-[connection signal="pressed" from="Library/Book Collection/Button4" to="Library/Book Collection/Button4" method="_on_pressed"]
-[connection signal="pressed" from="Library/Book Collection/Button5" to="Library/Book Collection/Button5" method="_on_pressed"]
-[connection signal="pressed" from="Library/Book Collection/Button6" to="Library/Book Collection/Button6" method="_on_pressed"]
-[connection signal="pressed" from="Library/Book Collection/Button7" to="Library/Book Collection/Button7" method="_on_pressed"]
-[connection signal="pressed" from="Library/Book Collection/Button8" to="Library/Book Collection/Button8" method="_on_pressed"]
-[connection signal="pressed" from="Library/Book Collection/Button9" to="Library/Book Collection/Button9" method="_on_pressed"]
-[connection signal="pressed" from="Library/Book Collection/Button10" to="Library/Book Collection/Button10" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection2/Button4" to="Library/Book Collection2/Button4" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection2/Button5" to="Library/Book Collection2/Button5" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection2/Button6" to="Library/Book Collection2/Button6" method="_on_pressed"]
@@ -4531,4 +4524,3 @@ volume_db = -13.371
 [connection signal="pressed" from="Library/Book Collection38/Button23" to="Library/Book Collection38/Button23" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection38/Button25" to="Library/Book Collection38/Button25" method="_on_pressed"]
 [connection signal="pressed" from="Library/Book Collection38/Button26" to="Library/Book Collection38/Button26" method="_on_pressed"]
-[connection signal="pressed" from="BookSpines/ReadBook" to="BookSpines/ReadBook" method="_on_pressed"]

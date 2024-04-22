@@ -70,7 +70,7 @@ func _study_book_contents():
 	%"book count label"._update_count(-1)
 	
 
-func _on_pressed():
+func _pressed():
 	if %BookSpines.book_bind == $".":
 		_read_the_book()
 	elif times_read == 0:
