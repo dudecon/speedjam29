@@ -4,6 +4,7 @@ var usersettings
 # this is where the player vocabulary lives
 var player_brain
 var social_battery
+var social_books_locked
 var npcs_cleared
 var game_score
 
@@ -15,6 +16,7 @@ func _ready():
 	_update_escape()
 	var starting_memory = 4
 	social_battery = 15
+	social_books_locked = 0
 	_update_social()
 	usersettings = get_node("/root/UserSettings")
 	player_brain = {
@@ -58,7 +60,7 @@ func _add_to_read(stuff, increment = 1):
 		read.append(p)
 	while len(read) > memcap:
 		read.pop_front()
-	_update_social(2)
+	_update_social(5,-2)
 	#print("read",read)
 
 
@@ -69,7 +71,7 @@ func _add_to_studied(stuff, increment = 1):
 	studied.append(stuff)
 	while len(studied) > memcap:
 		studied.pop_front()
-	_update_social(10)
+	_update_social(10,-5)
 	#print("studied",studied)
 
 
@@ -88,10 +90,11 @@ func _add_to_conversation(stuff, character_name, increment = 1):
 	#print("converse",converse)
 	_update_social(-2)
 
-func _update_social(val=0):
+func _update_social(val=0, book_chng=-1):
 	social_battery += val
+	social_books_locked += book_chng	
 	%"social energy".text = str(social_battery)
-	%Library._set_book_visibility(social_battery)
+	%Library._set_book_visibility(social_books_locked)
 	#print("social battery ", social_battery)
 	for card in $Social_Cards.get_children():
 		card.disabled = card.SOCIAL_COST > social_battery

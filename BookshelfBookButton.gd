@@ -54,7 +54,7 @@ func _ready():
 
 func _read_the_book():
 	%BookSpines._set_spine(spine_y, spine_color, title, $".")
-	%BookSpines.countdown = 8
+	%BookSpines.countdown = 6
 	if times_read == 0:
 		%"book count label"._update_count()
 	modulate = Color(0,1,0,.8)
