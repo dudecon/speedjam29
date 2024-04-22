@@ -4098,7 +4098,6 @@ offset_top = 205.0
 offset_right = -260.0
 offset_bottom = 452.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_7hw3k")
-disabled = true
 text = "Escape
 to
 Study

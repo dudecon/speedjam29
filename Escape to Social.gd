@@ -12,3 +12,4 @@ func _process(delta):
 
 func _pressed():
 	%Social.visible = true
+	visible = false
