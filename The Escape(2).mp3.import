@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d23fh8dnyg3px"
+path="res://.godot/imported/The Escape(2).mp3-77f3e07c78e021030067b6a11fb646aa.mp3str"
+
+[deps]
+
+source_file="res://The Escape(2).mp3"
+dest_files=["res://.godot/imported/The Escape(2).mp3-77f3e07c78e021030067b6a11fb646aa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
