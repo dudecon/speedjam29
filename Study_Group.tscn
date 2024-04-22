@@ -354,7 +354,6 @@ text = "HELP!"
 script = ExtResource("15_ssasj")
 
 [node name="Control" type="Control" parent="Help Button"]
-visible = false
 anchors_preset = 0
 offset_left = -854.0
 offset_top = -570.0
@@ -372,14 +371,17 @@ offset_bottom = 106.0
 text = "This is the social game"
 
 [node name="Label2" type="Label" parent="Help Button/Control"]
-offset_left = 12.0
-offset_top = 133.0
-offset_right = 844.0
-offset_bottom = 259.0
-rotation = -0.048229
+offset_left = 11.0
+offset_top = 119.0
+offset_right = 843.0
+offset_bottom = 331.0
+rotation = -0.0249551
+scale = Vector2(0.979047, 0.68655)
 text = "Click on the faces to toggle who you are talking to.
 The cards at the bottom are your options, which cost
-social points to use.
+social points to use. Your social points must be
+below 45 to escape back to the library once you have
+engaged in a conversation.
 "
 
 [node name="Label3" type="Label" parent="Help Button/Control"]
