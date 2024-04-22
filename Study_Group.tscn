@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://bxdwuk6jrfu0c"]
+[gd_scene load_steps=30 format=3 uid="uid://bxdwuk6jrfu0c"]
 
 [ext_resource type="Script" path="res://Study_Group.gd" id="1_r0edu"]
 [ext_resource type="Texture2D" uid="uid://d03q3i47jy1td" path="res://tehcr33d_6_high_schooler_archetypes_sitting_at_a_lunch_table_jo_e3fb4566-4f05-4203-b485-852823ba0b58.png" id="1_tl7oh"]
 [ext_resource type="Script" path="res://Social_target.gd" id="3_3h75m"]
 [ext_resource type="Theme" uid="uid://k122kqdoda5o" path="res://bookbuttons.tres" id="3_s2b88"]
+[ext_resource type="Script" path="res://Q_deck.gd" id="5_886fx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c06w7"]
 bg_color = Color(0.419608, 0.478431, 0.247059, 0.427451)
@@ -34,23 +35,47 @@ device = -1
 keycode = 84
 unicode = 116
 
-[sub_resource type="Shortcut" id="Shortcut_2hwp3"]
+[sub_resource type="Shortcut" id="Shortcut_k3qvg"]
 events = [SubResource("InputEventKey_g4fnp")]
 
-[sub_resource type="InputEventKey" id="InputEventKey_jen3s"]
+[sub_resource type="InputEventKey" id="InputEventKey_uqg6i"]
 device = -1
 keycode = 89
 unicode = 121
 
 [sub_resource type="Shortcut" id="Shortcut_gd6iv"]
-events = [SubResource("InputEventKey_jen3s")]
+events = [SubResource("InputEventKey_uqg6i")]
 
-[sub_resource type="InputEventKey" id="InputEventKey_ucri8"]
+[sub_resource type="InputEventKey" id="InputEventKey_e8caa"]
 device = -1
 keycode = 85
 unicode = 117
 
 [sub_resource type="Shortcut" id="Shortcut_au6i3"]
+events = [SubResource("InputEventKey_e8caa")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_77hab"]
+device = -1
+keycode = 73
+unicode = 105
+
+[sub_resource type="Shortcut" id="Shortcut_jibl4"]
+events = [SubResource("InputEventKey_77hab")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_47h4p"]
+device = -1
+keycode = 79
+unicode = 111
+
+[sub_resource type="Shortcut" id="Shortcut_34uuh"]
+events = [SubResource("InputEventKey_47h4p")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ucri8"]
+device = -1
+keycode = 80
+unicode = 112
+
+[sub_resource type="Shortcut" id="Shortcut_bg83q"]
 events = [SubResource("InputEventKey_ucri8")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_a08kh"]
@@ -66,7 +91,7 @@ device = -1
 keycode = 87
 unicode = 119
 
-[sub_resource type="Shortcut" id="Shortcut_h6yio"]
+[sub_resource type="Shortcut" id="Shortcut_nj50o"]
 events = [SubResource("InputEventKey_1hkwq")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_c4f8s"]
@@ -117,7 +142,7 @@ offset_top = 36.0
 offset_right = 228.0
 offset_bottom = 275.0
 toggle_mode = true
-shortcut = SubResource("Shortcut_2hwp3")
+shortcut = SubResource("Shortcut_k3qvg")
 script = ExtResource("3_3h75m")
 
 [node name="Stacy_target" type="Button" parent="Study_Group/Social Buttons"]
@@ -147,7 +172,7 @@ offset_top = 76.0
 offset_right = 790.0
 offset_bottom = 267.0
 toggle_mode = true
-shortcut = SubResource("Shortcut_2hwp3")
+shortcut = SubResource("Shortcut_jibl4")
 script = ExtResource("3_3h75m")
 
 [node name="Karen_target" type="Button" parent="Study_Group/Social Buttons"]
@@ -157,7 +182,7 @@ offset_top = 93.0
 offset_right = 962.0
 offset_bottom = 301.0
 toggle_mode = true
-shortcut = SubResource("Shortcut_au6i3")
+shortcut = SubResource("Shortcut_34uuh")
 script = ExtResource("3_3h75m")
 
 [node name="Violet_target" type="Button" parent="Study_Group/Social Buttons"]
@@ -167,7 +192,7 @@ offset_top = 19.9815
 offset_right = 1162.5
 offset_bottom = 279.981
 toggle_mode = true
-shortcut = SubResource("Shortcut_au6i3")
+shortcut = SubResource("Shortcut_bg83q")
 script = ExtResource("3_3h75m")
 
 [node name="Social_Cards" type="Control" parent="."]
@@ -191,6 +216,7 @@ offset_top = 429.9
 offset_right = 280.368
 offset_bottom = 612.9
 shortcut = SubResource("Shortcut_od6py")
+script = ExtResource("5_886fx")
 
 [node name="W_deck" type="Button" parent="Social_Cards"]
 layout_mode = 1
@@ -203,7 +229,7 @@ offset_left = 356.368
 offset_top = 429.9
 offset_right = 486.368
 offset_bottom = 612.9
-shortcut = SubResource("Shortcut_h6yio")
+shortcut = SubResource("Shortcut_nj50o")
 
 [node name="E_deck" type="Button" parent="Social_Cards"]
 layout_mode = 1
@@ -230,3 +256,5 @@ offset_top = 427.9
 offset_right = 910.368
 offset_bottom = 610.9
 shortcut = SubResource("Shortcut_mgpjr")
+
+[connection signal="pressed" from="Social_Cards/Q_deck" to="Social_Cards/Q_deck" method="_on_pressed"]

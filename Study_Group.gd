@@ -6,6 +6,7 @@ var player_brain
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var starting_memory = 4
 	usersettings = get_node("/root/UserSettings")
 	player_brain = {
 	"known"       : {},
@@ -13,8 +14,9 @@ func _ready():
 	"read"        : [],
 	"studied"     : [],
 	"converse"    : {},
-	"mem_cap"     : 4
-}
+	"mem_cap"     : 0
+	}
+	%"book count label"._update_count(starting_memory)
 
 func _add_to_known(stuff, increment = 1):
 	stuff = stuff.replace("\n","")
@@ -24,7 +26,7 @@ func _add_to_known(stuff, increment = 1):
 			known[c] += increment
 		else:
 			known[c] = increment
-	print(known)
+	#print("known",known)
 
 
 func _add_to_latest(stuff, increment = 1):
@@ -36,9 +38,28 @@ func _add_to_latest(stuff, increment = 1):
 		latest.append(c)
 	while len(latest) > memcap:
 		latest.pop_front()
-	print(latest)
+	#print("latest",latest)
 
 
+func _add_to_read(stuff, increment = 1):
+	_add_to_latest(stuff, increment)
+	var read = player_brain["read"]
+	var memcap = player_brain["mem_cap"]
+	for p in stuff.split("\n",false):
+		read.append(p)
+	while len(read) > memcap:
+		read.pop_front()
+	#print("read",read)
+
+
+func _add_to_studied(stuff, increment = 1):
+	_add_to_read(stuff, increment)
+	var studied = player_brain["studied"]
+	var memcap = player_brain["mem_cap"]
+	studied.append(stuff)
+	while len(studied) > memcap:
+		studied.pop_front()
+	#print("studied",studied)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
