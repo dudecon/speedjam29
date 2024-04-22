@@ -4210,6 +4210,7 @@ text = "HELP!"
 script = ExtResource("24_muhl7")
 
 [node name="Control" type="Control" parent="Library Controls/Help Button"]
+visible = false
 anchors_preset = 0
 offset_left = -657.0
 offset_top = -554.0
@@ -4242,6 +4243,7 @@ escape to the
 study group"
 
 [node name="Label3" type="Label" parent="Library Controls/Help Button/Control"]
+layout_mode = 0
 offset_left = 272.0
 offset_top = 317.0
 offset_right = 1106.0
