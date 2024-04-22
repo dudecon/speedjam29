@@ -26,11 +26,14 @@ func title_gen():
 
 
 func content_gen():
-	var num_chaps = [1,2,3,3,4,4,5,5,6].pick_random()
+	var num_chaps = [0,1,1,2,2,2,3,4].pick_random()
 	var content = ""
 	var titlechars = []
 	for c in title:
 		titlechars.append(c)
+		
+	num_chaps += len(titlechars)
+	
 	for i in num_chaps:
 		var num_chars = [2,2,3,3,4,4,4,5,5,5,5,6,6,6,6,7,7,8,8,9,10].pick_random()
 		for j in num_chars:

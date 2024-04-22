@@ -86,9 +86,9 @@ func _ready():
 				for c in e:
 					print(c)"""
 
-func _set_book_visibility(social_energy):
+func _set_book_visibility(books_modifier):
 	var num_books = len(all_books)
-	var target_visible = num_books - social_energy
+	var target_visible = num_books + books_modifier
 	if num_books != len(visible_books) + len(invisible_books):
 		visible_books = all_books.duplicate()
 	if target_visible < 0:
