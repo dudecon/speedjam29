@@ -4098,11 +4098,9 @@ offset_top = 205.0
 offset_right = -260.0
 offset_bottom = 452.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_7hw3k")
-toggle_mode = true
-button_pressed = true
+disabled = true
 text = "Escape
 to
-the
 Study
 Group"
 script = ExtResource("23_d6h1p")

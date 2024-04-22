@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bxdwuk6jrfu0c"]
+[gd_scene load_steps=39 format=3 uid="uid://bxdwuk6jrfu0c"]
 
 [ext_resource type="Script" path="res://Study_Group.gd" id="1_r0edu"]
 [ext_resource type="Texture2D" uid="uid://d03q3i47jy1td" path="res://tehcr33d_6_high_schooler_archetypes_sitting_at_a_lunch_table_jo_e3fb4566-4f05-4203-b485-852823ba0b58.png" id="1_tl7oh"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://W_deck.gd" id="8_ybdmm"]
 [ext_resource type="Texture2D" uid="uid://b5dbdd3mbm1bk" path="res://CardBackground3.jpg" id="9_1n8is"]
 [ext_resource type="Script" path="res://E_deck.gd" id="10_5n4fq"]
+[ext_resource type="Script" path="res://Escape to Library.gd" id="13_x0jv0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c06w7"]
 bg_color = Color(0.419608, 0.478431, 0.247059, 0.427451)
@@ -118,6 +119,9 @@ unicode = 114
 
 [sub_resource type="Shortcut" id="Shortcut_mgpjr"]
 events = [SubResource("InputEventKey_ko7bf")]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8do1e"]
+bg_color = Color(0.145098, 0.407843, 0.352941, 0.847059)
 
 [node name="Social Root" type="Node2D"]
 script = ExtResource("1_r0edu")
@@ -295,3 +299,14 @@ show_behind_parent = true
 position = Vector2(64.5, 91.5)
 scale = Vector2(0.650862, 0.625)
 texture = ExtResource("9_1n8is")
+
+[node name="Escape to Library" type="Button" parent="."]
+offset_left = 990.0
+offset_top = 55.0
+offset_right = 1082.0
+offset_bottom = 295.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8do1e")
+text = "Escape
+to
+Library"
+script = ExtResource("13_x0jv0")
