@@ -6,7 +6,8 @@ func _ready():
 	_update_count(0)
 
 func _update_count(add = 1):
-	%Social.player_brain["mem_cap"] += add
-	number = %Social.player_brain["mem_cap"]
+	number += add
+	if number < 3: number = 3
+	%Social.player_brain["mem_cap"] = number
 	text = str(number)
 	
