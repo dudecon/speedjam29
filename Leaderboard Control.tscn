@@ -1,15 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://ukt2dai804xx"]
+[gd_scene load_steps=21 format=3 uid="uid://ukt2dai804xx"]
 
 [ext_resource type="Theme" uid="uid://c4knut3ejgm3h" path="res://default_theme.tres" id="1_1q4k8"]
 [ext_resource type="Script" path="res://Leaderboard.gd" id="1_oftcf"]
 [ext_resource type="Script" path="res://Leaderboard Name Entry.gd" id="2_84p6p"]
 [ext_resource type="Script" path="res://LeaderDisplay.gd" id="2_clybt"]
 [ext_resource type="Texture2D" uid="uid://2l8ov7w8jh56" path="res://baroque_golden_filigree_frame.jpg" id="2_csbqg"]
+[ext_resource type="Script" path="res://Leaderboard Control.gd" id="2_mfrp1"]
 [ext_resource type="Texture2D" uid="uid://cbqpk1tmluxx" path="res://EmptyFrame.png" id="3_5y4pb"]
 [ext_resource type="Script" path="res://Leaderboard Submit.gd" id="3_igrs1"]
 [ext_resource type="Script" path="res://Leaderboard Display.gd" id="4_hyhe4"]
 [ext_resource type="FontFile" uid="uid://d1y4hftmvewfn" path="res://XanhMono-Regular.ttf" id="4_uvoik"]
 [ext_resource type="Script" path="res://Restart.gd" id="10_yp3dt"]
+[ext_resource type="Script" path="res://Escape the game.gd" id="12_y00w8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1eji"]
 bg_color = Color(0.364706, 0, 0.0156863, 1)
@@ -20,17 +22,20 @@ bg_color = Color(0.658824, 0, 0.054902, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtydb"]
 bg_color = Color(0.584314, 0.584314, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nurqh"]
+bg_color = Color(0.407843, 0.380392, 0.0941176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_koede"]
+bg_color = Color(0.803922, 0.752941, 0.227451, 1)
+
 [sub_resource type="InputEventKey" id="InputEventKey_h0n01"]
 keycode = 76
 
 [sub_resource type="Shortcut" id="Shortcut_td48o"]
 events = [SubResource("InputEventKey_h0n01")]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nurqh"]
-bg_color = Color(0.407843, 0.380392, 0.0941176, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_koede"]
-bg_color = Color(0.803922, 0.752941, 0.227451, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxqpp"]
+bg_color = Color(0.145098, 0.407843, 0.352941, 0.847059)
 
 [node name="Leaderboard" type="Control"]
 layout_mode = 3
@@ -40,10 +45,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_1q4k8")
+script = ExtResource("2_mfrp1")
 
 [node name="Leaderboard" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
-visible = false
 script = ExtResource("1_oftcf")
 
 [node name="LeaderDisplay" type="ColorRect" parent="Leaderboard"]
@@ -93,10 +98,10 @@ autowrap_mode = 0
 [node name="Name Entry" type="LineEdit" parent="Leaderboard/LeaderDisplay/Leaderboard Text"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 487.0
-offset_top = 33.0
-offset_right = 609.0
-offset_bottom = 66.0
+offset_left = 487.974
+offset_top = 26.75
+offset_right = 609.974
+offset_bottom = 59.75
 max_length = 26
 script = ExtResource("2_84p6p")
 
@@ -108,7 +113,18 @@ offset_right = 79.9745
 offset_bottom = -6.25003
 text = "Name"
 
+[node name="Submit" type="Button" parent="Leaderboard/LeaderDisplay/Leaderboard Text/Name Entry"]
+offset_left = 3.0
+offset_top = 44.0
+offset_right = 115.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 17
+text = "Change Name"
+script = ExtResource("3_igrs1")
+
 [node name="Submit" type="Button" parent="Leaderboard/LeaderDisplay/Leaderboard Text"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 488.0
 offset_top = 125.0
@@ -118,23 +134,25 @@ text = "Submit
 Score"
 script = ExtResource("3_igrs1")
 
-[node name="SpinBox" type="SpinBox" parent="Leaderboard/LeaderDisplay/Leaderboard Text/Submit"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 12.9745
-offset_top = 130.75
-offset_right = 96.037
-offset_bottom = 163.75
-max_value = 9001.0
-value = 50.0
+[node name="Label" type="Label" parent="Leaderboard/LeaderDisplay/Leaderboard Text/Submit"]
+offset_left = -31.0
+offset_top = 115.0
+offset_right = 111.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 30
+text = "You
+Escaped!"
+horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="Leaderboard/LeaderDisplay/Leaderboard Text/Submit/SpinBox"]
-layout_mode = 0
-offset_left = 11.0
-offset_top = -28.0
-offset_right = 51.0
-offset_bottom = -5.0
-text = "Score"
+[node name="Final Score" type="Label" parent="Leaderboard/LeaderDisplay/Leaderboard Text/Submit"]
+unique_name_in_owner = true
+offset_left = -29.026
+offset_top = 67.75
+offset_right = 112.974
+offset_bottom = 111.75
+theme_override_font_sizes/font_size = 30
+text = "0000000"
+horizontal_alignment = 1
 
 [node name="EmptyFrame" type="Sprite2D" parent="Leaderboard/LeaderDisplay"]
 position = Vector2(464.025, 307.25)
@@ -148,12 +166,12 @@ offset_left = 17.0
 offset_top = 13.0
 offset_right = 180.0
 offset_bottom = 46.0
+theme = ExtResource("1_1q4k8")
 theme_override_colors/font_color = Color(0.968627, 0.996078, 0.470588, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_f1eji")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fbowt")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wtydb")
 toggle_mode = true
-shortcut = SubResource("Shortcut_td48o")
 text = "Restart Game"
 script = ExtResource("10_yp3dt")
 
@@ -162,6 +180,7 @@ offset_left = 937.0
 offset_top = 17.0
 offset_right = 1135.0
 offset_bottom = 50.0
+theme = ExtResource("1_1q4k8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_nurqh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_koede")
 toggle_mode = true
@@ -169,4 +188,18 @@ shortcut = SubResource("Shortcut_td48o")
 text = "Display Leaderboard"
 script = ExtResource("4_hyhe4")
 
+[node name="Escape the game" type="Button" parent="Top Level UI"]
+visible = false
+anchors_preset = -1
+offset_left = 350.0
+offset_top = 21.0
+offset_right = 595.0
+offset_bottom = 121.0
+theme = ExtResource("1_1q4k8")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_wxqpp")
+text = "Escape!"
+script = ExtResource("12_y00w8")
+
+[connection signal="text_changed" from="Leaderboard/LeaderDisplay/Leaderboard Text/Name Entry" to="Leaderboard/LeaderDisplay/Leaderboard Text/Name Entry" method="_on_text_changed"]
 [connection signal="pressed" from="Top Level UI/Restart" to="Top Level UI/Restart" method="_on_pressed"]

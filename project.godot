@@ -21,6 +21,10 @@ gui/theme/custom="default_theme.tres"
 
 UserSettings="*res://user_settings.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [rendering]
 
 renderer/rendering_method="mobile"

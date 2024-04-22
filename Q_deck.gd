@@ -3,9 +3,11 @@ extends Button
 
 var countdown
 var COOLDOWN = 0.618
+var SOCIAL_COST = 1
+var scene_root
 
 func _getQchar():
-	var latest = $".".owner.player_brain["latest"]
+	var latest = scene_root.player_brain["latest"]
 	if len(latest):
 		text = latest.pick_random()
 
@@ -13,16 +15,17 @@ func _getQchar():
 func _ready():
 	text = ""
 	countdown = COOLDOWN
+	scene_root = $".".owner
 
 
 func _pressed():
 	if text == "":
 		pass
 	else:
-		# do the conversation thing
+		$".".owner._deliver_soliliquy(text)
 		text = ""
 		countdown = COOLDOWN
-		$"../..".social_battery -= 1
+		scene_root._update_social(-SOCIAL_COST)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

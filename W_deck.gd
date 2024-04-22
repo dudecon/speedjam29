@@ -2,6 +2,7 @@ extends Button
 
 var countdown
 var COOLDOWN = 1
+var SOCIAL_COST = 2
 
 func _getWchar():
 	var convs_dict = $".".owner.player_brain["converse"]
@@ -28,10 +29,10 @@ func _pressed():
 	if text == "":
 		pass
 	else:
-		# do the conversation thing
+		$".".owner._deliver_soliliquy(text)
 		text = ""
 		countdown = COOLDOWN
-		$"../..".social_battery -= 2
+		$".".owner._update_social(-SOCIAL_COST)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

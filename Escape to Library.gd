@@ -16,13 +16,16 @@ func _pressed():
 
 
 func can_escape():
+	if $".".owner.social_battery > 30: return false
 	var escapeable = true
 	for child in $"../Study_Group/Social Buttons".get_children():
 		if child.thoughts_exposed:
 			escapeable = false
 	return escapeable
 			
-	
+
+
+
 
 func _on_chad_target_toggled(toggled_on):
 	visible = can_escape()
@@ -46,3 +49,4 @@ func _on_karen_target_toggled(toggled_on):
 
 func _on_violet_target_toggled(toggled_on):
 	visible = can_escape()
+

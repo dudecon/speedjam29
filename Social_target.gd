@@ -1,8 +1,10 @@
 extends Button
 
 var npc_social_brain = {}
+var npc_all_known = []
 var npc_active_thought = ""
 var rng = RandomNumberGenerator.new()
+var npc_conversation_phase
 
 var thoughts_exposed = false
 
@@ -67,15 +69,20 @@ var npc_social_content = {
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# print(name)
+	rng = RandomNumberGenerator.new()
+	npc_all_known = []
+	npc_social_brain = {}
+	npc_active_thought = ""
 	countdown = rng.randi_range(1,5)
 	
 	for i in range(3):
 		var new_topic = npc_social_content.keys().pick_random()
-		npc_social_brain[new_topic] = npc_social_content[new_topic]
+		var new_emojis = npc_social_content[new_topic]
+		npc_social_brain[new_topic] = new_emojis
+		npc_all_known += new_emojis
 	#print(npc_social_brain)
-	
-	# name is used as the key for the social dictionary
-	pass # Replace with function body.
+	#print(name,npc_all_known)
+	npc_conversation_phase = 0
 	
 func generate_thought():
 	return npc_social_brain[npc_social_brain.keys().pick_random()].pick_random()
@@ -107,4 +114,37 @@ func _process(delta):
 	else:
 		text = ''
 	pass
+
+func _evaluate_state_machine(some_known,some_unknown):
+	if (npc_conversation_phase < 2) and some_known:
+		npc_conversation_phase += 1
+		$".".modulate[3] -= 0.2
+	elif (npc_conversation_phase == 2) and some_unknown:
+		npc_conversation_phase = 3
+		button_pressed = false
+		disabled = true
+		$".".modulate[3] = 1
+		$".".modulate[2] = 0
+		$".".modulate[1] = 0
+		$".".owner._update_escape(1)
+		
+
+func _deliver_soliliquy(stuff):
+	stuff = stuff.replace("\n","")
+	var some_known = false
+	var some_unknown = false
+	var invert
+	if npc_conversation_phase == 2: invert = -1
+	else: invert = 1
+	for c in stuff:
+		var c_val = $".".owner.player_brain["known"][c]
+		#print(c,c_val)
+		if c in npc_all_known:
+			$".".owner._update_score(c_val*invert)
+			some_known = true
+		else:
+			$".".owner._update_score(-c_val*invert)
+			some_unknown = true
+	_evaluate_state_machine(some_known,some_unknown)
+
 

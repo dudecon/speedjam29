@@ -4,11 +4,18 @@ var usersettings
 # this is where the player vocabulary lives
 var player_brain
 var social_battery
+var npcs_cleared
+var game_score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	game_score = 0
+	_update_score()
+	npcs_cleared = 0
+	_update_escape()
 	var starting_memory = 4
-	social_battery = 10
+	social_battery = 15
+	_update_social()
 	usersettings = get_node("/root/UserSettings")
 	player_brain = {
 	"known"       : {},
@@ -51,9 +58,8 @@ func _add_to_read(stuff, increment = 1):
 		read.append(p)
 	while len(read) > memcap:
 		read.pop_front()
-	social_battery += 2
+	_update_social(2)
 	#print("read",read)
-	print("social battery ", social_battery)
 
 
 func _add_to_studied(stuff, increment = 1):	
@@ -63,10 +69,7 @@ func _add_to_studied(stuff, increment = 1):
 	studied.append(stuff)
 	while len(studied) > memcap:
 		studied.pop_front()
-
-	social_battery += 10
-	print("social battery ", social_battery)
-
+	_update_social(10)
 	#print("studied",studied)
 
 
@@ -83,11 +86,45 @@ func _add_to_conversation(stuff, character_name, increment = 1):
 	while len(charconv) > memcap:
 		charconv.pop_front()
 	#print("converse",converse)
-	social_battery -= 2
-	print("social battery ", social_battery)
+	_update_social(-2)
+
+func _update_social(val=0):
+	social_battery += val
+	%"social energy".text = str(social_battery)
+	%Library._set_book_visibility(social_battery)
+	#print("social battery ", social_battery)
+	for card in $Social_Cards.get_children():
+		card.disabled = card.SOCIAL_COST > social_battery
 
 
+func _update_score(val=0):
+	game_score += val
+	%score.text = str(game_score)
+	$"../Leaderboard".current_score = game_score
+
+
+func _update_escape(val=0):
+	npcs_cleared += val
+	%cleared.text = str(npcs_cleared)
+	if npcs_cleared == 6:
+		$"../Leaderboard"._allow_escape()
+
+
+func _excluded_from_soliliquy(stuff):
+	stuff = stuff.replace("\n","")
+	for c in stuff:
+		_update_score(-1)
+
+
+func _deliver_soliliquy(stuff):
+	for person in $"Study_Group/Social Buttons".get_children():
+		if person.thoughts_exposed:
+			person._deliver_soliliquy(stuff)
+		else:
+			_excluded_from_soliliquy(stuff)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+

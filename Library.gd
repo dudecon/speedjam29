@@ -71,7 +71,7 @@ func _ready():
 	total_books = 0
 	for shelf in get_children():
 		total_books += shelf.get_child_count()
-	_set_book_visibility()
+	#_set_book_visibility()
 	#print("num available ",len(available_themes))
 	#print("num used ",len(used_themes))
 	# 54 themes print(len(THEMES))
@@ -86,11 +86,15 @@ func _ready():
 				for c in e:
 					print(c)"""
 
-func _set_book_visibility(target_visible = 0):
-	if len(all_books) != len(visible_books) + len(invisible_books):
+func _set_book_visibility(social_energy):
+	var num_books = len(all_books)
+	var target_visible = num_books - social_energy
+	if num_books != len(visible_books) + len(invisible_books):
 		visible_books = all_books.duplicate()
-	if target_visible == 0:
-		target_visible = randi_range(100,200)
+	if target_visible < 0:
+		target_visible = 0#randi_range(100,200)
+	elif target_visible > num_books:
+		target_visible = num_books
 	var num_books_visible = len(visible_books)
 	var book
 	if target_visible > num_books_visible:

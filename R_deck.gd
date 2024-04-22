@@ -4,6 +4,8 @@ extends Button
 var countdown
 var COOLDOWN = 3.618
 
+var SOCIAL_COST = 12
+
 func _getRchars():
 	var studied = $".".owner.player_brain["studied"]
 	if len(studied):
@@ -21,10 +23,10 @@ func _pressed():
 	if text == "":
 		pass
 	else:
-		# do the conversation thing
+		$".".owner._deliver_soliliquy(text)
 		text = ""
 		countdown = COOLDOWN
-		$"../..".social_battery -= 12
+		$".".owner._update_social(-SOCIAL_COST)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

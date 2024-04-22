@@ -4065,13 +4065,38 @@ offset_right = 592.0
 offset_bottom = 136.0
 theme = ExtResource("20_any22")
 
+[node name="ColorRect4" type="ColorRect" parent="Library Controls"]
+layout_mode = 0
+offset_left = -346.0
+offset_top = 536.0
+offset_right = -160.0
+offset_bottom = 577.0
+color = Color(0.152941, 0.152941, 0.152941, 0.662745)
+
+[node name="cleared" type="Label" parent="Library Controls/ColorRect4"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 87.0
+offset_top = 7.0
+offset_right = 105.0
+offset_bottom = 37.0
+text = "0"
+
+[node name="Label" type="Label" parent="Library Controls/ColorRect4"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 98.0
+offset_bottom = 30.0
+text = "Cleared:  / 6"
+
 [node name="ColorRect" type="ColorRect" parent="Library Controls"]
 layout_mode = 0
 offset_left = -346.0
-offset_top = 590.0
+offset_top = 431.0
 offset_right = -160.0
-offset_bottom = 631.0
-color = Color(0.152941, 0.152941, 0.152941, 0.494118)
+offset_bottom = 472.0
+color = Color(0.152941, 0.152941, 0.152941, 0.662745)
 
 [node name="book count label" type="Label" parent="Library Controls/ColorRect"]
 unique_name_in_owner = true
@@ -4091,12 +4116,62 @@ offset_right = 98.0
 offset_bottom = 30.0
 text = "Recall:"
 
+[node name="ColorRect2" type="ColorRect" parent="Library Controls"]
+layout_mode = 0
+offset_left = -346.0
+offset_top = 484.0
+offset_right = -160.0
+offset_bottom = 525.0
+color = Color(0.152941, 0.152941, 0.152941, 0.662745)
+
+[node name="social energy" type="Label" parent="Library Controls/ColorRect2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 87.0
+offset_top = 7.0
+offset_right = 173.0
+offset_bottom = 37.0
+text = "0"
+
+[node name="Label" type="Label" parent="Library Controls/ColorRect2"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 98.0
+offset_bottom = 30.0
+text = "Social:"
+
+[node name="ColorRect3" type="ColorRect" parent="Library Controls"]
+layout_mode = 0
+offset_left = -346.0
+offset_top = 585.0
+offset_right = -109.0
+offset_bottom = 626.0
+color = Color(0.294118, 0.286275, 0.0745098, 0.662745)
+
+[node name="score" type="Label" parent="Library Controls/ColorRect3"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 75.0
+offset_top = 7.0
+offset_right = 230.0
+offset_bottom = 37.0
+text = "0"
+
+[node name="Label" type="Label" parent="Library Controls/ColorRect3"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 98.0
+offset_bottom = 30.0
+text = "Score:"
+
 [node name="Escape to Social" type="Button" parent="Library Controls"]
 layout_mode = 0
-offset_left = -351.0
-offset_top = 205.0
-offset_right = -260.0
-offset_bottom = 452.0
+offset_left = -352.0
+offset_top = 173.0
+offset_right = -261.0
+offset_bottom = 420.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_7hw3k")
 text = "Escape
 to

@@ -5,6 +5,7 @@ var countdown
 var COOLDOWN = 2.618
 
 var WRAPWIDTH = 3
+var SOCIAL_COST = 5
 
 func _getEchars():
 	var read = $".".owner.player_brain["read"]
@@ -34,10 +35,10 @@ func _pressed():
 	if text == "":
 		pass
 	else:
-		# do the conversation thing
+		$".".owner._deliver_soliliquy(text)
 		text = ""
 		countdown = COOLDOWN
-		$"../..".social_battery -= 5
+		$".".owner._update_social(-SOCIAL_COST)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
