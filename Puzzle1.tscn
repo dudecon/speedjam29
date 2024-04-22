@@ -4210,7 +4210,6 @@ text = "HELP!"
 script = ExtResource("24_muhl7")
 
 [node name="Control" type="Control" parent="Library Controls/Help Button"]
-visible = false
 anchors_preset = 0
 offset_left = -657.0
 offset_top = -554.0
@@ -4221,26 +4220,37 @@ theme = SubResource("Theme_72x2w")
 
 [node name="Label" type="Label" parent="Library Controls/Help Button/Control"]
 layout_mode = 0
-offset_left = 424.0
-offset_top = 63.0
-offset_right = 804.0
-offset_bottom = 264.0
+offset_left = 222.0
+offset_top = 14.0
+offset_right = 666.0
+offset_bottom = 149.0
 text = "Welcome to 
-Symbolic Sentences!
-click on the books
-to get started"
+Symbolic Sentences!"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Library Controls/Help Button/Control"]
 layout_mode = 0
-offset_left = -4.0
-offset_top = 192.0
-offset_right = 376.0
-offset_bottom = 393.0
+offset_left = -17.0
+offset_top = 314.0
+offset_right = 191.0
+offset_bottom = 447.0
 rotation = -0.21725
+theme_override_font_sizes/font_size = 22
 text = "when you've read
 enough, you can 
 escape to the
 study group"
+
+[node name="Label3" type="Label" parent="Library Controls/Help Button/Control"]
+offset_left = 272.0
+offset_top = 317.0
+offset_right = 1106.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 30
+text = "click on books on shelf to browse (+1 social, -1 book)
+click on book spines to read (+5 social, -1 book)
+click on book contents to study (+10 social, -5 book)"
+horizontal_alignment = 1
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_bpr7t")

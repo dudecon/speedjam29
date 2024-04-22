@@ -60,7 +60,7 @@ func _add_to_read(stuff, increment = 1):
 		read.append(p)
 	while len(read) > memcap:
 		read.pop_front()
-	_update_social(5,-2)
+	_update_social(5,-1)
 	#print("read",read)
 
 
