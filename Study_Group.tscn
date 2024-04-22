@@ -310,3 +310,10 @@ text = "Escape
 to
 Library"
 script = ExtResource("13_x0jv0")
+
+[connection signal="toggled" from="Study_Group/Social Buttons/Chad_target" to="Escape to Library" method="_on_chad_target_toggled"]
+[connection signal="toggled" from="Study_Group/Social Buttons/Stacy_target" to="Escape to Library" method="_on_stacy_target_toggled"]
+[connection signal="toggled" from="Study_Group/Social Buttons/Gewn_target" to="Escape to Library" method="_on_gewn_target_toggled"]
+[connection signal="toggled" from="Study_Group/Social Buttons/Beta_target" to="Escape to Library" method="_on_beta_target_toggled"]
+[connection signal="toggled" from="Study_Group/Social Buttons/Karen_target" to="Escape to Library" method="_on_karen_target_toggled"]
+[connection signal="toggled" from="Study_Group/Social Buttons/Violet_target" to="Escape to Library" method="_on_violet_target_toggled"]

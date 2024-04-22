@@ -12,3 +12,37 @@ func _process(delta):
 	
 func _pressed():
 	$".".owner.visible = false
+
+
+
+func can_escape():
+	var escapeable = true
+	for child in $"../Study_Group/Social Buttons".get_children():
+		if child.thoughts_exposed:
+			escapeable = false
+	return escapeable
+			
+	
+
+func _on_chad_target_toggled(toggled_on):
+	visible = can_escape()
+
+
+func _on_stacy_target_toggled(toggled_on):
+	visible = can_escape()
+
+
+func _on_gewn_target_toggled(toggled_on):
+	visible = can_escape()
+
+
+func _on_beta_target_toggled(toggled_on):
+	visible = can_escape()
+
+
+func _on_karen_target_toggled(toggled_on):
+	visible = can_escape()
+
+
+func _on_violet_target_toggled(toggled_on):
+	visible = can_escape()
