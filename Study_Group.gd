@@ -92,12 +92,15 @@ func _add_to_conversation(stuff, character_name, increment = 1):
 
 func _update_social(val=0, book_chng=0):
 	social_battery += val
+	if social_battery < 0: social_battery = 0
 	social_books_locked += book_chng	
 	%"social energy".text = str(social_battery)
 	%Library._set_book_visibility(social_books_locked)
 	#print("social battery ", social_battery)
 	for card in $Social_Cards.get_children():
 		card.disabled = card.SOCIAL_COST > social_battery
+	%StudyBookButton.disabled = 55 < social_battery
+	%ReadBookButton.disabled  = 105 < social_battery
 
 
 func _update_score(val=0):

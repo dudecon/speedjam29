@@ -10,7 +10,8 @@ func _getQchar():
 	var latest = scene_root.player_brain["latest"]
 	if len(latest):
 		text = latest.pick_random()
-		scene_root._update_social(-SOCIAL_COST)
+		if randi_range(0,3) == 0:
+			scene_root._update_social(-SOCIAL_COST)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

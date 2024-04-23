@@ -65,6 +65,7 @@ var npc_social_content = {
 	"🎭": ["🎨", "🎬", "🎤", "🎻", "🎹", "🎶", "🎷", "🎨", "🖼", "🎬", "📽", "🎥", "🎤", "🎧", "🎼", "🎹", "🎷", "🎺", "🎸", "🪕", "🥁", "🎻", "🎲", "🎮", "🎰", "🃏"],  # The Arts, Entertainment, and Creative Expression
 }
 
+var statelabels
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -82,8 +83,16 @@ func _ready():
 		npc_all_known += new_emojis
 	#print(npc_social_brain)
 	#print(name,npc_all_known)
+	statelabels = [$Label1,$Label2,$Label3]
 	npc_conversation_phase = 0
-	
+	_set_state_label_visibility()
+
+
+func _set_state_label_visibility():
+	for i in [0,1,2]:
+		statelabels[i].visible = npc_conversation_phase >= i
+
+
 func generate_thought():
 	return npc_social_brain[npc_social_brain.keys().pick_random()].pick_random()
 
@@ -118,16 +127,17 @@ func _process(delta):
 func _evaluate_state_machine(some_known,some_unknown):
 	if (npc_conversation_phase < 2) and some_known:
 		npc_conversation_phase += 1
-		$".".modulate[3] -= 0.2
+		_set_state_label_visibility()
 	elif (npc_conversation_phase == 2) and some_unknown:
 		npc_conversation_phase = 3
 		button_pressed = false
 		disabled = true
 		$".".modulate[3] = 1
-		$".".modulate[2] = 0
-		$".".modulate[1] = 0
+		$".".modulate[2] = .3
+		$".".modulate[1] = .3
+		$".".modulate[0] = .5
 		$".".owner._update_escape(1)
-		
+	
 
 func _deliver_soliliquy(stuff):
 	stuff = stuff.replace("\n","")

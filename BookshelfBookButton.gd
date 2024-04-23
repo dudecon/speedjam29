@@ -74,14 +74,14 @@ func _study_book_contents():
 	
 
 func _pressed():
-	if %BookSpines.book_bind == $".":
-		_read_the_book()
-	elif times_read == 0:
+	#if %BookSpines.book_bind == $".":
+	#	_read_the_book()
+	if times_read == 0:
 		spine_y = %BookSpines.yvals.pick_random()
 		spine_color = Color(randf_range(.5,1),randf_range(.5,1),randf_range(.5,1))
 		title = title_gen()
-		%BookSpines.countdown = 4
-		%Social._update_social(1, -1)
+		%Social._update_social(1)
 	%BookSpines._set_spine(spine_y, spine_color, title, $".")
+	%BookSpines.countdown = 4
 	
 	

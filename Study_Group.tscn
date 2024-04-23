@@ -42,6 +42,8 @@ default_font_size = 50
 Button/styles/focus = SubResource("StyleBoxFlat_c06w7")
 Button/styles/hover = SubResource("StyleBoxFlat_llhml")
 Button/styles/normal = SubResource("StyleBoxFlat_h7p1t")
+Label/colors/font_outline_color = Color(0.0156863, 0.0156863, 0.0156863, 0.752941)
+Label/constants/outline_size = 7
 
 [sub_resource type="InputEventKey" id="InputEventKey_g4fnp"]
 device = -1
@@ -172,6 +174,39 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_k3qvg")
 script = ExtResource("3_3h75m")
 
+[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Chad_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = 0.38887
+offset_top = -59.9855
+offset_right = -119.611
+offset_bottom = 0.0145461
+text = "👍"
+
+[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Chad_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = 60.472
+offset_top = -59.5075
+offset_right = -59.528
+offset_bottom = 0.0145461
+text = "👍"
+
+[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Chad_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.994
+offset_left = 118.931
+offset_top = -59.5075
+offset_right = 0.0293274
+offset_bottom = 0.492546
+text = "👎"
+
 [node name="Stacy_target" type="Button" parent="Study_Group/Social Buttons"]
 layout_mode = 0
 offset_left = 227.0
@@ -181,6 +216,39 @@ offset_bottom = 307.0
 toggle_mode = true
 shortcut = SubResource("Shortcut_gd6iv")
 script = ExtResource("3_3h75m")
+
+[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Stacy_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = 0.38887
+offset_top = -59.9855
+offset_right = -119.611
+offset_bottom = 0.0145461
+text = "👍"
+
+[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Stacy_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = 60.472
+offset_top = -59.5075
+offset_right = -59.528
+offset_bottom = 0.0145461
+text = "👍"
+
+[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Stacy_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.994
+offset_left = 118.931
+offset_top = -59.5075
+offset_right = 0.0293274
+offset_bottom = 0.492546
+text = "👎"
 
 [node name="Gewn_target" type="Button" parent="Study_Group/Social Buttons"]
 layout_mode = 0
@@ -192,6 +260,39 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_au6i3")
 script = ExtResource("3_3h75m")
 
+[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Gewn_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = -25.9837
+offset_top = -60.5438
+offset_right = -87.9837
+offset_bottom = -0.543816
+text = "👍"
+
+[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Gewn_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = 34.0995
+offset_top = -60.0658
+offset_right = -27.9005
+offset_bottom = -0.399815
+text = "👍"
+
+[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Gewn_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.994
+offset_left = 92.5588
+offset_top = -60.0658
+offset_right = 31.3088
+offset_bottom = -0.065815
+text = "👎"
+
 [node name="Beta_target" type="Button" parent="Study_Group/Social Buttons"]
 layout_mode = 0
 offset_left = 632.0
@@ -201,6 +302,39 @@ offset_bottom = 267.0
 toggle_mode = true
 shortcut = SubResource("Shortcut_jibl4")
 script = ExtResource("3_3h75m")
+
+[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Beta_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = -13.3852
+offset_top = -59.5069
+offset_right = -108.385
+offset_bottom = 0.493122
+text = "👍"
+
+[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Beta_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = 46.698
+offset_top = -59.0289
+offset_right = -48.302
+offset_bottom = 0.589123
+text = "👍"
+
+[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Beta_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.994
+offset_left = 105.157
+offset_top = -59.0289
+offset_right = 11.1053
+offset_bottom = 0.971123
+text = "👎"
 
 [node name="Karen_target" type="Button" parent="Study_Group/Social Buttons"]
 layout_mode = 0
@@ -212,6 +346,39 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_34uuh")
 script = ExtResource("3_3h75m")
 
+[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Karen_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = -40.1266
+offset_top = -59.4559
+offset_right = -113.127
+offset_bottom = 0.544064
+text = "👍"
+
+[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Karen_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = 19.9566
+offset_top = -58.9779
+offset_right = -53.0434
+offset_bottom = 0.606064
+text = "👍"
+
+[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Karen_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.994
+offset_left = 78.4159
+offset_top = -58.9779
+offset_right = 6.23187
+offset_bottom = 1.02206
+text = "👎"
+
 [node name="Violet_target" type="Button" parent="Study_Group/Social Buttons"]
 layout_mode = 0
 offset_left = 964.499
@@ -221,6 +388,39 @@ offset_bottom = 279.981
 toggle_mode = true
 shortcut = SubResource("Shortcut_bg83q")
 script = ExtResource("3_3h75m")
+
+[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Violet_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.002
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = 0.38887
+offset_top = -59.9855
+offset_right = -119.611
+offset_bottom = 0.0145461
+text = "👍"
+
+[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Violet_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.002
+offset_left = 60.472
+offset_top = -59.5075
+offset_right = -59.528
+offset_bottom = 0.0145461
+text = "👍"
+
+[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Violet_target"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.994
+offset_left = 118.931
+offset_top = -59.5075
+offset_right = 0.0293274
+offset_bottom = 0.492546
+text = "👎"
 
 [node name="Social_Cards" type="Control" parent="."]
 layout_mode = 3
@@ -372,6 +572,7 @@ offset_bottom = 106.0
 text = "This is the social game"
 
 [node name="Label2" type="Label" parent="Social Help Button/Control"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 119.0
 offset_right = 843.0
@@ -386,6 +587,7 @@ engaged in a conversation.
 "
 
 [node name="Label3" type="Label" parent="Social Help Button/Control"]
+layout_mode = 0
 offset_left = 105.0
 offset_top = 414.0
 offset_right = 313.0
@@ -396,6 +598,7 @@ you've seen
 recently"
 
 [node name="Label4" type="Label" parent="Social Help Button/Control"]
+layout_mode = 0
 offset_left = 351.0
 offset_top = 432.0
 offset_right = 559.0
@@ -406,6 +609,7 @@ people have
 said recently"
 
 [node name="Label5" type="Label" parent="Social Help Button/Control"]
+layout_mode = 0
 offset_left = 585.0
 offset_top = 434.0
 offset_right = 777.0
@@ -415,6 +619,7 @@ you read
 recently"
 
 [node name="Label6" type="Label" parent="Social Help Button/Control"]
+layout_mode = 0
 offset_left = 813.0
 offset_top = 367.0
 offset_right = 941.0
@@ -424,6 +629,7 @@ studied
 recently"
 
 [node name="Label7" type="Label" parent="Social Help Button/Control"]
+layout_mode = 0
 offset_left = -66.0
 offset_top = 264.0
 offset_right = 1166.0

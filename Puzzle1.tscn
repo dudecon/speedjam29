@@ -4011,7 +4011,8 @@ text = "🎶💧💀🔍🧐"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ReadBook" type="Button" parent="BookSpines"]
+[node name="ReadBookButton" type="Button" parent="BookSpines"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 offset_left = -246.0
 offset_top = -77.0
@@ -4057,7 +4058,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="LockBookContents" type="Button" parent="BookOpener"]
+[node name="StudyBookButton" type="Button" parent="BookOpener"]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.160784)
 layout_mode = 0
 offset_left = 197.0
@@ -4244,14 +4246,17 @@ study group"
 
 [node name="Label3" type="Label" parent="Library Controls/Help Button/Control"]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 317.0
-offset_right = 1106.0
-offset_bottom = 455.0
+offset_left = 273.0
+offset_top = 263.0
+offset_right = 1107.0
+offset_bottom = 460.0
+scale = Vector2(0.91864, 1.03133)
 theme_override_font_sizes/font_size = 30
-text = "click on books on shelf to browse (+1 social, -1 book)
-click on book spines to read (+5 social, -1 book)
-click on book contents to study (+10 social, -5 book)"
+text = "click on unread books on shelf to browse (+1 social)
+click on book spine to read (+5 social, -1 book)
++1 exposure to each symbol on the page
+click on book contents to study (+10 social, -5 book)
++7 exposure to each symbol on the page"
 horizontal_alignment = 1
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
