@@ -41,20 +41,22 @@ func _play_random(song_library):
 	if midpoint:
 		playhead = randf_range(MIDPOINT_OFFSET,stream.get_length()-MIDPOINT_OFFSET)
 		fadein = true
+		fadeout = false
 		pitch_scale = 0.01
 	else:
+		fadein = false
+		fadeout = false
+		pitch_scale = 1
 		playhead = 0#stream.get_length()-MIDPOINT_OFFSET
 	play(playhead)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if playing:
-		#print(stream.resource_name," ",get_playback_position()," of ",stream.get_length())
-		if fadein:
-			pitch_scale += delta/FADELENGTH
-			if pitch_scale > 1: fadein = false
-		elif  fadeout:
+		#print("playing ",stream.resource_path," at ",get_playback_position()," of ",stream.get_length()," at speed ",pitch_scale)
+		if  fadeout:
 			pitch_scale -= delta/FADELENGTH
+			fadein = false
 			if pitch_scale < 0.02:
 				fadeout = false
 				stop()
@@ -62,6 +64,11 @@ func _process(delta):
 					countdown = 0
 				else:
 					countdown = randf_range(INTERSONG*0.618,INTERSONG)
+		elif fadein:
+			pitch_scale += delta/FADELENGTH
+			if pitch_scale > 1:
+				pitch_scale = 1
+				fadein = false
 	else:
 		countdown -= delta
 		#print("countdown",countdown)
