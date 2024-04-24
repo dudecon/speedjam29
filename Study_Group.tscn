@@ -595,7 +595,8 @@ offset_bottom = 583.0
 text = "Random from
 all the emoji
 you've seen
-recently"
+recently
+(cost 1)"
 
 [node name="Label4" type="Label" parent="Social Help Button/Control"]
 layout_mode = 0
@@ -606,7 +607,8 @@ offset_bottom = 601.0
 text = "Things
 the selected
 people have
-said recently"
+said recently
+(cost 2)"
 
 [node name="Label5" type="Label" parent="Social Help Button/Control"]
 layout_mode = 0
@@ -614,9 +616,10 @@ offset_left = 585.0
 offset_top = 434.0
 offset_right = 777.0
 offset_bottom = 573.0
-text = "book chapter
+text = "book line
 you read
-recently"
+recently
+(cost 5)"
 
 [node name="Label6" type="Label" parent="Social Help Button/Control"]
 layout_mode = 0
@@ -626,7 +629,8 @@ offset_right = 941.0
 offset_bottom = 493.0
 text = "book you
 studied
-recently"
+recently
+(cost 12)"
 
 [node name="Label7" type="Label" parent="Social Help Button/Control"]
 layout_mode = 0
