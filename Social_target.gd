@@ -69,7 +69,6 @@ var statelabels
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# print(name)
 	rng = RandomNumberGenerator.new()
 	npc_all_known = []
 	npc_social_brain = {}
@@ -99,15 +98,13 @@ func generate_thought():
 
 func _toggled(toggled_on):
 	thoughts_exposed = toggled_on
-
-
-func _pressed():
 	if len(npc_active_thought) and thoughts_exposed:
 		_store_thought()
 
 
 func _store_thought():
 	$".".owner._add_to_conversation(npc_active_thought, $".", 2)
+	text = npc_active_thought
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -118,11 +115,7 @@ func _process(delta):
 		npc_active_thought = generate_thought()
 		if thoughts_exposed:
 			_store_thought()
-	if thoughts_exposed:
-		text = npc_active_thought
-	else:
-		text = ''
-	pass
+
 
 func _evaluate_state_machine(some_known,some_unknown):
 	if (npc_conversation_phase < 2) and some_known:

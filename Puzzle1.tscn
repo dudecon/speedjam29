@@ -4124,7 +4124,7 @@ offset_left = 87.0
 offset_top = 7.0
 offset_right = 173.0
 offset_bottom = 37.0
-text = "0"
+text = "4"
 script = ExtResource("6_c2rq3")
 
 [node name="Label" type="Label" parent="Library Controls/ColorRect"]
@@ -4144,13 +4144,12 @@ offset_bottom = 525.0
 color = Color(0.152941, 0.152941, 0.152941, 0.662745)
 
 [node name="social energy" type="Label" parent="Library Controls/ColorRect2"]
-unique_name_in_owner = true
 layout_mode = 0
 offset_left = 87.0
 offset_top = 7.0
 offset_right = 173.0
 offset_bottom = 37.0
-text = "0"
+text = "20"
 
 [node name="Label" type="Label" parent="Library Controls/ColorRect2"]
 layout_mode = 0
@@ -4186,6 +4185,7 @@ offset_bottom = 30.0
 text = "Score:"
 
 [node name="Escape to Social" type="Button" parent="Library Controls"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = -352.0
 offset_top = 173.0

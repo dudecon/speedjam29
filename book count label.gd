@@ -1,6 +1,6 @@
 extends Label
 
-var number = 0
+var number = 4
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_update_count(0)

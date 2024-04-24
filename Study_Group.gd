@@ -1,5 +1,4 @@
 extends Node2D
-var usersettings
 
 # this is where the player vocabulary lives
 var player_brain
@@ -14,20 +13,18 @@ func _ready():
 	_update_score()
 	npcs_cleared = 0
 	_update_escape()
-	var starting_memory = 4
-	social_battery = 15
+	social_battery = 20
 	social_books_locked = 0
 	_update_social()
-	usersettings = get_node("/root/UserSettings")
 	player_brain = {
 	"known"       : {},
 	"latest"      : [],
 	"read"        : [],
 	"studied"     : [],
 	"converse"    : {},
-	"mem_cap"     : 0
+	"mem_cap"     : 4
 	}
-	%"book count label"._update_count(starting_memory)
+	%"book count label"._update_count(0)
 
 func _add_to_known(stuff, increment = 1):
 	stuff = stuff.replace("\n","")
@@ -92,15 +89,20 @@ func _add_to_conversation(stuff, character_name, increment = 1):
 
 func _update_social(val=0, book_chng=0):
 	social_battery += val
-	if social_battery < 0: social_battery = 0
+	if social_battery < 0:
+		social_battery = 0
+		for target in $Study_Group/NPCButtons.get_children():
+			target.button_pressed = false
 	social_books_locked += book_chng	
-	%"social energy".text = str(social_battery)
+	$"../Library Controls/ColorRect2/social energy".text = str(social_battery)
 	%Library._set_book_visibility(social_books_locked)
 	#print("social battery ", social_battery)
 	for card in $Social_Cards.get_children():
 		card.disabled = card.SOCIAL_COST > social_battery
 	%StudyBookButton.disabled = 55 < social_battery
 	%ReadBookButton.disabled  = 105 < social_battery
+	if (%Social.social_battery >= 30) and not %Social.visible:
+		%"Escape to Social".visible = true
 
 
 func _update_score(val=0):
@@ -123,14 +125,10 @@ func _excluded_from_soliliquy(stuff):
 
 
 func _deliver_soliliquy(stuff):
-	for person in $"Study_Group/Social Buttons".get_children():
+	for person in $Study_Group/NPCButtons.get_children():
 		if person.thoughts_exposed:
 			person._deliver_soliliquy(stuff)
 		else:
 			_excluded_from_soliliquy(stuff)
 	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 

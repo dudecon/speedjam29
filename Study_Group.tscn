@@ -155,7 +155,7 @@ position = Vector2(532, 305)
 scale = Vector2(0.615813, 0.643842)
 texture = ExtResource("1_tl7oh")
 
-[node name="Social Buttons" type="Control" parent="Study_Group"]
+[node name="NPCButtons" type="Control" parent="Study_Group"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -604.0
@@ -164,7 +164,7 @@ offset_right = 642.0
 offset_bottom = 50.0
 theme = SubResource("Theme_qojja")
 
-[node name="Chad_target" type="Button" parent="Study_Group/Social Buttons"]
+[node name="Chad_target" type="Button" parent="Study_Group/NPCButtons"]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 36.0
@@ -174,7 +174,7 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_k3qvg")
 script = ExtResource("3_3h75m")
 
-[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Chad_target"]
+[node name="Label1" type="Label" parent="Study_Group/NPCButtons/Chad_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.002
@@ -186,7 +186,7 @@ offset_right = -119.611
 offset_bottom = 0.0145461
 text = "👍"
 
-[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Chad_target"]
+[node name="Label2" type="Label" parent="Study_Group/NPCButtons/Chad_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -197,7 +197,7 @@ offset_right = -59.528
 offset_bottom = 0.0145461
 text = "👍"
 
-[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Chad_target"]
+[node name="Label3" type="Label" parent="Study_Group/NPCButtons/Chad_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.994
@@ -207,7 +207,7 @@ offset_right = 0.0293274
 offset_bottom = 0.492546
 text = "👎"
 
-[node name="Stacy_target" type="Button" parent="Study_Group/Social Buttons"]
+[node name="Stacy_target" type="Button" parent="Study_Group/NPCButtons"]
 layout_mode = 0
 offset_left = 227.0
 offset_top = 116.0
@@ -217,7 +217,7 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_gd6iv")
 script = ExtResource("3_3h75m")
 
-[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Stacy_target"]
+[node name="Label1" type="Label" parent="Study_Group/NPCButtons/Stacy_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.002
@@ -229,7 +229,7 @@ offset_right = -119.611
 offset_bottom = 0.0145461
 text = "👍"
 
-[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Stacy_target"]
+[node name="Label2" type="Label" parent="Study_Group/NPCButtons/Stacy_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -240,7 +240,7 @@ offset_right = -59.528
 offset_bottom = 0.0145461
 text = "👍"
 
-[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Stacy_target"]
+[node name="Label3" type="Label" parent="Study_Group/NPCButtons/Stacy_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.994
@@ -250,7 +250,7 @@ offset_right = 0.0293274
 offset_bottom = 0.492546
 text = "👎"
 
-[node name="Gewn_target" type="Button" parent="Study_Group/Social Buttons"]
+[node name="Gewn_target" type="Button" parent="Study_Group/NPCButtons"]
 layout_mode = 0
 offset_left = 427.0
 offset_top = 60.0
@@ -260,7 +260,7 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_au6i3")
 script = ExtResource("3_3h75m")
 
-[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Gewn_target"]
+[node name="Label1" type="Label" parent="Study_Group/NPCButtons/Gewn_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.002
@@ -272,7 +272,7 @@ offset_right = -87.9837
 offset_bottom = -0.543816
 text = "👍"
 
-[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Gewn_target"]
+[node name="Label2" type="Label" parent="Study_Group/NPCButtons/Gewn_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -283,7 +283,7 @@ offset_right = -27.9005
 offset_bottom = -0.399815
 text = "👍"
 
-[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Gewn_target"]
+[node name="Label3" type="Label" parent="Study_Group/NPCButtons/Gewn_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.994
@@ -293,7 +293,7 @@ offset_right = 31.3088
 offset_bottom = -0.065815
 text = "👎"
 
-[node name="Beta_target" type="Button" parent="Study_Group/Social Buttons"]
+[node name="Beta_target" type="Button" parent="Study_Group/NPCButtons"]
 layout_mode = 0
 offset_left = 632.0
 offset_top = 76.0
@@ -303,7 +303,7 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_jibl4")
 script = ExtResource("3_3h75m")
 
-[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Beta_target"]
+[node name="Label1" type="Label" parent="Study_Group/NPCButtons/Beta_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.002
@@ -315,7 +315,7 @@ offset_right = -108.385
 offset_bottom = 0.493122
 text = "👍"
 
-[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Beta_target"]
+[node name="Label2" type="Label" parent="Study_Group/NPCButtons/Beta_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -326,7 +326,7 @@ offset_right = -48.302
 offset_bottom = 0.589123
 text = "👍"
 
-[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Beta_target"]
+[node name="Label3" type="Label" parent="Study_Group/NPCButtons/Beta_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.994
@@ -336,7 +336,7 @@ offset_right = 11.1053
 offset_bottom = 0.971123
 text = "👎"
 
-[node name="Karen_target" type="Button" parent="Study_Group/Social Buttons"]
+[node name="Karen_target" type="Button" parent="Study_Group/NPCButtons"]
 layout_mode = 0
 offset_left = 826.0
 offset_top = 93.0
@@ -346,7 +346,7 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_34uuh")
 script = ExtResource("3_3h75m")
 
-[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Karen_target"]
+[node name="Label1" type="Label" parent="Study_Group/NPCButtons/Karen_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.002
@@ -358,7 +358,7 @@ offset_right = -113.127
 offset_bottom = 0.544064
 text = "👍"
 
-[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Karen_target"]
+[node name="Label2" type="Label" parent="Study_Group/NPCButtons/Karen_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -369,7 +369,7 @@ offset_right = -53.0434
 offset_bottom = 0.606064
 text = "👍"
 
-[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Karen_target"]
+[node name="Label3" type="Label" parent="Study_Group/NPCButtons/Karen_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.994
@@ -379,7 +379,7 @@ offset_right = 6.23187
 offset_bottom = 1.02206
 text = "👎"
 
-[node name="Violet_target" type="Button" parent="Study_Group/Social Buttons"]
+[node name="Violet_target" type="Button" parent="Study_Group/NPCButtons"]
 layout_mode = 0
 offset_left = 964.499
 offset_top = 19.9815
@@ -389,7 +389,7 @@ toggle_mode = true
 shortcut = SubResource("Shortcut_bg83q")
 script = ExtResource("3_3h75m")
 
-[node name="Label1" type="Label" parent="Study_Group/Social Buttons/Violet_target"]
+[node name="Label1" type="Label" parent="Study_Group/NPCButtons/Violet_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.002
@@ -401,7 +401,7 @@ offset_right = -119.611
 offset_bottom = 0.0145461
 text = "👍"
 
-[node name="Label2" type="Label" parent="Study_Group/Social Buttons/Violet_target"]
+[node name="Label2" type="Label" parent="Study_Group/NPCButtons/Violet_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -412,7 +412,7 @@ offset_right = -59.528
 offset_bottom = 0.0145461
 text = "👍"
 
-[node name="Label3" type="Label" parent="Study_Group/Social Buttons/Violet_target"]
+[node name="Label3" type="Label" parent="Study_Group/NPCButtons/Violet_target"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.994
@@ -642,9 +642,9 @@ for emoji not in their vocabulary. The third stage is the opposite.
 Complete all three stages for all six characters
 to escape this horrible clique! Good luck!"
 
-[connection signal="toggled" from="Study_Group/Social Buttons/Chad_target" to="Escape to Library" method="_on_chad_target_toggled"]
-[connection signal="toggled" from="Study_Group/Social Buttons/Stacy_target" to="Escape to Library" method="_on_stacy_target_toggled"]
-[connection signal="toggled" from="Study_Group/Social Buttons/Gewn_target" to="Escape to Library" method="_on_gewn_target_toggled"]
-[connection signal="toggled" from="Study_Group/Social Buttons/Beta_target" to="Escape to Library" method="_on_beta_target_toggled"]
-[connection signal="toggled" from="Study_Group/Social Buttons/Karen_target" to="Escape to Library" method="_on_karen_target_toggled"]
-[connection signal="toggled" from="Study_Group/Social Buttons/Violet_target" to="Escape to Library" method="_on_violet_target_toggled"]
+[connection signal="toggled" from="Study_Group/NPCButtons/Chad_target" to="Escape to Library" method="_on_chad_target_toggled"]
+[connection signal="toggled" from="Study_Group/NPCButtons/Stacy_target" to="Escape to Library" method="_on_stacy_target_toggled"]
+[connection signal="toggled" from="Study_Group/NPCButtons/Gewn_target" to="Escape to Library" method="_on_gewn_target_toggled"]
+[connection signal="toggled" from="Study_Group/NPCButtons/Beta_target" to="Escape to Library" method="_on_beta_target_toggled"]
+[connection signal="toggled" from="Study_Group/NPCButtons/Karen_target" to="Escape to Library" method="_on_karen_target_toggled"]
+[connection signal="toggled" from="Study_Group/NPCButtons/Violet_target" to="Escape to Library" method="_on_violet_target_toggled"]
